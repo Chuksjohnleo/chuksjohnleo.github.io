@@ -1,0 +1,21 @@
+body{
+    background-image: url('C:/Users/CHUKWUMBUEZE/OneDrive/New_website/osa.jpeg');
+    background-repeat:no-repeat;
+    background-size: cover;
+}
+.containerbutton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+     h1  {text-transform: capitalize;
+    font-family: fantasy,'Times New Roman', Times, serif;
+    color: aqua;
+   }
+   .findoutbutton{
+    background-color: rgb(240, 163, 21);
+    border: 2px solid yellow;
+    border-radius: 50px;
+    color: white;
+   }
