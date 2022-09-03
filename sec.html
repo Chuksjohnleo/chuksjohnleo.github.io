@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="utf-8" name="viewport" content="width=device-width,initial-scale=1">
+	<title>Web Calculator</title>
+	<style>
+		.red{
+			color: red;
+		}
+      .buttoncontainer{
+         background-color: aqua;
+         display: grid;
+         grid-template-columns:1fr 1fr 1fr 1fr;
+         grid-template-rows: 1fr 1fr 1fr 1fr 1fr 0.5fr;
+         gap: 10px;
+         margin:0px 2em;
+         border: 10px solid blueviolet;
+         border-radius: 20px;
+         height: 90%;
+      }
+      .bt{
+         color: white;
+         
+      }
+      button{border: 2px solid transparent;}
+      .calc{
+         background-color: rgb(12, 158, 243);
+         border-radius: 20px;
+      }
+      button:active{
+         background-color: red;
+         border-radius: 10px;
+      }
+      section{
+         display: flex;
+         flex-direction: column;
+         background-color: yellow;
+         border-radius: 20px;
+         margin: 6px 20%;
+         height: 80vh;
+      }
+      .ip2{
+         color: yellow;
+         background-color: aqua;
+         border-radius: 3px;
+      }
+      #ip2{
+         border: 8px solid blue;
+         height: 10vh;
+         width: 40vw;
+         border-radius: 20px;
+         font-size: 40px;
+         color: rgb(13, 221, 100);
+         margin: 1px 15px;
+      }
+      .eq{
+         background-color:white;
+         grid-column: 3/span 2;
+         color: black;
+         border-radius: 2px;
+         margin-bottom: 6px;
+         margin-right: 4px;
+      }
+      .del{
+         background-color: red;
+         margin-top: 5px;
+         border-radius: 2px;
+      }
+      .clear{
+         background-color: rgb(141, 141, 16);
+         color:blue;
+         margin-top: 5px;
+         border-radius: 2px;
+      }
+	</style>
+</head>
+<body>
+	<h1>Simple Web Calculator By Chuksjohnleo</h1>
+   <!--<input type="text" placeholder="enter" id="ip">-->
+   <section>
+   <div class="ip2" align="center" ><input type="text" placeholder="Chuksjohnleo Calculator" id="ip2"></div>
+   <div class="buttoncontainer">
+   <button class="bt clear" onclick="clean()">Clear</button>
+   <button class="bt del" onclick="del()">Del</button>
+   <button class="bt calc" id="btn" value="0">0</button>
+   <button class="bt calc" value="1" >1</button>
+   <button class="bt calc" value="2" >2</button>
+   <button class="bt calc" value="3" >3</button>
+   <button class="bt calc" value="4" >4</button>
+   <button class="bt calc" value="5" >5</button>
+   <button class="bt calc" value="6" >6</button>
+   <button class="bt calc" value="7" >7</button>
+   <button class="bt calc" value="8" >8</button>
+   <button class="bt calc" value="9" >9</button>
+   <button class="bt calc" value="*" >*</button>
+   <button class="bt calc" value="-" >-</button>
+   <button class="bt calc" value="+" >+</button>
+   <button class="bt calc" value="/" >÷</button>
+   <button class="bt calc" value="*0.01" >%</button>
+   <button class="bt calc" value="%" >rem</button>
+   <button class="bt calc" value="**2" >²</button>
+   <button class="bt calc" value="**">^</button>
+   <button class="bt calc" value="*10**">exp</button>
+   <button class="bt calc" value=".">.</button>
+  <button class="bt eq" onclick="maths()">=</button></div>
+   </section>
+	<script>
+      var input = document.getElementById('ip')
+      var input2 = document.getElementById('ip2');
+      //var btn = document.querySelectorAll('bt');
+     function clean(){
+      input2.value = ''
+     }
+     function del(){
+      var a = input2.value;
+     b = a.toString().slice(0,-1);
+     input2.value = b;
+     // console.log(b)
+     }
+       function maths(){
+         input2.value = eval(input2.value);
+         //eval() is a dangerous function, don't use for a serious app/site
+       }
+
+       function CalScreen(bta){
+       return input2.value += bta;}
+         var btn = document.getElementsByClassName('bt')
+         for(let i = 0;i<btn.length;i++){
+            var btnvalue= btn[i].value;
+           // function CalScreen(){
+           // input2.value += btn[i].value;}
+       btn[i].addEventListener('click',CalScreen.bind(this,btnvalue))
+      }
+         
+
+       function maths(){
+        input2.value = eval(input2.value);
+       }
+   
+    </script>
+</body>
+</html>
