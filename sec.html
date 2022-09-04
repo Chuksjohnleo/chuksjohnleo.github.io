@@ -61,7 +61,7 @@ h5{
          background-color: aqua;
          display: grid;
          grid-template-columns:1fr 1fr 1fr 1fr;
-         grid-template-rows:60px 60px 60px 60px 60px 40px;
+         grid-template-rows:60px 60px 60px 60px 60px 40px 60px;
          gap: 10px;
          margin:0px 2em;
          border: 10px solid blueviolet;
@@ -108,6 +108,7 @@ h5{
 }
 /*media*/
 	@media screen and (min-width:600px) {
+      body{background-color: grey;}
 .red{
 			color: red;
 		}
@@ -149,7 +150,7 @@ h5{
       }
       .ip2{
          color: yellow;
-         background-color: aqua;
+         background-color: rgb(136, 255, 0);
          border-radius: 3px;
       }
       .ip1{
@@ -174,6 +175,7 @@ h5{
          border-radius: 2px;
          margin-bottom: 6px;
          margin-right: 4px;
+         background-color: purple;
       }
       .del{
          background-color: red;
@@ -186,6 +188,12 @@ h5{
          margin-top: 5px;
          border-radius: 2px;
       }
+      .answ{
+         background-color: blue;
+         color: white;
+         border-radius: 3px;
+         grid-column:1/span 4 ;
+      }
    }
 	</style>
 </head>
@@ -194,7 +202,7 @@ h5{
    <!--<input type="text" placeholder="enter" id="ip">-->
    <section>
       <h5>Maria</h5>
-      <h3>Calculator</h3>
+      <h3 align="center">Calculator</h3>
    <div class="ip2" align="center" >
       <input type="text" disabled placeholder="Chuksjohnleo Calculator" id="ip2">
       <input type="text" disabled placeholder="Ans" id="ip" class="ip1">
