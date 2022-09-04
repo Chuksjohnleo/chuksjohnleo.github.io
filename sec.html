@@ -24,7 +24,7 @@ h1{
 }
 .ip1{
     height:5vh;
-    width:73vw;
+    width:70vw;
     margin-top:-5px;
     border-color:transparent ;
     color:red;
@@ -106,9 +106,14 @@ h5{
 
 }
 /*media*/
-		.red{
+	@media screen and (min-width:600px) {
+.red{
 			color: red;
 		}
+      h2{
+         text-align: center;
+         color: blue;
+      }
       .buttoncontainer{
          background-color: aqua;
          display: grid;
@@ -139,21 +144,27 @@ h5{
          background-color: yellow;
          border-radius: 20px;
          margin: 6px 20%;
-         height: 80vh;
+         height: 90vh;
       }
       .ip2{
          color: yellow;
          background-color: aqua;
          border-radius: 3px;
       }
+      .ip1{
+         width: 40vw;
+         height: 10vh;
+         font-size:40px ;
+         border: 0px solid transparent;
+      
+      }
       #ip2{
-         border: 8px solid blue;
          height: 10vh;
          width: 40vw;
-         border-radius: 20px;
-         font-size: 40px;
+         font-size: 30px;
          color: rgb(13, 221, 100);
-         margin: 1px 15px;
+         margin: -1px 15px;
+         border: 0px solid transparent;
       }
       .eq{
          background-color:white;
@@ -174,6 +185,7 @@ h5{
          margin-top: 5px;
          border-radius: 2px;
       }
+   }
 	</style>
 </head>
 <body>
@@ -209,13 +221,19 @@ h5{
    <button class="bt calc" value="**">^</button>
    <button class="bt calc" value="*10**">exp</button>
    <button class="bt calc" value=".">.</button>
-  <button class="bt eq" onclick="maths()">=</button></div>
+  <button class="bt eq" onclick="maths()">=</button>
+  <button class="answ" onclick="ans()">Ans</button>
+</div>
   <h2>Emma</h2>
    </section>
 	<script>
       var input = document.getElementById('ip')
       var input2 = document.getElementById('ip2');
       //var btn = document.querySelectorAll('bt');
+      function ans(){
+         input2.value = input.value;
+         input.value = ""
+      }
      function clean(){
       input2.value = ''
      }
@@ -240,10 +258,6 @@ h5{
        btn[i].addEventListener('click',CalScreen.bind(this,btnvalue))
       }
          
-
-       function maths(){
-        input2.value = eval(input2.value);
-       }
    
     </script>
 </body>
