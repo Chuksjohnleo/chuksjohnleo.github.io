@@ -61,11 +61,12 @@ h5{
          background-color: aqua;
          display: grid;
          grid-template-columns:1fr 1fr 1fr 1fr;
-         grid-template-rows:60px 60px 60px 60px 60px 40px 60px;
+         grid-template-rows:1fr 1fr 1fr 1fr 1fr 0.67fr 0.1fr;
          gap: 10px;
          margin:0px 2em;
          border: 10px solid blueviolet;
          border-radius: 20px;
+         overflow-y: scroll;
       }
       .bt{
          color: white;
@@ -125,7 +126,8 @@ h5{
          margin:0px 2em;
          border: 10px solid blueviolet;
          border-radius: 20px;
-         height: 90%;
+         height: 90vh;
+         overflow-y: scroll;
       }
       .bt{
          color: white;
@@ -151,19 +153,19 @@ h5{
       .ip2{
          color: yellow;
          background-color: rgb(136, 255, 0);
-         border-radius: 3px;
+         border-radius: 30px;
       }
       .ip1{
          width: 40vw;
-         height: 10vh;
-         font-size:40px ;
+         height: 50%;
+         font-size:20px ;
          border: 0px solid transparent;
       
       }
       #ip2{
-         height: 10vh;
+         height: 50%;
          width: 40vw;
-         font-size: 30px;
+         font-size: 15px;
          color: rgb(13, 221, 100);
          margin: -1px 15px;
          border: 0px solid transparent;
@@ -194,7 +196,17 @@ h5{
          border-radius: 3px;
          grid-column:1/span 4 ;
       }
+      h5{
+         color: blue;
+         height: 0.5px;
+      }
+      h3{
+         color: aqua;
+         height: 1px;
+         margin-top: -4px;
+      }
    }
+   
 	</style>
 </head>
 <body>
