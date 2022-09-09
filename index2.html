@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="index2.css">
+        <title>Working on it</title>
+    </head>
+    <body>
+<nav><button onclick="home()" id="home"><b>🏠</b>Home</button></nav>
+ <div id="sidebar">
+    <div id="sback" class="sidechild back"><button onclick="back()">❌</button></div>
+    <div  class="sidechild contacts">  Contacts</div>
+    <div class="sidechild about"> More actions</div>
+    <div class="sidechild tools">Tools <span id="upD" onclick="drawDown()">🔽</span><div id="tools" class="toolchild">see calcl<br>
+        <a href="C:\Users\CHUKWUMBUEZE\OneDrive\New_website\Udemy_Exercises\Christoph\sec.html">web calculator</a></div></div>
+    <div>About</div>
+</div>
+<!--  ⬅️➡️➡️⏸🔝🔝⏫⬅️➡️➡️⏸🔝🔝⏫🔽🔼🏠🔼🏠 -->
+        <div class="containerbutton">
+          <h1>welcome to our learning platform</h1>
+         <a id="a1" href="https://mailchi.mp/0cb697dedf52/maria">
+            <button class="findoutbutton">Find Out More</button>
+         </a>ekene Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores magni, provident facilis accusantium animi et amet numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </div>
+        <script>
+            function home(){
+        document.getElementById('sidebar').style.width = '50vw'
+            }
+            function back(){
+                document.getElementById('sidebar').style.width = '0px'
+            }
+            function drawDown(){
+              var abc =  document.getElementById('tools');
+                abc.classList.toggle('drawUpandDown');
+                if(document.getElementById('upD').textContent === '🔽'){
+              document.getElementById('upD').textContent = '🔼'}else{
+                document.getElementById('upD').textContent = '🔽'
+              }
+            }
+        </script>
+    </body>
+</html>

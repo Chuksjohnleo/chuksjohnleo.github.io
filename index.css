@@ -1,7 +1,10 @@
 body{
     background-image: url('osa.jpeg');
     background-repeat:no-repeat;
-    background-size: 100% 540%;
+    background-size: 100% 295%;
+}
+@media screen and (min-height:500px) {
+    body{background-size: 100% 500%;}
 }
 .containerbutton{
     display: flex;
@@ -19,11 +22,24 @@ body{
     border-radius: 50px;
     color: white;
     position: relative;
-    top: 70vh;
+    top: 60vh;
    }
    .webc{
     text-decoration: none;
     color: yellow;
     position: relative;
-    top: 71vh;
+    top: 61vh;
+    background-color: aqua;
+   }
+   .links{
+    display: none;
+   }
+   .webc:hover .links{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    z-index: 1;}
+    .link{
+    text-decoration: none;
+    color: aquamarine;
    }

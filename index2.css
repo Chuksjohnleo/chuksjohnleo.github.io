@@ -1,0 +1,69 @@
+body{
+    background-image: url('osa.jpeg');
+    background-repeat:no-repeat;
+    background-size: 100% 295%;
+}
+@media screen and (min-height:500px) {
+    body{background-size: 100% 350%;}
+}
+.containerbutton{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+     h1  {text-transform: capitalize;
+    font-family: fantasy,'Times New Roman', Times, serif;
+    color: aqua;
+   }
+   .findoutbutton{
+    background-color: rgb(240, 163, 21);
+    border: 2px solid yellow;
+    border-radius: 50px;
+    color: white;
+   }
+   #a1{
+    position: relative;
+    top: 60vh;
+    overflow: hidden;
+   }
+   .webc{
+    text-decoration: none;
+    color: yellow;
+    position: relative;
+    top: 61vh;
+   }
+   #sidebar{
+    background-color: rgb(67, 78, 78);
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    transition:0.1s linear;
+    color: white;
+    font-size: 40px;
+    font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   }
+   .tools{
+    cursor: pointer;
+   }
+   .toolchild{
+    position: relative;
+    left: 10px;
+    background-color: aqua;
+    height: 0;
+    width: 50%;
+    overflow: hidden;
+    /* transition: 1s linear; */
+   }
+   .back{
+    background-color: blue;
+    position: relative;
+    text-align: right;
+    cursor: pointer;
+   }
+   .drawUpandDown{
+    height:20% ;
+   }
