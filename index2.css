@@ -1,10 +1,7 @@
 body{
-    background-image: url('osa.jpeg');
+    background-image: url('Nne.jpg');
     background-repeat:no-repeat;
-    background-size: 100% 295%;
-}
-@media screen and (min-height:500px) {
-    body{background-size: 100% 350%;}
+    /* background-size: 100% 295%; */
 }
 .containerbutton{
     display: flex;
@@ -46,6 +43,7 @@ body{
     font-size: 40px;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     opacity: 0.9;
+    z-index: 1;
 }
    .tools{
     cursor: pointer;
