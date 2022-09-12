@@ -1,6 +1,6 @@
 body{
     background-image: url('Nne.jpg');
-    background-repeat:no-repeat;
+    background-repeat:repeat-x;
     /* background-size: 100% 295%; */
 }
 .containerbutton{
@@ -38,24 +38,26 @@ body{
     left: 0;
     width: 0px;
     height: 100%;
-    transition:0.1s linear;
+    transition:0.5s linear;
     color: white;
-    font-size: 40px;
+    font-size: 20px;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     opacity: 0.9;
     z-index: 1;
 }
-   .tools{
+   #drawtool{
     cursor: pointer;
    }
    .toolchild{
-    position: relative;
     left: 10px;
-    background-color: aqua;
-    height: 0;
-    width: 50%;
+    background-color: rgb(7, 14, 14);
+    display: none;
+    width: 90%;
     overflow: hidden;
     /* transition: 1s linear; */
+   }
+   ul{
+    margin: 0px;
    }
    .back{
     background-color: blue;
@@ -64,5 +66,23 @@ body{
     cursor: pointer;
    }
    .drawUpandDown{
-    height:20% ;
+    display: block;
+   }
+   #upD{
+    text-align: right;
+    font-size: 30px;
+    display: inline;
+    margin-left: 50%;
+   }
+   #opt{
+    font-size: 60px;
+    cursor: pointer;
+   }
+   #home{
+    font-size: 27px;
+     display: inline;
+    margin-left: 20px;
+   }
+   #back{
+    font-size: 60px;
    }

@@ -1,11 +1,8 @@
 body{
     background-image: url('Nne.jpg');
-    background-repeat:no-repeat;
-    background-size: 100% 295%;
+    background-repeat:repeat-x;
 }
-@media screen and (min-height:500px) {
-    body{background-size: 100% 500%;}
-}
+
 .containerbutton{
     display: flex;
     flex-direction: column;
@@ -29,14 +26,14 @@ body{
     color: yellow;
     position: relative;
     top: 61vh;
-    background-color: aqua;
+    z-index: 1;
    }
    .links{
     display: none;
    }
    .webc:hover .links{
     display: flex;
-    position: absolute;
+    position: relative;
     flex-direction: column;
     z-index: 1;}
     .link{
