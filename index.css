@@ -27,6 +27,7 @@ body{
     position: relative;
     top: 61vh;
     z-index: 1;
+    text-align: center;
    }
    .links{
     display: none;
