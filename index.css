@@ -31,6 +31,8 @@ body{
    }
    .links{
     display: none;
+    background-color: aquamarine;
+    box-shadow: 2px 0px 4px green, 2px 0px 4px green;
    }
    .webc:hover .links{
     display: flex;
@@ -39,5 +41,6 @@ body{
     z-index: 1;}
     .link{
     text-decoration: none;
-    color: aquamarine;
+    color: rgb(9, 12, 11);
+    font-size: 150%;
    }
