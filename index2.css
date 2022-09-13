@@ -64,7 +64,7 @@ nav{
     color: white;
     position: relative;
     margin-top: 50%;
-    padding-top: 40px;
+    padding-top: 30px;
     overflow: hidden;
     text-decoration: none;
     width: 70%;
@@ -78,6 +78,7 @@ nav{
     }
     .findoutbutton{
         margin-top: 20%;
+
     }
    }
    .webc{
