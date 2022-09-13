@@ -70,7 +70,7 @@ nav{
     width: 70%;
     height: 80px;
     text-align: center;
-    font-size: 300%;
+    font-size: 200%;
    }
    @media screen and (min-width:800px) {
     body{
