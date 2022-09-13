@@ -19,13 +19,13 @@ body{
     border-radius: 50px;
     color: white;
     position: relative;
-    top: 60vh;
+    top: 50vh;
    }
    .webc{
     text-decoration: none;
     color: yellow;
     position: relative;
-    top: 61vh;
+    top: 51vh;
     z-index: 1;
     text-align: center;
    }
