@@ -3,10 +3,7 @@ body{
     background-repeat:repeat;
     margin: 0;
 }
-header{
-    background-image: url('Nne.jpg');
-    background-repeat:no-repeat;
-}
+
 .log{
     display: flex;
     justify-content: flex-end;
@@ -58,7 +55,7 @@ nav{
 }
      h1  {text-transform: capitalize;
     font-family: fantasy,'Times New Roman', Times, serif;
-    color: aqua;
+    color: rgb(207, 28, 183);
    }
    .findoutbutton{
     background-color: rgb(240, 163, 21);
