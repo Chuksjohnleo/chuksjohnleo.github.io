@@ -65,11 +65,23 @@ nav{
     border: 2px solid yellow;
     border-radius: 50px;
     color: white;
-   }
-   #a1{
     position: relative;
-    top: 60vh;
+    margin-top: 50%;
+    padding-top: 40px;
     overflow: hidden;
+    text-decoration: none;
+    width: 70%;
+    height: 80px;
+    text-align: center;
+    font-size: 300%;
+   }
+   @media screen and (min-width:800px) {
+    body{
+        margin: 2px;
+    }
+    .findoutbutton{
+        margin-top: 20%;
+    }
    }
    .webc{
     text-decoration: none;
