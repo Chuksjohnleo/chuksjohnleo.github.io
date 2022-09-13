@@ -1,7 +1,54 @@
 body{
     background-image: url('Nne.jpg');
-    background-repeat:repeat-x;
-    /* background-size: 100% 295%; */
+    background-repeat:repeat;
+    margin: 0;
+}
+header{
+    background-image: url('Nne.jpg');
+    background-repeat:no-repeat;
+}
+.log{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 10vh;
+    text-align: center;
+}
+.register{
+    background-color: rgb(30, 238, 238);
+    text-decoration: none;
+    border-radius: 10px;
+}
+.login{
+    background-color: blue;
+    border-radius: 10px;
+    color: beige;
+}
+.fn{
+    margin: 20px 10px;
+    height: 30px;
+    width: 90px;
+    box-shadow: 3px 3px 1px rgb(155, 26, 26), -3px -3px 1px rgb(93, 180, 21);
+}
+.lo{
+    text-decoration: none;
+    color: azure;
+    padding-top: 18px;
+}
+article{
+    text-align: center;
+    background-color: aliceblue;
+    margin: 10px;
+    border-radius: 6px;
+    height: 50vh;
+}
+nav{
+    background:linear-gradient(to right,lightblue,blue);
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top:0px;
+    z-index: 1;
 }
 .containerbutton{
     display: flex;
@@ -38,7 +85,7 @@ body{
     left: 0;
     width: 0px;
     height: 100%;
-    transition:0.5s linear;
+    transition:0.7s linear;
     color: white;
     font-size: 20px;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -47,6 +94,8 @@ body{
 }
    #drawtool{
     cursor: pointer;
+    display: flex;
+    justify-content: space-between;
    }
    .toolchild{
     left: 10px;
@@ -69,20 +118,21 @@ body{
     display: block;
    }
    #upD{
-    text-align: right;
-    font-size: 30px;
-    display: inline;
-    margin-left: 50%;
+    font-size: 25px;
+    color: black;
    }
    #opt{
     font-size: 60px;
     cursor: pointer;
    }
    #home{
-    font-size: 27px;
-     display: inline;
+    font-size: 60px;
+    font-weight: 100px;
     margin-left: 20px;
+    color: rgb(8, 41, 70);
    }
    #back{
     font-size: 60px;
+    font-weight: 100px;
+    color: rgb(194, 22, 22);
    }

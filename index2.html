@@ -6,13 +6,21 @@
         <title>Working on it</title>
     </head>
     <body>
-<nav><span id="opt" onclick="options()">≡</span><div id="home"><b>🏠</b>Home</div></nav>
+      <section class="log">
+        <div class="login fn"><a class="lo" href="logform.html">Login</a></div>
+        <div class="register fn"><a class="lo" href="uform.html">Register</a></div>
+      </section>
+  <nav>
+    <div id="opt" onclick="options()">≡</div>
+    <div id="home"><b>🏠</b>Home</div>
+  </nav>
  <section id="sidebar">
     <div id="sback" class="sidechild back"><span id="back" onclick="back()">ꭓ</span></div>
+    <div onclick="back()">🏠 Home</div><hr>
     <div  class="sidechild contacts">  Contacts</div><hr>
     <div class="sidechild about"> More actions</div><hr>
     <div class="sidechild tools">
-      <div id="drawtool" onclick="drawDown()">Tools<div id="upD">></div></div>
+      <div id="drawtool" onclick="drawDown()"><div id="tool">Tools</div><div id="upD">></div></div>
        <ul id="tools" class="toolchild" >
          <li>see something</li>
          <li><a href="sec.html">web calculator</a></li>
@@ -25,19 +33,80 @@
           <h1>welcome to our learning platform</h1>
          <a id="a1" href="https://mailchi.mp/0cb697dedf52/maria">
             <button class="findoutbutton">Find Out More</button>
-         </a>ekene Lorem ipsum dolor sit <br>
-          amet consectetur, adipisicing elit.<br>
-           Officia saepe nisi aliquid. Nihil voluptatum maiores magni, provident facilis accusantium animi et amet numquam rem reiciendis dolor 
-         <br>eaque placeat praesentium suscipit.
+         </a>
         </div>
+      <div class="articles">
+         <article class="art1"> Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </article>
+        <article class="art1"> Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </article><article class="art1"> Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </article><article class="art1"> Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </article><article class="art1"> Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </article><article class="art1"> Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </article><article class="art1"> Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </article><article class="art1"> Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </article><article class="art1"> Lorem ipsum dolor sit <br>
+          amet consectetur, adipisicing elit.<br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        br>
+           Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
+           <br>magni, provident facilis accusantium animi et amet 
+           <br>numquam rem reiciendis dolor 
+         <br>eaque placeat praesentium suscipit.
+        </article>
+      </div>
         <script>
             function options(){
-        document.getElementById('sidebar').style.width = '50vw';
+        document.getElementById('sidebar').style.width = '100%';
         document.getElementById('opt').textContent = ''
             }
             function back(){
-                document.getElementById('sidebar').style.width = '0px'
-                document.getElementById('opt').textContent = '≡'
+                sidebar = document.getElementById('sidebar');
+                sidebar.style.width = '0px';
+                setTimeout(()=>{document.getElementById('opt').textContent = '≡'},700)
             }
             function drawDown(){
               var abc =  document.getElementById('tools');

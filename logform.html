@@ -18,7 +18,7 @@
                 width: 100px;
                 height: 100px;
             }
-        form{
+        .form{
                 display: flex;
                 flex-wrap: nowrap;
                 flex-direction: column;
@@ -28,13 +28,22 @@
                 padding: 13px;
                 border-radius: 50px;
             }
-            input{
+            .input{
                 width: 200px;
                 border: 2px solid yellow;
                 border-radius: 25px;
             }
 input:hover{
-                transform: scale(1.2);
+                transform: scale(1.1);
+            }
+            a{
+                text-decoration: none;
+                color: rgb(65, 19, 192);
+                font-size: larger;
+                font-family:sans-serif ;
+            }
+            #forgotpass{
+                display: none;
             }
         </style>
     </head>
@@ -42,15 +51,26 @@ input:hover{
         <header align="right" >Maria</header>
        <h1 align="center"> Register</h1>
        <img src="C:\Users\Leo\Downloads\SeatOfWisdom.jpg" alt="logo">
-       <form>
-        <input type="text" name="fn"  placeholder=" First name" required><br>
-        <input type="text" name="mn" placeholder="Middle name(optional)"><br>
-        <input type="text" name="ln" placeholder="Lastname" required><br>
+       <form class="form" id="forms">
         <input type="email" name="ea" placeholder="Input your email address" required ><br>
         <input type="password" name="pswd" placeholder="Set password" required><br>
-        <input type="button" name="sub" value="Register">
-
+        <input type="button" name="sub" value="Login">
        </form>
-       
+    <section align="right" id="fgp" onclick="fpass()"><a href="#">Forgotten Password</a>
+        <form align="center" id="forgotpass">
+            <input id="rEmail" type="email" placeholder="enter your email"><br><br>
+            <input onclick = "rest()" id="reset" type="submit" name="reset" value="reset password">
+        </form>
+    </section>
+    <script>
+   function fpass(){
+    document.getElementById('forgotpass').style.display = 'block';
+    document.getElementById('forms').style.display = 'none'
+
+   }
+   function rest(){
+    document.getElementById('forgotpass').textContent = "The password reset link have been sent to your email"
+   }
+    </script>
     </body>
 </html>
