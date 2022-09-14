@@ -15,7 +15,9 @@
     <div id="home"><b>🏠</b>Home</div>
   </nav>
  <section id="sidebar">
-    <div id="sback" class="sidechild back"><span id="back" onclick="back()">ꭓ</span></div>
+    <div id="sback" class="sidechild back">
+      <!-- <input type="search" name="artsearch" oninput="searcher()" id="arts" placeholder="search for Articles"> -->
+      <span id="back" onclick="back()">ꭓ</span></div>
     <div onclick="back()">🏠 Home</div><hr>
     <div  class="sidechild contacts">  Contacts</div><hr>
     <div class="sidechild about"> More actions</div><hr>
@@ -36,27 +38,37 @@
           Find Out More
          </a>
         </div>
-      <div class="articles">
-         <article class="art1"> Lorem ipsum dolor sit <br>
+        <div class="articles">
+        <input type="search" name="artsearch" oninput="searcher()" id="arts" 
+        placeholder="search for Articles">
+         <article class="art1">
+          <h1 class="ah">Dolor</h1>
+           Lorem dolor ipsum dolor sit <br>
           amet consectetur, adipisicing elit.<br>
            Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
            <br>magni, provident facilis accusantium animi et amet 
            <br>numquam rem reiciendis dolor 
          <br>eaque placeat praesentium suscipit.
         </article>
-        <article class="art1"> Lorem ipsum dolor sit <br>
+        <article class="art1">
+          <h1 class="ah">lorem</h1>
+           Lorem ipsum dolor sit <br>
           amet consectetur, adipisicing elit.<br>
            Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
            <br>magni, provident facilis accusantium animi et amet 
            <br>numquam rem reiciendis dolor 
          <br>eaque placeat praesentium suscipit.
-        </article><article class="art1"> Lorem ipsum dolor sit <br>
+        </article><article class="art1">
+          <h1 class="ah">officia</h1>
+           Lorem ipsum third dolor sit <br>
           amet consectetur, adipisicing elit.<br>
            Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
            <br>magni, provident facilis accusantium animi et amet 
            <br>numquam rem reiciendis dolor 
          <br>eaque placeat praesentium suscipit.
-        </article><article class="art1"> Lorem ipsum dolor sit <br>
+        </article><article class="art1">
+          <h1 class="ah">Secudum</h1>
+           Lorem ipsum fourth sit <br>
           amet consectetur, adipisicing elit.<br>
            Officia saepe nisi aliquid. Nihil voluptatum maiores <br>
            <br>magni, provident facilis accusantium animi et amet 
@@ -80,6 +92,20 @@
                 if(document.getElementById('upD').textContent === '>'){
               document.getElementById('upD').textContent = '˅'}else{
                 document.getElementById('upD').textContent = '>'
+              }
+            }
+            var art1 = document.getElementsByClassName('art1');
+            var arts = document.getElementById('arts')
+            function searcher(){
+              var a = arts.value.toUpperCase();
+              for(i=0;i<art1.length;i++){
+                var h1 = art1[i].getElementsByClassName('ah')[0];
+                var filterer = h1.textContent || h1.innerText;
+                if(filterer.toUpperCase().indexOf(a) > -1){
+                  art1[i].style.display = ''
+                }else{
+                  art1[i].style.display = 'none'
+                }
               }
             }
         </script>
