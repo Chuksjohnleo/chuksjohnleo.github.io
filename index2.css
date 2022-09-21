@@ -151,4 +151,12 @@ nav{
     margin:20px auto;
     height: 50px;
     width: 90vw;
+    border-radius: 15em;
+    border: 2px solid rgb(177, 74, 74);
+    background: aqua;
+    color: rgb(243, 236, 236);
+   }
+   #arts:hover{
+    border: 3px solid green;
+    background: rgb(100, 179, 179);
    }
