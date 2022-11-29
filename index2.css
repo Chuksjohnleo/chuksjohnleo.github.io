@@ -130,6 +130,7 @@ h1{text-transform: capitalize;
 @media screen and (min-width:800px){
     #generalContainer{
         left: 30%;
+        width: 70%;
     }
 #sidebar{
     width: 30%;
@@ -190,10 +191,12 @@ h1{text-transform: capitalize;
     margin-left: 20px;
     color: rgb(8, 41, 70);
    }
+
    #back{
     font-size: 1.8rem;
     color: rgb(54, 48, 48);
    }
+
    .showcaseContainer{
     display: flex;
     flex-direction: column;
