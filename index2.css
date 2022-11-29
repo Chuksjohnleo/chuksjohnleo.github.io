@@ -1,15 +1,28 @@
 body{
-    background-image: url('Nne.jpg');
-    background-repeat:repeat;
-    margin: 0;
+    background-color: white;
+    margin: 0; 
+}
+/*header{
+    position: ;
+}*/
+.to_top{
+    position: fixed;
+    top: 200px;
+    right: 1px;
+    display: none;
+    font-size: xx-large;
+    z-index: 2;
 }
 
 .log{
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 10vh;
+    height: 60px;
+    margin: 0;
+    overflow: hidden;
     text-align: center;
+
 }
 .register{
     background-color: rgb(30, 238, 238);
@@ -37,23 +50,30 @@ article{
     background-color: aliceblue;
     margin: 10px;
     border-radius: 6px;
-    height: 50vh;
+    height: 100%;
+}
+.articles:hover #scrol{
+display: block;
 }
 nav{
     background:linear-gradient(to right,lightblue,blue);
     display: flex;
     position: -webkit-sticky;
     position: sticky;
+    height: 80px;
     top:0px;
     z-index: 1;
 }
+
 .containerbutton{
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    border-radius:0px 50px 0px 50px;
+    background-color: beige;
 }
-     h1  {text-transform: capitalize;
+
+h1{text-transform: capitalize;
     font-family: fantasy,'Times New Roman', Times, serif;
     color: rgb(207, 28, 183);
    }
@@ -64,18 +84,15 @@ nav{
     color: white;
     position: relative;
     margin-top: 50%;
-    padding-top: 30px;
+    padding: 30px;
     overflow: hidden;
     text-decoration: none;
     width: 70%;
-    height: 80px;
+    height: 8px;
     text-align: center;
-    font-size: 200%;
+    font-size: 100%;
    }
    @media screen and (min-width:800px) {
-    body{
-        margin: 2px;
-    }
     .findoutbutton{
         margin-top: 20%;
 
@@ -93,14 +110,35 @@ nav{
     position: fixed;
     top: 0;
     left: 0;
-    width: 0px;
+    width: 0%;
     height: 100%;
-    transition:0.7s linear;
     color: white;
-    font-size: 20px;
+    font-size: 1rem;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     opacity: 0.9;
     z-index: 1;
+}
+
+.setWidth{
+    width: 30%;
+}
+#generalContainer{
+    position: absolute;
+}
+@media screen and (min-width:800px){
+    #generalContainer{
+        left: 30%;
+        background-image: url('Nne.jpg');
+    }
+#sidebar{
+    width: 30%;
+}
+#opt{
+    display: none;
+}
+#back{
+    display: none;
+}
 }
    #drawtool{
     cursor: pointer;
@@ -123,7 +161,7 @@ nav{
     position: relative;
     text-align: right;
     cursor: pointer;
-    height: 10vh;
+    
    }
    .drawUpandDown{
     display: block;
@@ -137,20 +175,65 @@ nav{
     cursor: pointer;
    }
    #home{
-    font-size: 60px;
+    font-size: 40px;
     font-weight: 100px;
     margin-left: 20px;
     color: rgb(8, 41, 70);
    }
    #back{
-    font-size: 60px;
-    font-weight: 100px;
+    font-size: 1.8rem;
+    font-weight: 2rem;
     color: rgb(54, 48, 48);
+   }
+   .showcaseContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    text-align: center;
+    color: blue;
+    font-size: larger;
+   }
+   .showcase{
+    display: none;
+   }
+   .showcaseImg{
+    width: 200px;
+    height: 300px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px black,2px 2px 4px black;
+  
+   }
+   @media screen and (max-width:200px){
+    .showcaseImg{
+        width: 130px;
+    }
+   }
+   .dots{
+    display: flex;
+   }
+   .dot{
+    margin: 2px;
+    width: 10px;
+    height: 10px;
+    background-color: grey;
+   }
+
+   @media screen and (min-width:700px) {
+    .showcaseImage{
+        width: 500px;
+        height: 400px;
+       }
+       .dot{
+        width: 30px;
+        height: 30px;
+       }
    }
    #arts{
     margin:20px auto;
     height: 50px;
-    width: 90vw;
+    width: 80%;
     border-radius: 15em;
     border: 2px solid rgb(177, 74, 74);
     background: aqua;
@@ -160,3 +243,74 @@ nav{
     border: 3px solid green;
     background: rgb(100, 179, 179);
    }
+   .art{
+    padding: 30px;
+    margin: 10px;
+    box-shadow: 2px 2px 4px black,2px 2px 4px black;
+   }
+   @media screen and (min-width:900px){
+      .art{
+        margin: 40px;
+      }
+   }
+   .art span{
+    color: blue;
+    cursor: pointer;
+   }
+   /* TELEGRAM LINK */
+.tele_link{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    height: 200px;
+    text-align: center;
+    background-color: white;
+    font-size: 2rem;
+    border-radius: 30px;
+    box-shadow: 1px 3px 4px black,-1px -3px 4px black;
+    color: blue;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.tele{
+    border-radius: 5px;
+    background-color: white;
+    margin: auto 25px;
+    color: blue;
+}
+
+
+/* ALL BUTTONS */
+button:hover{
+    background-color: red;
+}
+
+/* FOOTER */
+footer{
+    position: sticky;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background: grey;
+    margin-top:2em;
+    text-align: center;
+}
+footer img{
+    width: 30px;
+    height: 30px;
+}
+footer a{
+    margin: 5px;
+}
+@media screen and (min-width:700px){
+    footer img{
+        width: 50px;
+        height: 50px;
+    }
+    footer a{
+        margin: 20px;
+    }
+}
