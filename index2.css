@@ -113,12 +113,14 @@ h1{text-transform: capitalize;
     width: 0%;
     height: 100%;
     color: white;
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     opacity: 0.9;
     z-index: 1;
 }
-
+#upD{
+    color: rgb(252, 247, 247);
+   }
 .setWidth{
     width: 30%;
 }
@@ -128,17 +130,28 @@ h1{text-transform: capitalize;
 @media screen and (min-width:800px){
     #generalContainer{
         left: 30%;
-        background-image: url('Nne.jpg');
     }
 #sidebar{
     width: 30%;
+    font-size: 1rem;
 }
+#upD{
+    font-size: 1rem;
+   }
 #opt{
     display: none;
 }
 #back{
     display: none;
 }
+}
+@media screen and (max-width:300px){
+    #sidebar{
+        font-size: 0.4rem;
+    }
+}
+#sidebar ul{
+    margin-left: -20%;
 }
    #drawtool{
     cursor: pointer;
@@ -161,15 +174,11 @@ h1{text-transform: capitalize;
     position: relative;
     text-align: right;
     cursor: pointer;
-    
    }
    .drawUpandDown{
     display: block;
    }
-   #upD{
-    font-size: 25px;
-    color: rgb(252, 247, 247);
-   }
+  
    #opt{
     font-size: 60px;
     cursor: pointer;
@@ -182,7 +191,6 @@ h1{text-transform: capitalize;
    }
    #back{
     font-size: 1.8rem;
-    font-weight: 2rem;
     color: rgb(54, 48, 48);
    }
    .showcaseContainer{
@@ -221,7 +229,7 @@ h1{text-transform: capitalize;
    }
 
    @media screen and (min-width:700px) {
-    .showcaseImage{
+    .showcaseImg{
         width: 500px;
         height: 400px;
        }

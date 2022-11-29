@@ -38,7 +38,7 @@ window.onscroll = ()=>{
             document.getElementById('upD').textContent = '►'
           }
         }
-        var art1 = document.getElementsByClassName('art1');
+        var art1 = document.getElementsByClassName('art');
         var arts = document.getElementById('arts');
         const officia = document.getElementById('officia')
         //the searchbar
@@ -48,9 +48,9 @@ window.onscroll = ()=>{
             var h1 = art1[i].getElementsByClassName('ah')[0];
             var filterer = h1.textContent || h1.innerText;
             if(filterer.toUpperCase().indexOf(a) > -1){
-              art1[i].style.display = ''
+              art1[i].style.display = '';
             }else{
-              art1[i].style.display = 'none'
+              art1[i].style.display = 'none';
             }
           }
         }
