@@ -146,13 +146,14 @@ h1{text-transform: capitalize;
 }
 }
 @media screen and (max-width:300px){
-    #sidebar{
+#sidebar{
         font-size: 0.4rem;
     }
+    #sidebar ul{
+        margin-left: -20%;
+    }
 }
-#sidebar ul{
-    margin-left: -20%;
-}
+
    #drawtool{
     cursor: pointer;
     display: flex;
@@ -205,6 +206,7 @@ h1{text-transform: capitalize;
    }
    .showcase{
     display: none;
+    object-fit: contain;
    }
    .showcaseImg{
     width: 200px;

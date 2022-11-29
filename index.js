@@ -3,10 +3,12 @@ const logs = document.getElementById('logs');
 
 const to_top =  document.getElementsByClassName('to_top')[0];
 //the scroll tab
-const to_top_remove = setInterval(()=>{
-    to_top.style.display = 'none';
-},3000);
-
+function timeout(){
+    setTimeout(()=>{
+        to_top.style.display = 'none';
+    },5000);
+    
+}
 function topY(){
     logs.scrollIntoView();
     to_top.style.display = 'none';
@@ -14,6 +16,7 @@ function topY(){
 window.onscroll = ()=>{
     if(window.scrollY > 200){
         to_top.style.display = 'block';
+        timeout();
     }else{
         to_top.style.display = 'none';
     }
@@ -79,7 +82,24 @@ const imageSlider = setInterval(()=>{
         images[currentImage].style.display = 'inline';
         dots[currentImage].style.background = 'blue';
     }
-},3000)
+},4000);
+//in case I need it as a function
+function slider(){
+    setInterval(()=>{
+        hideImage();
+        if(currentImage < images.length-1){
+            currentImage++;
+            images[currentImage].style.display = 'inline';
+            dots[currentImage].style.background = 'blue';
+        }else{
+            currentImage = 0;
+            images[currentImage].style.display = 'inline';
+            dots[currentImage].style.background = 'blue';
+        }
+    },3000)
+}
+
+
 
 function myEmail(){
     document.getElementById('social').scrollIntoView();
