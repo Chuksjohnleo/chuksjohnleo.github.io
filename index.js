@@ -3,20 +3,14 @@ const logs = document.getElementById('logs');
 
 const to_top =  document.getElementsByClassName('to_top')[0];
 //the scroll tab
-function timeout(){
-    setTimeout(()=>{
-        to_top.style.display = 'none';
-    },5000);
-    
-}
+
 function topY(){
     logs.scrollIntoView();
     to_top.style.display = 'none';
 }
 window.onscroll = ()=>{
-    if(window.scrollY > 200){
+    if(window.scrollY > 1000){
         to_top.style.display = 'block';
-        timeout();
     }else{
         to_top.style.display = 'none';
     }
