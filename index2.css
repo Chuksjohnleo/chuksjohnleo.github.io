@@ -56,11 +56,12 @@ article{
 display: block;
 }
 nav{
-    background:linear-gradient(to right,lightblue,blue);
+    background:white;
     display: flex;
     position: -webkit-sticky;
     position: sticky;
     height: 80px;
+    box-shadow: 3px 0px 4px;
     top:0px;
     z-index: 1;
 }
@@ -92,6 +93,9 @@ h1{text-transform: capitalize;
     text-align: center;
     font-size: 100%;
    }
+   #sidebar ul{
+    margin-left: -10%;
+   }
    @media screen and (min-width:800px) {
     .findoutbutton{
         margin-top: 20%;
@@ -105,21 +109,21 @@ h1{text-transform: capitalize;
     top: 61vh;
    }
    #sidebar{
-    background-color: rgb(67, 78, 78);
+    background-color: aqua;
     overflow: hidden;
     position: fixed;
     top: 0;
     left: 0;
     width: 0%;
     height: 100%;
-    color: white;
+    color: blue;
     font-size: 0.8rem;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     opacity: 0.9;
     z-index: 1;
 }
 #upD{
-    color: rgb(252, 247, 247);
+    color: blue;
    }
 .setWidth{
     width: 30%;
@@ -151,7 +155,7 @@ h1{text-transform: capitalize;
         font-size: 0.4rem;
     }
     #sidebar ul{
-        margin-left: -20%;
+        margin-left: -30%;
     }
 }
 
@@ -162,15 +166,14 @@ h1{text-transform: capitalize;
    }
    .toolchild{
     left: 10px;
-    background-color: rgb(7, 14, 14);
+    background-color: white;
     display: none;
     width: 90%;
     overflow: hidden;
+    cursor: pointer;
     /* transition: 1s linear; */
    }
-   ul{
-    margin: 0px;
-   }
+
    .back{
     background-color: rgb(239, 239, 247);
     position: relative;
