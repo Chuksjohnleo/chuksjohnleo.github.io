@@ -142,6 +142,9 @@ nav{
   #sidebar ul {
     margin-left: 0%;
   }
+  .first_h1{
+    padding-left: 20px;
+  }
 }
 /* sidebar */
 #sidebar {
