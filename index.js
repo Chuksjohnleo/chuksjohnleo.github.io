@@ -19,13 +19,13 @@ window.onscroll = () => {
 //the sidebar
 function options() {
   /* sidebar.style.width = '30%' */
-  sidebar.classList.add('sidebar-mobile');
+  sidebar.classList.add('sidebar-mobile','padding');
   document.getElementById('opt').textContent = '';
 }
 
 function back() {
   /*   sidebar.style.width = '' */
-  sidebar.classList.remove('sidebar-mobile');
+  sidebar.classList.remove('sidebar-mobile','padding');
   document.getElementById('opt').textContent = '≡';
 }
 //drawdown menus at the sidebar

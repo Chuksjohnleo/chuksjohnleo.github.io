@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   margin:0 auto;
 }
 
@@ -30,7 +30,7 @@ header {
   background-color: blue;
 }
 .first_h1 {
-  display: block;
+  position: relative;
   margin: 0px;
   padding: 8px;
   font-size: smaller;
@@ -45,27 +45,7 @@ header {
     font-size: larger;
   }
 }
-.register {
-  background-color: rgb(30, 238, 238);
-  text-decoration: none;
-  border-radius: 10px;
-}
-.login {
-  background-color: blue;
-  border-radius: 10px;
-  color: beige;
-}
-.fn {
-  margin: 20px 10px;
-  height: 30px;
-  width: 90px;
-  box-shadow: 3px 3px 1px rgb(155, 26, 26), -3px -3px 1px rgb(93, 180, 21);
-}
-.lo {
-  text-decoration: none;
-  color: azure;
-  padding-top: 18px;
-}
+
 article {
   text-align: center;
   background-color: aliceblue;
@@ -75,15 +55,16 @@ article {
 }
 
 
-nav {
+nav{
   background: white;
   display: flex;
-  position: -webkit-sticky;
   position: sticky;
   height: 70px;
   box-shadow: 3px 0px 4px;
-  top: 0px;
+  background-color: aqua;
   z-index: 1;
+  width: 100%;
+  top: 0px;
 }
 
 .containerbutton {
@@ -122,22 +103,25 @@ nav {
   }
 }
 .info {
-  background-color: rgb(76, 0, 255);
-  border-radius: 30px;
+  background-color: blue;
+  border-radius: 20px;
   color: yellow;
   font-size: larger;
   font-weight: 900;
-  animation: info 10s linear 0.4s infinite;
+  animation: info 20s linear 0.4s infinite;
   padding: 10px;
   text-align: center;
-  box-shadow: 3px 3px 4px blue inset, 3px -3px 4px blue inset;
+}
+.info-parent{
+  width: 100%;
+  overflow: hidden;
 }
 @keyframes info {
   from {
-    transform: translateX(-150%);
+    transform: translateX(150%);
   }
   to {
-    transform: translateX(150%);
+    transform: translateX(-150%);
   }
 }
 #sidebar ul {
@@ -176,7 +160,9 @@ nav {
   box-shadow: 4px 4px 6px black;
   opacity: 1;
 }
-
+.padding{
+  padding: 10px;
+}
 @media screen and (max-width: 800px) {
   #sidebar.sidebar-mobile {
     width: 30%;
@@ -195,7 +181,7 @@ nav {
 }
 #generalContainer {
   position: absolute;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   background-color: rgb(183, 241, 241);
 }
 @media screen and (min-width: 800px) {
@@ -209,6 +195,7 @@ nav {
   #sidebar {
     width: 20%;
     font-size: 1rem;
+    padding: 5px;
   }
   #upD {
     font-size: 1rem;
