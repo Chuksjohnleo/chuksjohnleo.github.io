@@ -17,11 +17,10 @@
 <body>
 <div id="generalContainer">
      <h1 class="first_h1">MariaDevs Website developer</h1>
-     <header>
+     <header id="logs">
        <div class="login fn"><a class="lo" href="logform.html">Login</a></div>
-        <div class="register fn"><a class="lo" href="uform.html">Register</a></div>
+       <div class="register fn"><a class="lo" href="uform.html">Register</a></div>
      </header>
-
       <button class="to_top" onclick="topY()">🔝</button>
   <nav>
     <div id="opt" onclick="options()">≡</div>
@@ -30,16 +29,21 @@
 
  <section  id="sidebar">
     <div id="sback" class="sidechild back">
-    <div id="back" onclick="back()">×</div></div>
+         <div id="back" onclick="back()">×</div>
+    </div>
     <div onclick="back()">🏠 Home</div><hr>
     <div  class="sidechild contacts">  Contacts</div><hr>
     <div class="sidechild about"> More actions</div><hr>
     <div class="sidechild tools">
-      <div id="drawtool" onclick="drawDown()"><div id="tool">Tools</div><div id="upD">►</div></div>
+      <div id="drawtool" onclick="drawDown()">
+        <div id="tool">Tools</div>
+        <div id="upD">►</div>
+      </div>
        <ul id="tools" class="toolchild" >
          <li>Still working<br> on this site.</li>
          <li><a href="calculator.html">Web calculator</a></li>
        </ul>
+       <!-- sidechild toos end -->
     </div><hr>
     <div>About</div>
  </section>
