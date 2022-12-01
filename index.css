@@ -154,12 +154,7 @@ color: white;
         margin-left: 0%;
        }
    }
-.webc{
-    text-decoration: none;
-    color: yellow;
-    position: relative;
-    top: 61vh;
-   }
+/* sidebar */
    #sidebar{
     background-color:blue;
     overflow: hidden;
@@ -173,7 +168,7 @@ color: white;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 1;
     font-weight: 400;
-    opacity: 0.5;
+    opacity: 1;
 }
 
 .setWidth{
