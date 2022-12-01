@@ -27,7 +27,7 @@ header{
     margin: 0;
     overflow: hidden;
     text-align: center;
-   background-color: blue;
+    background-color: blue;
 }
 .first_h1{
     display: block;
@@ -80,7 +80,7 @@ nav{
     display: flex;
     position: -webkit-sticky;
     position: sticky;
-    height: 80px;
+    height: 70px;
     box-shadow: 3px 0px 4px;
     top:0px;
     z-index: 1;
@@ -173,10 +173,9 @@ color: white;
     font-family: 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     z-index: 1;
     font-weight: 400;
+    opacity: 0.5;
 }
-#upD{
-    color: blue;
-   }
+
 .setWidth{
     width: 30%;
 }
