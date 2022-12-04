@@ -6,7 +6,8 @@ function ans(){
    input.value = ""
 }
 function clean(){
-input2.value = ''
+input2.value = '';
+input.value = '';
 }
 function del(){
 var a = input2.value;
