@@ -190,6 +190,12 @@ img{
  font-size: larger;
  line-height: 30px;
 }
+a{
+    text-decoration: none;
+}
+a:visited{
+    color: blue;
+}
 .projects h1{
     text-align: center;
 }
