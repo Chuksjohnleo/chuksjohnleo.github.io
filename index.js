@@ -6,6 +6,10 @@ const nav_divs = document.getElementsByClassName('nav_btn');
 const email = document.getElementById('email');
 const about_me = document.getElementById('about_me');
 const projects = document.getElementById('project');
+const home_btn = document.getElementById('home');
+const intro = document.querySelectorAll('.intro')[0];
+const up = document.getElementById('up');
+
 
 function click_btn(){
     for(let i=0; i<nav_divs.length;i++) {
@@ -18,7 +22,7 @@ for(let i=0; i<nav_divs.length;i++) {
     let btn =  nav_divs[i];
     btn.addEventListener('click',()=>{
         click_btn();
-        btn.style.borderTop = '3px solid lightblue';
+        btn.style.borderTop = '3px solid blue';
     });
 };
 
@@ -32,4 +36,56 @@ about_btn.addEventListener('click',()=>{
 
 projects_btn.addEventListener('click',()=>{
     projects.scrollIntoView();
+});
+
+home_btn.addEventListener('click',()=>{
+    intro.scrollIntoView();
 })
+up.addEventListener('click',()=>{
+    intro.scrollIntoView();//redundant, yeaaa 😅😂😂
+})
+function select_nav_btn(current_btn,btn1,btn2,btn3){
+    current_btn.style.borderTop = '3px solid blue';
+    btn1.style.borderTop = '0px solid transparent';
+    btn2.style.borderTop = '0px solid transparent';
+    btn3.style.borderTop = '0px solid transparent';
+}
+
+// I prefer the long/hard way here 😅😅😅😂😂
+function indicator(a){
+    if(window.scrollY >= 400 && window.scrollY < 1200){//select_nav_btn(about_btn, home_btn,projects_btn,contacts_btn)
+        
+        contacts_btn.style.borderTop = '0px solid transparent'
+        about_btn.style.borderTop = '3px solid blue'
+        projects_btn.style.borderTop = '0px solid transparent'
+        home_btn.style.borderTop = '0px solid transparent';
+    }else if(window.scrollY >= 1200 && window.scrollY < a){// select_nav_btn(projects_btn, home_btn, about_btn,contacts_btn)
+        about_btn.style.borderTop = '0px solid transparent';
+        projects_btn.style.borderTop = '3px solid blue';
+        contacts_btn.style.borderTop = '0px solid transparent';
+        home_btn.style.borderTop = '0px solid tranparent';
+    }else if(window.scrollY >= a){//select_nav_btn(contacts_btn, home_btn,projects_btn,about_btn)
+        projects_btn.style.borderTop = '0px solid transparent';
+        about_btn.style.borderTop = '0px solid transparent';
+        contacts_btn.style.borderTop = '3px solid blue';
+        home_btn.style.borderTop = '0px solid transparent';
+    }else{//select_nav_btn(home_btn,projects_btn,about_btn,contacts_btn)
+        projects_btn.style.borderTop = '0px solid transparent';
+        about_btn.style.borderTop = '0px solid transparent';
+        contacts_btn.style.borderTop = '0px solid transparent';
+        home_btn.style.borderTop = '3px solid blue';
+    }
+}
+
+const small_screen = window.matchMedia('(max-width:300px)');
+const large_screen = window.matchMedia('(min-width:800px)');
+
+window.onscroll =()=>{
+    if(small_screen.matches){
+        indicator(5000);
+    }else if(large_screen.matches){
+        indicator(3000)
+    }else{
+        indicator(4000)
+    }
+}
