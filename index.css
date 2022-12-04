@@ -28,7 +28,7 @@ nav div:hover{
 h2{
     text-align: center;
 }
-img{
+section img{
     width: 200px;
     box-shadow: 2px 2px 8px blue,2px -2px 8px blue;
 }
@@ -190,12 +190,8 @@ img{
  font-size: larger;
  line-height: 30px;
 }
-a{
-    text-decoration: none;
-}
-a:visited{
-    color: blue;
-}
+
+
 .projects h1{
     text-align: center;
 }
@@ -233,6 +229,10 @@ a:visited{
     width:70%;
     height:100%;
     margin: 1px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
 }
 @media screen and (min-width:800px){
     .description-wrapper{
@@ -289,7 +289,8 @@ a:visited{
     color: white;
 }
 .email-link:hover{
-    transform: scale(0.7);
+    transform: scale(1.1);
+    
 }
 footer {
     display: flex;
@@ -305,15 +306,13 @@ footer {
     margin-top: 5px;
     height: 30px;
     width: 30px;
-    background-color: rgb(27, 27, 185);
     padding: 10px;
     border-radius: 50px;
   }
   #up:hover{
     color: blue;
-    background-color: white;
     margin-top: 10px;
-    transform: scale(1.2);
+    transform: scale(1.2) translateY(-12px);
     cursor: pointer;
     padding: auto 50%;
   }
