@@ -1,0 +1,176 @@
+
+body{
+    margin:auto 10px;
+}
+textarea::-webkit-scrollbar{
+    width: 30px;
+    background-color: aqua;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: blue;
+    border-radius: 30px;
+}
+body::-webkit-scrollbar{
+    background-color: rgb(175, 175, 206);
+}
+nav{
+    position: fixed;
+    height: 50px;
+    width: 100vw;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:blue;
+    text-shadow: 2px 3px 4px rgb(10, 21, 200);
+    background-color: white;
+    gap: 10px;
+    box-shadow: 2px -5px 20px black inset;
+    animation: navscroll 15s linear 0s infinite;
+    border-radius: 30px;
+}
+@media screen and (min-width:1000px) {
+    @keyframes navscroll{
+        0%{
+            transform: translateX(-1400px);
+            color: red;
+        }
+        50%{
+            transform: translateX(0px);
+            color: blue;
+        }
+        100%{
+            transform: translateX(1400px);
+            color: yellow;
+        }
+    }
+}
+@media screen and (max-width:700px) {
+    @keyframes navscroll{
+        0%{
+            transform: translateX(-700px);
+        }
+        50%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(700px);
+        }
+    }
+}
+
+@media screen and (max-width:450px){
+    @keyframes navscroll{
+        0%{
+            transform: translateX(-450px);
+        }
+        50%{
+            transform: translateX(0px);
+        }
+        100%{
+            transform: translateX(450px);
+        }
+    }
+}
+
+.flex{
+    display: flex;
+}
+#add{
+    position: sticky;
+    top: 60px;
+    background-color: white;
+    border: 2px solid transparent;
+    text-align: left;
+    width: 120px;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 3px 3px 8px  lightblue inset;
+}
+#container{
+    position: sticky;
+    bottom: 10px;
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    border: 2px solid blue;
+    border-radius: 30px;
+    background:blue;
+    margin: auto 20px;
+}
+#container button,input,textarea{
+    margin:2px 10px 10px;
+    background-color: lightblue;
+    border: 1px solid blue;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+#container button,input,textarea::placeholder{
+    color: blue;
+    text-align: center;
+    
+}
+#todos{
+    border: 1px solid blue;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+}
+#todos p{
+    border: 3px solid rgb(226, 226, 236);
+    color: rgb(252, 253, 253);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 13px;
+    background: lightblue;
+}
+#todos div{
+    word-wrap: break-word;
+    border: 5px solid blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.activity{
+    padding: 20px;
+}
+em{  display: block;
+    margin: 1.6rem;
+    border: 1px solid blue;
+    color: blue;
+}
+.done{
+    background-color: aquamarine;
+    color: blue;
+}
+h1{
+    color: rgb(38, 0, 255);
+}
+#boundary{
+    background-color: white;
+    color: blue;
+    
+}
+.remove_btn{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:right;
+    width: 100px;
+    color: blue;
+    font-weight: 800;
+    
+}
+.span_btn:hover{
+    background-color: blue;
+    color: white;
+}
+div{
+    word-wrap: break-word;
+}
+@media screen and (min-width:800px){
+    body{
+        margin:auto 200px;
+    }
+}

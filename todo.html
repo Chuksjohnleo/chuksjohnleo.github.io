@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
+        <link type="text/css" rel="stylesheet" href="todo.css">
+        <title>To do app</title>
+    </head>
+    <body align="center">
+        <nav>
+           <div>Hello! Welcome</div>
+           <div>Todos Always Help</div>
+        </nav>
+        <h1 id="add">➕ New</h1>
+    <form>
+        (<input checked type="radio">
+        <input checked type="radio">)
+        <h1>Your entries</h1>
+        <div id="todos"></div>
+    </form>
+ <div id="boundary" >Thats all</div>
+       <article id="container" >
+            <h3 id="right" >write something</h3>
+            <textarea id="activity" type="text" rows="6" placeholder="activity"></textarea>
+            <input id="date" type="date" placeholder="time">
+            <input id="time" type="time" >
+            <button onclick="add_to_entries()" >Add to list</button>
+            <button onclick="done()" class="done">Done</button>
+        </article>
+  </body>
+    <script type="text/javascript" src="todo.js" ></script>
+</html>
