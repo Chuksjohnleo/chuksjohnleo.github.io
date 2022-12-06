@@ -82,10 +82,10 @@ const large_screen = window.matchMedia('(min-width:800px)');
 
 window.onscroll =()=>{
     if(small_screen.matches){
-        indicator(5000);
+        indicator(5500);
     }else if(large_screen.matches){
-        indicator(3000)
+        indicator(3700)
     }else{
-        indicator(4000)
+        indicator(4500)
     }
 }

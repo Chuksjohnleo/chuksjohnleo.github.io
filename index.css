@@ -82,7 +82,7 @@ section img{
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: blue;
+    background-color: rgb(47, 47, 196);
     line-height: 30px;
     padding: 30px;
     border-top: 20px solid transparent;
@@ -222,11 +222,10 @@ section img{
     display: flex;
     justify-content: center;
     width: 100%;
-    height:400px;
     padding: 10px;
 }
 .img-container img{
-    width:70%;
+    width:100%;
     height:100%;
     margin: 1px;
 }
