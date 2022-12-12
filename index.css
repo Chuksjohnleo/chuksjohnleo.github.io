@@ -29,10 +29,7 @@ nav{
 h2{
     text-align: center;
 }
-section img{
-    width: 200px;
-    box-shadow: 2px 2px 8px blue,2px -2px 8px blue;
-}
+
 @media screen and (max-width:200px){
     img{
         width: 150px;
@@ -83,7 +80,7 @@ section img{
     justify-content: center;
     align-items: center;
     align-content: center;
-    background-color: rgb(47, 47, 196);
+    background-color: blue;
     line-height: 30px;
     padding: 30px;
     border-top: 20px solid transparent;
@@ -97,6 +94,7 @@ section img{
     color: white;
     font-weight: 500;
     align-self: center;
+    font-weight: 700;
 }
 .about-p{
     display: flex;
@@ -115,6 +113,11 @@ section img{
     margin: 20px 0px;
     border-radius: 5px;
 }
+#me{
+    width: 200px;
+    border-radius: 0%;
+    box-shadow: 4px 4px 60px inset rgb(0, 132, 255);
+}
 .resume-link{
     display: inline-block;
     margin-bottom: 10px;
@@ -125,12 +128,13 @@ section img{
     text-decoration: none;
 }
 @media screen and (min-width:700px) {
+    #me{
+        width: 300px;
+    }
     .about-me-wrapper{
         text-align: left;
     }
-    .about{
-        clip-path:polygon(0 15vh,100% 0,100% 100%,0 100%);
-    }
+    
     .more-about{
         margin: auto;
         display: inline;
@@ -169,6 +173,9 @@ section img{
    }
 }
 @media screen and (min-width:900px) {
+    .about{
+        clip-path:polygon(0 15vh,100% 0,100% 100%,0 100%);
+    }
     .resume-link-container{
         margin: 0px;
     }
@@ -183,7 +190,7 @@ section img{
         margin-bottom: 0px;
     }
     .resume-link-container{
-        transform:translate(150px,-150px);
+        transform:translate(0px,-100px);
     }
 }
 .projects{

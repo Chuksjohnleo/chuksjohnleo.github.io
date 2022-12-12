@@ -53,13 +53,13 @@ function select_nav_btn(current_btn,btn1,btn2,btn3){
 
 // I prefer the long/hard way here 😅😅😅😂😂
 function indicator(a){
-    if(window.scrollY >= 400 && window.scrollY < 1200){//select_nav_btn(about_btn, home_btn,projects_btn,contacts_btn)
+    if(window.scrollY >= 400 && window.scrollY < 1100){//select_nav_btn(about_btn, home_btn,projects_btn,contacts_btn)
         
         contacts_btn.style.borderTop = '0px solid transparent'
         about_btn.style.borderTop = '3px solid blue'
         projects_btn.style.borderTop = '0px solid transparent'
         home_btn.style.borderTop = '0px solid transparent';
-    }else if(window.scrollY >= 1200 && window.scrollY < a){// select_nav_btn(projects_btn, home_btn, about_btn,contacts_btn)
+    }else if(window.scrollY >= 1100 && window.scrollY < a){// select_nav_btn(projects_btn, home_btn, about_btn,contacts_btn)
         about_btn.style.borderTop = '0px solid transparent';
         projects_btn.style.borderTop = '3px solid blue';
         contacts_btn.style.borderTop = '0px solid transparent';
@@ -78,14 +78,21 @@ function indicator(a){
 }
 
 const small_screen = window.matchMedia('(max-width:300px)');
-const large_screen = window.matchMedia('(min-width:800px)');
+const medium_screen = window.matchMedia('(min-width:800px) and (max-width:850px)');
+const large_screen = window.matchMedia('(min-width:900px)');
 
-window.onscroll =()=>{
+function match_screen(){
     if(small_screen.matches){
         indicator(5500);
-    }else if(large_screen.matches){
+    } else if(medium_screen.matches){
+        indicator(2500)
+    }
+    else if(large_screen.matches){
         indicator(3700)
     }else{
         indicator(4500)
     }
 }
+window.onload =()=>match_screen();
+window.onresize =()=>match_screen();
+window.onscroll =()=> match_screen();
