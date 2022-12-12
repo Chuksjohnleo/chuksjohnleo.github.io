@@ -2,75 +2,152 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width,initial-scale=1">
-        <title>My udemy registration form</title>
+        <title>Login form</title>
         <style>
-            header{
-                font-size: 70px;
-                font-family: 'Times New Roman', Times, serif;
-                font-weight: bolder;
-                color: blue;
-            }
             body{
-                background-color: bisque;
+                margin: 0 auto;
+                background-color: rgb(7, 245, 245);
+            }
+            .body{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                
+            }
+            .header{
+                font-family: 'Times New Roman', Times, serif;
+                color: blue;
+                text-align: center;
             }
             img{
-                border-radius: 70px;
                 width: 100px;
-                height: 100px;
             }
-        .form{
+            .logo{
                 display: flex;
-                flex-wrap: nowrap;
+                justify-content: center;
+            }
+            .form,.form2-div{
+                display: flex;
+                justify-content: center;
                 flex-direction: column;
-                align-items: center;
-                background-color: aquamarine;
-                border: 5px solid magenta;
-                padding: 13px;
-                border-radius: 50px;
+                margin: 0 20%;
             }
-            .input{
-                width: 200px;
-                border: 2px solid yellow;
-                border-radius: 25px;
+            .forgotpass{
+                display: flex;
+                justify-content: center;
+                margin: 0 20%;
+                flex-direction: column;
+                }
+             #fgp{
+                display: flex;
+                text-align: center;
+                justify-content: center;
+                flex-direction: column;
             }
-input:hover{
-                transform: scale(1.1);
+            .container{
+                background-color: aqua;
+                padding:0% 20% 10% ;
+                display: flex;
+                flex-direction: column;
+                transform: translateY(30%);
+                border-radius: 15px;
+                box-shadow: 4px 4px 20px black;
             }
-            a{
-                text-decoration: none;
-                color: rgb(65, 19, 192);
-                font-size: larger;
-                font-family:sans-serif ;
-            }
-            #forgotpass{
+            .form2-div{
                 display: none;
             }
+            input{
+                transform: scale(2,1.2);
+                background-color: aqua;
+                border-radius: 5px;
+                border-color: aqua;
+                margin: 3%;
+                box-shadow: 3px -3px 3px inset white, -3px 3px inset white;
+            }
+            input::placeholder{
+                color: rgb(67, 7, 248);
+                font-size: 8px;
+            }
+           
+            @media screen and (max-width:300px){
+                .container{
+                    padding: 25px;
+                }
+                input{
+                    transform: scale(1,1);
+                }
+            }
+           
+            @media screen and (min-width:550px){
+                .form-section,.form-div{
+                    display: flex;
+                    justify-content: center;
+                }
+                .form2-div{
+                    
+                    justify-content: center;
+                }
+                .container{
+                width: 450px;
+                padding:0% 0% 10% ;
+                transform: translateY(10%);
+            }
+            }
+            .flink{
+            display: block;
+            margin:10% 15% 10%;
+            text-decoration: none;
+            color: blue;
+            font-weight: 600;
+            border-radius: 30px;
+            border: 0px;
+            background-color: aqua;
+            font-weight: 900;
+            box-shadow: -2px 2px 8px black,2px -2px 8px black;
+           }
+           .flink:hover{
+            color: rgb(27, 27, 173);
+           
+           }
         </style>
     </head>
-    <body align="center">
-        <header align="right" >Maria</header>
-       <h1 align="center"> Login </h1>
-       <img src="SeatOfWisdom.jpg" alt="logo">
-       <form class="form" id="forms">
+    <body>
+<div class="body">
+  <div class="container">
+        <h1 class="header"> Login </h1>
+       <div class="logo"><img src="../images/logo.svg" alt="logo"></div>
+      <div class="form-div">
+        <form class="form" id="forms">
         <input type="email" name="ea" placeholder="Input your email address" required ><br>
         <input type="password" name="pswd" placeholder="Set password" required><br>
         <input type="button" name="sub" value="Login">
        </form>
-    <section align="right" id="fgp" onclick="fpass()"><a href="#">Forgotten Password</a>
-        <form align="center" id="forgotpass">
-            <input id="rEmail" type="email" placeholder="enter your email"><br><br>
-            <input onclick = "rest()" id="reset" type="submit" name="reset" value="reset password">
+      </div>
+    <section class="form-section" id="fgp">
+        <button class="flink" onclick="fpass()">Forgotten Password</button>
+       <div class="form2-div">
+        <form id="forgotpass" class="forgotpass">
+            <input style="margin: 10% 0%;" id="rEmail" type="email" placeholder="enter your email">
+            <input style="margin: 20% 0% 5%;" onclick="rest()" id="reset" type="submit" name="reset" value="Reset">
         </form>
+       </div> 
     </section>
+  </div>
+</div>
     <script>
-   function fpass(){
-    document.getElementById('forgotpass').style.display = 'block';
-    document.getElementById('forms').style.display = 'none'
+        const forgotPass = document.querySelectorAll('.form2-div')[0];
 
+   function fpass(){
+    forgotPass.style.display = 'block';
+    document.getElementById('forms').style.display = 'none';
    }
    function rest(){
-    document.getElementById('forgotpass').textContent = "The password reset link have been sent to your email"
-   }
+    document.getElementById('forgotpass').innerHTML = `The password reset link have been sent to your email <span style="color:blue;" onclick='returnBack()'>Return to login</span>`
+   document.getElementsByClassName('container')[0].style.margin = '0px 25px'
+}
+function returnBack(){
+    location.reload();
+}
     </script>
     </body>
 </html>

@@ -52,6 +52,8 @@ function select_nav_btn(current_btn,btn1,btn2,btn3){
 }
 
 // I prefer the long/hard way here 😅😅😅😂😂
+//Use intersection observer API, the following is very redundant,
+//I left for the sake of memories. though it helps as you can see.
 function indicator(a){
     if(window.scrollY >= 400 && window.scrollY < 1100){//select_nav_btn(about_btn, home_btn,projects_btn,contacts_btn)
         
@@ -93,6 +95,26 @@ function match_screen(){
         indicator(4500)
     }
 }
-window.onload =()=>match_screen();
-window.onresize =()=>match_screen();
-window.onscroll =()=> match_screen();
+//intersection observer does this best
+//window.onload =()=>match_screen();
+//window.onresize =()=>match_screen();
+//window.onscroll =()=> match_screen();
+
+const sections = document.querySelectorAll('section')
+const observer = new IntersectionObserver(entries=>{
+if(entries[0].isIntersecting){
+                if(entries[0].target.className === 'intro'){
+                select_nav_btn(home_btn,projects_btn,about_btn,contacts_btn)
+                 }else  if(entries[0].target.className === 'about'){
+                select_nav_btn(about_btn,projects_btn,home_btn,contacts_btn)
+                 }else  if(entries[0].target.className === 'projects'){
+                select_nav_btn(projects_btn,home_btn,about_btn,contacts_btn)
+                  }else  if(entries[0].target.className === 'contact'){   
+                select_nav_btn(contacts_btn,projects_btn,about_btn,home_btn)
+                 }
+
+        }
+});
+sections.forEach(section=>{
+    observer.observe(section);
+})
