@@ -4,29 +4,104 @@ body{
     width: 100%;
 }
 
-section.visible{
-    opacity: 1;
-}
-section{
-    transition: 4s;
-    opacity: 1;
-}
-nav{
+.opener{
     display: flex;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
+    box-shadow: 2px 2px 2px black;
     position: sticky;
     top: 0;
-    height: 50px;
+    background-color: white;
+    z-index: 1;
+    align-items: center;
+}
+.logo{
+    height: 60px;
+    width: 100%;
+    margin-bottom: -15px;
+}
+.logo-div{
+    display: none;
+}
+.opts{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    height:60px;
+   justify-content: center;
+  }
+
+  .opt{
+    cursor: pointer;
+    margin: 5px;
+    background-color: black;
+    height: 7px;
+    width: 3rem;
+    cursor: pointer;
+    transition: 0.31s;
+  }
+  .change .n1{
+    margin-top: 0px;
+    transform:translateY(17px) rotate(45deg);
+  
+  }
+  .n2{
+    transition: 0.2s;
+  }
+  .change .n3{
+    transform:translateY(-17px) rotate(-45deg);
+  }
+  .change .n2{
+    opacity: 0;
+    transition: 0.01s;
+  }
+  .open{
+    display: flex;
+    height: 100%;
+  }
+
+/* stop here */
+section{
+    transition: 1s;
+}
+nav{
+    display: none;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    position: sticky;
+    top: 60px;
+    gap: 20px;
+    height: 100%;
     box-shadow: 2px 2px 2px black;
     background-color: white;
     opacity: 0.99;
     color: blue;
-    transition: 1s;
     z-index: 1;
+}
+@media screen and (min-width:820px){
+    .logo-div{
+        display: block;
+    }
+    .opener{
+        display: none;
+    }
+    .open{
+        height: 70px;
+    }
+    nav{
+        display: flex;
+        flex-direction: row;
+        gap: 0px;
+        top: 0;
+        height: 70px;
+
+    }
 }
 
 .nav_btn{
+    padding:0px 40px;
+    margin: 20px;
     cursor: pointer;
     font-weight: 900;
 }
@@ -37,7 +112,9 @@ nav{
 h2{
     text-align: center;
 }
-
+.intro-h1{
+    margin-top: 100px;
+}
 @media screen and (max-width:200px){
     img{
         width: 150px;
@@ -61,9 +138,18 @@ h2{
     border: 5px solid blue;
     font-weight: 900;
     color: blue;
-
+}
+#services{
+    display: grid;
+    gap: 30px;
+    margin-bottom: 60px;
+}
+.intro-article{
+    padding: 10%;
+    box-shadow: 3px 3px 10px black;
 }
 @media screen and (min-width:700px){
+
 .intro{
         text-align: left;
         font-size: x-large;
@@ -80,6 +166,9 @@ h2{
         to{
             background-clip: border-box;
         }
+    }
+    #services{
+        grid-template-columns:1fr 1fr;
     }
 }
 
@@ -119,18 +208,17 @@ h2{
 }
 .about-me-wrapper img{
     display: block;
-    margin: 20px 0px;
+    margin: 20px 0px 0px 20px;
     border-radius: 5px;
 }
 #me{
     width: 60%;
-    
     border-radius: 0%;
     box-shadow: 4px 4px 60px inset rgb(0, 132, 255);
 }
 .resume-link{
     display: inline-block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     border: 5px solid white;
     padding: 10px;
     font-weight: 900;
@@ -153,8 +241,8 @@ h2{
     .about-me-wrapper img{
         width: 300px;
         height: inherit;
-        float: left;
-        transform:translate(-50px,-20px) ;
+        float: right;
+        transform:translate(50px,-20px) ;
         margin: 10px;
         padding: 20px;
     }

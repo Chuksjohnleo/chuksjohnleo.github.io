@@ -7,14 +7,27 @@ const email = document.getElementById('email');
 const about_me = document.getElementById('about_me');
 const projects = document.getElementById('project');
 const home_btn = document.getElementById('home');
-const intro = document.querySelectorAll('.intro')[0];
+const intro = document.getElementById('intro-div');
 const up = document.getElementById('up');
+const topbar = document.getElementById('topbar');
+const small_screen = window.matchMedia('(max-width:300px)');
+const medium_screen =  window.matchMedia('(min-width:700px)');
+const ipad_screen = window.matchMedia('(min-width:800px) and (max-width:850px)');
+const large_screen = window.matchMedia('(min-width:900px)');
 
 
+const open_menu = ()=>{
+     topbar.classList.toggle('change');
+     nav.classList.toggle('open');
+     
+    }
 function click_btn(){
     for(let i=0; i<nav_divs.length;i++) {
         let btn =  nav_divs[i];
+        btn.addEventListener('click',open_menu);
         btn.style.borderTop = '0px';
+        btn.style.borderLeft = '0px';
+        btn.style.background = 'transparent';
     };
 };
 
@@ -22,10 +35,16 @@ for(let i=0; i<nav_divs.length;i++) {
     let btn =  nav_divs[i];
     btn.addEventListener('click',()=>{
         click_btn();
-        btn.style.borderTop = '3px solid blue';
+        if(medium_screen.matches){
+            btn.style.borderTop = '3px solid blue';
+            btn.style.background = 'lightblue'
+        }else{
+            btn.style.borderLeft = '3px solid blue';
+            btn.style.background = 'lightblue';
+        }
     });
 };
-
+   
 contacts_btn.addEventListener('click',()=>{
     email.scrollIntoView();
 });
@@ -43,12 +62,38 @@ home_btn.addEventListener('click',()=>{
 })
 up.addEventListener('click',()=>{
     intro.scrollIntoView();//redundant, yeaaa 😅😂😂
-})
+});
+
 function select_nav_btn(current_btn,btn1,btn2,btn3){
+
+if(medium_screen.matches){
+    for(i=0;i<nav_divs.length;i++){
+        nav_divs[i].style.background = 'transparent';
+    };
+    //for loop can settle the following but I choose not to.
+    current_btn.style.borderLeft = '0px solid transparent';
+    btn1.style.borderLeft = '0px solid transparent';
+    btn2.style.borderLeft = '0px solid transparent';
+    btn3.style.borderLeft = '0px solid transparent';
     current_btn.style.borderTop = '3px solid blue';
+    current_btn.style.background = 'lightblue'
     btn1.style.borderTop = '0px solid transparent';
     btn2.style.borderTop = '0px solid transparent';
     btn3.style.borderTop = '0px solid transparent';
+}else{ 
+    for(i=0;i<nav_divs.length;i++){
+        nav_divs[i].style.background = 'transparent'
+    };
+    current_btn.style.background = 'lightblue'
+    current_btn.style.borderTop = '0px solid transparent';
+    btn1.style.borderTop = '0px solid transparent';
+    btn2.style.borderTop = '0px solid transparent';
+    btn3.style.borderTop = '0px solid transparent';
+    current_btn.style.borderLeft = '3px solid blue';
+    btn1.style.borderLeft = '0px solid transparent';
+    btn2.style.borderLeft = '0px solid transparent';
+    btn3.style.borderLeft = '0px solid transparent';
+}
 }
 
 // I prefer the long/hard way here 😅😅😅😂😂
@@ -79,14 +124,11 @@ function indicator(a){
     }
 }
 
-const small_screen = window.matchMedia('(max-width:300px)');
-const medium_screen = window.matchMedia('(min-width:800px) and (max-width:850px)');
-const large_screen = window.matchMedia('(min-width:900px)');
 
 function match_screen(){
     if(small_screen.matches){
         indicator(5500);
-    } else if(medium_screen.matches){
+    } else if(ipad_screen.matches){
         indicator(2500)
     }
     else if(large_screen.matches){
@@ -95,6 +137,7 @@ function match_screen(){
         indicator(4500)
     }
 }
+
 //intersection observer does this best
 //window.onload =()=>match_screen();
 //window.onresize =()=>match_screen();
@@ -103,9 +146,9 @@ function match_screen(){
 const sections = document.querySelectorAll('section')
 const observer = new IntersectionObserver(entries=>{
 if(entries[0].isIntersecting){
-                if(entries[0].target.className === 'intro'){
+               if(entries[0].target.className === 'intro'){
                 select_nav_btn(home_btn,projects_btn,about_btn,contacts_btn)
-                 }else  if(entries[0].target.className === 'about'){
+                 }else  if(entries[0].target.id === 'about_me'){
                 select_nav_btn(about_btn,projects_btn,home_btn,contacts_btn)
                  }else  if(entries[0].target.className === 'projects'){
                 select_nav_btn(projects_btn,home_btn,about_btn,contacts_btn)

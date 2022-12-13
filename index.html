@@ -19,8 +19,17 @@
     <link rel="stylesheet" href="index.css">
   </head>
 <body>
-  <div class="intro"></div><div class="nav">
+  <div id="intro-div"></div>
+  <div class="intro-div opener">
+    <div><img class="logo" src="images/logo.svg" alt="logo"></div>
+    <div onclick='open_menu()' id="topbar" class="opts" >
+      <div class="opt  n1"></div>
+      <div class="opt  n2"></div>
+      <div class="opt  n3"></div>
+    </div>
+  </div>
   <nav id="nav">
+    <div class="logo-div"><img class="logo" src="images/logo.svg" alt="logo"></div>
     <div id="home" class="nav_btn">Intro</div>
     <div id="about" class="nav_btn">About</div>
     <div id="projects" class="nav_btn">Projects</div>
@@ -32,28 +41,53 @@
          a Web Developer.
       </h1>
       <p class="more-container"><a class="find-out-more" href="https://github.com/chuksjohnleo">Find out more</a></p>
+      <h2>Services</h2>
+      <div id="services">
+        <article class="intro-article">
+          <h3>Website development</h3>
+            <p> 
+              I develop different types of websites using different types<br>
+              of technologies such as JavaScript, Node.js, React, SQL etc.
+              You can contact me through my 
+              <a href="mailto:nwanonenyichukwuka@gmail.com" style="text-decoration: none;color: blue;" class="email">email and other media handles</a> for your websites.
+          </p>
+        </article>
+        <article class="intro-article">
+          <h3 class="ah">Past questions and Answers</h3>
+          <p>I also provide past questions and answers for students on my
+            <a style="text-decoration: none;color:blue;" href="https://chuksjohnleo.github.io/past_question">past questions and answers</a> website.
+            Its mainly based on UTME past questions.
+            You can visit the website to learn and prepare
+            for your exams especially university<br>
+            entrance exams.
+          </p>
+        </article>
+      </div>
 </section> 
 <section id="about_me" class="about">
   <div class="about-me-wrapper">
       <h2 class="about-me-h2">ABOUT ME</h2>
       <p  class="about-p">
-          <img id="me" src="images/favicon.jpg" alt="me">
+         <img id="me" src="images/favicon.jpg" alt="me">
+         <p>
           My fullname is Nwanonenyi Chukwuka Leonard.
           I am an Igbo, I love learning and using technologies. I have
           been a web developer for a while now. Learning doesn't stop and am always 
           eager to learn and use new technologies in order to be really good at
           what I do. Software development and using technologies are things that I have passion 
           for.
+          </p> 
           <p>
             My skills include HTML, CSS, JAVASCRIPT, React, Node.js with express, knex and many other Libraries.
             I also have a knowledge of Jquery, another javascript library and also CSS libraries
             like bootstrap, tachyons etc.
           </p>
-       <p><span class="more-about">
-          Some of my hobbies include reading, research, teaching and surfing
-         the web. I also climb palmtrees, once did it as a job 😁.
-        </span>
-       </p>
+          <p>
+            <span class="more-about">
+              Some of my hobbies include reading, research, teaching and surfing
+              the web. I also climb palmtrees, once did it as a job 😁.
+            </span>
+          </p>
       </p>
   </div>
   <div class="resume-link-container"><p><a class="resume-link a-btn" href="https://github.com/chuksjohnleo">See My Resume</a></p></div>
