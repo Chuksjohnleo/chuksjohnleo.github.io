@@ -2,7 +2,7 @@ const nav = document.getElementById('nav');
 const projects_btn = document.getElementById('projects');
 const contacts_btn = document.getElementById('contacts');
 const about_btn = document.getElementById('about');
-const nav_divs = document.getElementsByClassName('nav_btn');
+const nav_divs = nav.querySelectorAll('.nav_btn');
 const email = document.getElementById('email');
 const about_me = document.getElementById('about_me');
 const projects = document.getElementById('project');
@@ -19,17 +19,20 @@ const large_screen = window.matchMedia('(min-width:900px)');
 const open_menu = ()=>{
      topbar.classList.toggle('change');
      nav.classList.toggle('open');
-     
     }
 function click_btn(){
     for(let i=0; i<nav_divs.length;i++) {
         let btn =  nav_divs[i];
-        btn.addEventListener('click',open_menu);
         btn.style.borderTop = '0px';
         btn.style.borderLeft = '0px';
         btn.style.background = 'transparent';
     };
 };
+
+
+nav_divs.forEach((nav_div)=>{
+    nav_div.addEventListener('click',open_menu);
+});
 
 for(let i=0; i<nav_divs.length;i++) {
     let btn =  nav_divs[i];
@@ -81,7 +84,7 @@ if(medium_screen.matches){
     btn2.style.borderTop = '0px solid transparent';
     btn3.style.borderTop = '0px solid transparent';
 }else{ 
-    for(i=0;i<nav_divs.length;i++){
+    for(let i=0;i<nav_divs.length;i++){
         nav_divs[i].style.background = 'transparent'
     };
     current_btn.style.background = 'lightblue'
