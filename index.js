@@ -14,8 +14,9 @@ const small_screen = window.matchMedia('(max-width:300px)');
 const medium_screen =  window.matchMedia('(min-width:700px)');
 const ipad_screen = window.matchMedia('(min-width:800px) and (max-width:850px)');
 const large_screen = window.matchMedia('(min-width:900px)');
-
-
+const year = document.getElementById('year');
+let date = new Date();
+year.innerHTML = date.getFullYear();
 const open_menu = ()=>{
      topbar.classList.toggle('change');
      nav.classList.toggle('open');
