@@ -1,6 +1,6 @@
 # chuksjohnleo.github.io
   A simple homepage
-##Technologies
+## Technologies
 * HTML
 * CSS
 * JavaScript 
