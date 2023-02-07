@@ -347,6 +347,7 @@ h2{
     justify-content: center;
     width: 100%;
     padding: 10px;
+    transition: 0.5s;
 }
 .img-container img{
     width:100%;
@@ -354,11 +355,22 @@ h2{
     margin: 10px;
     margin-left: -14px;
 }
+.img-container:active{
+    transform: skew(5deg,1deg);
+}
 a{
     text-decoration: none;
     color: inherit;
 }
+
 @media screen and (min-width:800px){
+    /* .this-website{
+        max-height: 500px;
+    }*/
+    
+    .description-details{
+        width: 50%;
+    } 
     .description-wrapper{
         display: flex;
         justify-content: space-between;
@@ -369,8 +381,15 @@ a{
     .source-code{
    margin-left: 20px;
     }
-    .img-container img{
-       transform: translateY(-50px);
+    .img-container{
+        width: 50%;
+        transition: 1.5s;
+    }
+    .img-container:hover{
+        transform: skew(5deg,1deg);
+    }
+    .img-container > img{
+       transform: translateY(-30px);
        width: 100%;
        margin-left: 10px;
     }
