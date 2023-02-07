@@ -205,7 +205,10 @@ h2{
     flex-direction: column;
     justify-items: center;
     align-items: center;
-   
+    transition: 1.5s;
+}
+.about-p:active{
+    transform: skew(5deg,5deg);
 }
 .more-about{
     display: inline-block;
@@ -232,6 +235,9 @@ h2{
     text-decoration: none;
 }
 @media screen and (min-width:700px) {
+    .about-p:hover{
+        transform: skew(5deg,5deg);
+    }
     #me{
         width: 300px;
     }
