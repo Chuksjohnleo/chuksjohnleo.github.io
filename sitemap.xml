@@ -7,12 +7,17 @@
 
   <url>
     <loc>https://chuksjohnleo.github.io/</loc>
-    <lastmod>2023-02-16</lastmod>
+    <lastmod>2023-02-21</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://chuksjohnleo.github.io/past_question/</loc>
     <lastmod>2023-02-15</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://chuksjohnleo.github.io/tic-tac-toe/</loc>
+    <lastmod>2023-02-21</lastmod>
     <priority>0.80</priority>
   </url>
   <url>
