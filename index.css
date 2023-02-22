@@ -1,8 +1,9 @@
 body{
-    margin: 0 auto;
+    margin: 0;
     font-family:  sans-serif;
     width: 100%;
 }
+
 .sa:hover{
 opacity: 0.7;
 color: blue;
@@ -17,11 +18,55 @@ color: blue;
     z-index: 1;
     align-items: center;
 }
+.name{
+    margin: 0;
+    display: inline-block;
+    font-size: 0.8rem;
+   color: navy;
+   line-height: 30px;
+}
+.id-container{
+    display: flex;
+    margin-left: 5px;
+}
+
 .logo{
+   
+    height: 30px;
+    width: 40%;
+    display: inline-block;
+    
+}
+
+@media screen and (max-width:200px){
+.logo{
+    height: 15px;
+    width: 20%;
+    display: inline-block;
+ }
+ .name{
+    line-height: 15px;
+ }
+}
+
+@media screen and (min-width:273px){
+    .name{
+      font-size: 1.5rem;
+    }
+    .id-container{
+        gap: 10px;
+    }
+}
+
+.inner{
+    font-size: 1rem;
+}
+
+/* .logo{
     height: 60px;
     width: 100%;
     margin-bottom: -15px;
-}
+} */
 .logo-div{
     display: none;
 }
@@ -38,21 +83,21 @@ color: blue;
     cursor: pointer;
     margin: 5px;
     background-color: black;
-    height: 7px;
+    height: 5px;
     width: 3rem;
     cursor: pointer;
     transition: 0.31s;
   }
   .change .n1{
     margin-top: 0px;
-    transform:translateY(17px) rotate(45deg);
+    transform:translateY(15px) rotate(45deg);
   
   }
   .n2{
     transition: 0.2s;
   }
   .change .n3{
-    transform:translateY(-17px) rotate(-45deg);
+    transform:translateY(-15px) rotate(-45deg);
   }
   .change .n2{
     opacity: 0;
@@ -81,10 +126,18 @@ nav{
     height: 100%;
     box-shadow: 2px 2px 2px black;
     background-color: white;
-    opacity: 0.99;
+    opacity: 0.9;
     color: navy;
     z-index: 1;
 }
+
+.nav_btn{
+    padding:0px 40px;
+    margin: 20px;
+    cursor: pointer;
+    font-weight: 900;
+}
+
 @media screen and (min-width:820px){
     .logo-div{
         display: block;
@@ -103,14 +156,12 @@ nav{
         height: 70px;
 
     }
+    .nav_btn{
+        margin:20px 0px;
+        font-weight: 100;
+    }
 }
 
-.nav_btn{
-    padding:0px 40px;
-    margin: 20px;
-    cursor: pointer;
-    font-weight: 900;
-}
 .nav_btn:hover{
     transform: scale(1.1);
 }
