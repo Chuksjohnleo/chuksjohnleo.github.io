@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="sr">
+<html lang="en">
  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -23,7 +23,7 @@
 <body>
   <div id="intro-div"></div>
   <div class="intro-div opener">
-    <div class="id-container"><img class="logo" src="images/logo.svg" alt="logo"><h1 class="name">Chuksjohleo</h1></div>
+    <div class="id-container"><img class="logo" src="images/logo.svg" alt="logo"><h1 class="name">Chuksjohnleo</h1></div>
     <div onclick='open_menu()' id="topbar" class="opts" >
       <div class="opt  n1"></div>
       <div class="opt  n2"></div>
@@ -31,8 +31,8 @@
     </div>
   </div>
   <nav id="nav">
-    <div class="logo-div"><img class="logo" src="images/logo.svg" alt="logo"><h1 class="name inner">Chuksjohleo</h1></div>
-    <div id="home" class="nav_btn">Intro</div>
+    <div class="logo-div"><img class="logo" src="images/logo.svg" alt="logo"><h1 class="name inner">Chuksjohnleo</h1></div>
+    <div id="home" style="text-align: left;" class="nav_btn">Intro</div>
     <div id="about" class="nav_btn">About</div>
     <div id="projects" class="nav_btn">Projects</div>
     <div id="contacts" class="nav_btn">Contacts</div>
@@ -43,21 +43,23 @@
          a Web Developer.
       </h1>
       <p class="more-container"><a class="find-out-more" href="https://github.com/chuksjohnleo">Find out more</a></p>
-      <h2>Services</h2>
-      <div id="services">
+      <h2 style="margin: 10%;" class="services-h3">My Services</h2>
+      <div id="services" style="font-weight: 300;">
         <article class="intro-article">
+          <div class="intro-img-container"><div class="intro-img-wrapper"><img class="intro-img" src="images/code.png"></div></div>
           <h3>Website development</h3>
             <p> 
-              I develop different types of websites using different types<br>
-              of technologies such as JavaScript, Node.js, React, SQL etc.
-              You can contact me through my 
-              <a href="mailto:nwanonenyichukwuka@gmail.com" style="text-decoration: none;color: navy;font-weight: 700;" class="email sa">email</a> and other media handles for your websites.
+              I develop different types of websites<br> using different types
+              of technologies such as JavaScript,<br> Node.js, React, SQL etc.
+              You can contact me through my <br>
+              <a href="mailto:nwanonenyichukwuka@gmail.com" style="text-decoration: none;color: navy;font-weight: 900;" class="email sa">email</a><br> and other media handles for your websites.
           </p>
         </article>
         <article class="intro-article">
+          <div class="intro-img-container"><div class="intro-img-wrapper"><img class="intro-img" src="images/pastquestion.png"></div></div>
           <h3 class="ah">Past questions and Answers</h3>
-          <p>I also provide past questions and answers for students on my
-            <a style="text-decoration: none;color:navy;font-weight: 900;" href="https://chuksjohnleo.github.io/past_question" class="pstq sa">past questions and answers</a> website.
+          <p>I also provide past questions and answers for students on my<br>
+            <a style="text-decoration: none;color:navy;font-weight: 900;" href="https://chuksjohnleo.github.io/past_question" class="pstq sa">past questions and answers</a><br> website.
             Its mainly based on UTME past questions.
             You can visit the website to learn and prepare
             for your exams especially university<br>
@@ -65,7 +67,7 @@
           </p>
         </article>
       </div>
-</section> 
+</section> <hr>
 <section id="about_me" class="about">
   <div class="about-me-wrapper">
       <h2 class="about-me-h2">ABOUT ME</h2>
@@ -106,7 +108,7 @@
 </section>
 <p id="project-view"><span  id="project"></span></p>
 <section class="projects">
-      <h1>PROJECTS</h1><hr>
+      <h2>PROJECTS</h2><hr>
       <article class="this-website">
         <h3>Real Time Chat App</h3>
         <div class="description-wrapper">
@@ -323,12 +325,24 @@
           <div class="img-container"><img src="images/code.png" alt="demo image"></div>
         </div>
       </article>
-</section>
+</section><hr>
 <section class="contact">
     <h2>CONTACT</h2>
     <div>
-      <p> You can contact me for your websites through my</p>
+      <p style="font-weight: 900;"> 
+         You can contact or hire me for your websites by clicking the button below to send an email.
+         You can equally reach me through my social media handles</p>
       <span class="email" id="email"><a class="email-link" href="mailto:nwanonenyichukwuka@gmail.com">Email</a></span>
+       <article style="font-weight: 900;">
+        <h2> Socials </h2>
+        <em> Follow or chat me</em>
+        <p id="socials">
+          <a href="https://github.com/Chuksjohnleo"><img src="images/github.svg" alt="github"></a>
+          <a href="https://twitter.com/mariadevsQ"><img src="images/twitter.svg" alt="twitter"></a>
+          <a href="https://wa.me/message/QT6HAF2AQUH6C1"><img src="images/whats.png" alt="whatsapp"></a>
+          <a href="https://www.facebook.com/chuksjohnleo.nwanonenyi"><img src="images/fb.svg" alt="facebook"></a>
+        </p>
+      </article>
    </div>
 </section>
 
@@ -336,9 +350,9 @@
   <div id="up">🔝</div>
   <p>Website by Chuksjohleo</p>
   <p id="social">
-     <a href="https://github.com/Chuksjohnleo"><img src="images/github.svg" alt="github"></a>
+     <!-- <a href="https://github.com/Chuksjohnleo"><img src="images/github.svg" alt="github"></a> -->
      <a href="https://twitter.com/mariadevsQ"><img src="images/twitter.svg" alt="twitter"></a>
-     <a href="https://wa.me/message/QT6HAF2AQUH6C1"><img src="images/whats.png" alt="whatsapp"></a>
+     <!-- <a href="https://wa.me/message/QT6HAF2AQUH6C1"><img src="images/whats.png" alt="whatsapp"></a> -->
      <a href="https://www.facebook.com/chuksjohnleo.nwanonenyi"><img src="images/fb.svg" alt="facebook"></a>
    </p>
    <p style="word-wrap: break-word;max-width: 95vw;">✉️Email: nwanonenyichukwuka@gmail.com</p>
