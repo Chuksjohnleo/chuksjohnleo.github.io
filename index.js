@@ -2,7 +2,7 @@ const nav = document.getElementById('nav');
 const projects_btn = document.getElementById('projects');
 const contacts_btn = document.getElementById('contacts');
 const about_btn = document.getElementById('about');
-const nav_divs = nav.querySelectorAll('.nav_btn');
+const nav_divs = nav.querySelectorAll('.nav-btn');
 const email = document.getElementById('email');
 const about_me = document.getElementById('about_me');
 const projects = document.getElementById('project');
@@ -11,12 +11,16 @@ const intro = document.getElementById('intro-div');
 const up = document.getElementById('up');
 const topbar = document.getElementById('topbar');
 const small_screen = window.matchMedia('(max-width:300px)');
-const medium_screen =  window.matchMedia('(min-width:700px)');
+const medium_screen =  window.matchMedia('(min-width:820px)');
 const ipad_screen = window.matchMedia('(min-width:800px) and (max-width:850px)');
 const large_screen = window.matchMedia('(min-width:900px)');
 const year = document.getElementById('year');
+
+let currentSectionNavBtn;
+
 let date = new Date();
 year.innerHTML = date.getFullYear();
+
 const open_menu = ()=>{
      topbar.classList.toggle('change');
      nav.classList.toggle('open');
@@ -35,17 +39,22 @@ nav_divs.forEach((nav_div)=>{
     nav_div.addEventListener('click',open_menu);
 });
 
+function highlightTheClickedBtn(btn){
+    click_btn();
+    if(medium_screen.matches){
+        btn.style.borderTop = '3px solid blue';
+        btn.style.background = 'lightblue'
+    }else{
+        btn.style.borderLeft = '3px solid blue';
+        btn.style.background = 'lightblue';
+    }
+}
+
 for(let i=0; i<nav_divs.length;i++) {
     let btn =  nav_divs[i];
     btn.addEventListener('click',()=>{
-        click_btn();
-        if(medium_screen.matches){
-            btn.style.borderTop = '3px solid blue';
-            btn.style.background = 'lightblue'
-        }else{
-            btn.style.borderLeft = '3px solid blue';
-            btn.style.background = 'lightblue';
-        }
+        highlightTheClickedBtn(btn);
+        currentSectionNavBtn = btn;
     });
 };
    
@@ -144,24 +153,50 @@ function match_screen(){
 
 //intersection observer does this best
 //window.onload =()=>match_screen();
-//window.onresize =()=>match_screen();
+window.onresize =()=>{
+    console.log(currentSectionNavBtn)
+  if(currentSectionNavBtn)  highlightTheClickedBtn(currentSectionNavBtn);
+};
 //window.onscroll =()=> match_screen();
 
 const sections = document.querySelectorAll('section')
 const observer = new IntersectionObserver(entries=>{
 if(entries[0].isIntersecting){
                if(entries[0].target.className === 'intro'){
+                currentSectionNavBtn = home_btn;
                 select_nav_btn(home_btn,projects_btn,about_btn,contacts_btn)
                  }else  if(entries[0].target.id === 'about_me'){
-                select_nav_btn(about_btn,projects_btn,home_btn,contacts_btn)
+                    currentSectionNavBtn = about_btn;
+                    select_nav_btn(about_btn,projects_btn,home_btn,contacts_btn)
                  }else  if(entries[0].target.className === 'projects'){
-                select_nav_btn(projects_btn,home_btn,about_btn,contacts_btn)
+                    currentSectionNavBtn = projects_btn;
+                    select_nav_btn(projects_btn,home_btn,about_btn,contacts_btn)
                   }else  if(entries[0].target.className === 'contact'){   
-                select_nav_btn(contacts_btn,projects_btn,about_btn,home_btn)
+                    currentSectionNavBtn = contacts_btn;
+                    select_nav_btn(contacts_btn,projects_btn,about_btn,home_btn)
                  }
 
         }
 });
+
 sections.forEach(section=>{
     observer.observe(section);
 })
+
+
+function siter(){
+fetch('https://chuksjohnleo.github.io')
+  .then(response => response.text())
+  .then(html => {
+    const parser = new DOMParser();
+    const doc = parser.parseFromString(html, 'text/html');
+    const title = doc.querySelector('head title').textContent;
+    const ogImage = doc.querySelector('head meta[property="og:image"]').getAttribute('content');
+    const description = doc.querySelector('head meta[name="Description"]').getAttribute('content');
+    const ogt = doc.querySelector('head meta[name="og:title"]').getAttribute('content');
+  
+    // const ogTitle = doc.querySelector('head meta[property="og:title"]').getAttribute('content');
+    console.log(title, ogImage,description,ogt)//,ogTitle);
+  })
+  .catch(error => console.error(error));
+}

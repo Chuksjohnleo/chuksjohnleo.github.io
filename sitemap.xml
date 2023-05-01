@@ -4,15 +4,15 @@
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
-
+<!-- yyyy-mm-dd -->
   <url>
     <loc>https://chuksjohnleo.github.io/</loc>
-    <lastmod>2023-02-22</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <priority>1.00</priority>
   </url>
   <url>
     <loc>https://chuksjohnleo.github.io/past_question/</loc>
-    <lastmod>2023-02-15</lastmod>
+    <lastmod>2023-05-01</lastmod>
     <priority>0.80</priority>
   </url>
   <url>

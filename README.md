@@ -1,5 +1,6 @@
 # chuksjohnleo.github.io
-  A simple homepage
+  A simple Personal/Portfolio website
+  
 ## Technologies
 * HTML
 * CSS
