@@ -322,13 +322,14 @@ services-h1{
 
 .about-in-h1,
 .about-in-h2{
- width: 40%;
+ width: 60%;
+
  border-bottom: 1px solid black;
 }
 
 .about-me-wrapper img{
     display: block;
-    margin: 20px 0px 0px 20px;
+    margin: 0;
 }
 
 #me{
@@ -344,6 +345,12 @@ services-h1{
     padding: 10px;
     font-weight: 900;
     text-decoration: none;
+}
+
+@media screen and (min-width:280px){
+    .skill-list-container{
+       display: flex;
+    }
 }
 @media screen and (min-width:700px) {
     #me{

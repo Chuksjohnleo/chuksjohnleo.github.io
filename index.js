@@ -154,7 +154,6 @@ function match_screen(){
 //intersection observer does this best
 //window.onload =()=>match_screen();
 window.onresize =()=>{
-    console.log(currentSectionNavBtn)
   if(currentSectionNavBtn)  highlightTheClickedBtn(currentSectionNavBtn);
 };
 //window.onscroll =()=> match_screen();
