@@ -131,7 +131,7 @@ nav{
     justify-content: space-between;
     flex-direction: column;
     position: sticky;
-    top: 60px;
+    top: 50px;
     gap: 20px;
     height: 100%;
     box-shadow: 2px 2px 2px black;
