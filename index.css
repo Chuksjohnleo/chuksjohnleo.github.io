@@ -255,8 +255,8 @@ nav{
 }
 
 .intro-h1-wrapper{
-    background-image: url('images/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg');
-    background-size:cover;
+    /* background-image: url('images/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg');
+    background-size:cover; */
     height: 600px;
 }
 
