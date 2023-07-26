@@ -24,6 +24,9 @@ year.innerHTML = date.getFullYear();
 const open_menu = ()=>{
      topbar.classList.toggle('change');
      nav.classList.toggle('open');
+     if(!topbar.className.includes('change')){
+        topbar.classList.toggle('opt-bouncer');
+    }
     }
 function click_btn(){
     for(let i=0; i<nav_divs.length;i++) {

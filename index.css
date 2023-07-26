@@ -6,6 +6,16 @@ body{
 
 .starting-char{
     font-size: 48px;
+    color: navy;
+}
+
+.important-h1{
+    color: navy;
+}
+
+.sub-h1,
+.sub-h2{
+  color: blue;
 }
 
 .special-link:hover{
@@ -15,26 +25,31 @@ color: blue;
 .opener{
     display: flex;
     justify-content: space-between;
-    box-shadow: 2px 2px 2px black;
+    /* box-shadow: 2px 2px 2px black; */
     position: sticky;
     top: 0;
     background-color: white;
     z-index: 1;
     align-items: center;
+    transition: 4s;
 }
 
 .id-container{
     display: flex;
     margin-left: 5px;
+    align-content: center;
 }
 
 .logo{
-    height: 30px;
+    height: 50px;
     width: 40%;
     display: inline-block; 
 }
 
+
+
 .name{
+    padding-top: 5px;
     margin: 0;
     display: inline-block;
     color: navy;
@@ -63,6 +78,8 @@ color: blue;
 
 .services-img-wrapper{
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .services-img-container{
@@ -71,8 +88,8 @@ color: blue;
 }
 
 .services-img{
-    width: 100%;
-    height: 300px;
+    width: 60%;
+    height: 100px;
     object-fit: cover;
 }
 
@@ -89,20 +106,38 @@ color: blue;
     cursor: pointer;
   }
 
+  .opts:hover{
+    background-color: rgba(0, 0, 128,0.08);
+  }
+
   .opt{
     margin: 3px;
     background-color: black;
-    height: 5px;
-    width: 40px;
-    transition: 0.31s;
+    height: 3px;
+    width: 30px;
+    transition: 0.92s;
   }
+.opt-bouncer .n1,
+.opt-bouncer .n2,
+.opt-bouncer .n2{
+    animation: bouncer 0.4s ease-in-out 0s 2;
+ }
+  @keyframes bouncer {
+    0%{
+        transform: translateY(-15px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+  
   .change .n1{
     margin-top: 0px;
-    transform:translateY(11px) rotate(45deg);
+    transform:translateY(7px) rotate(45deg);
   
   }
   .n2{
-    transition: 0.2s;
+    transition: 0.32s;
   }
   .change .n3{
     transform:translateY(-11px) rotate(-45deg);
@@ -113,7 +148,9 @@ color: blue;
   }
   .open{
     display: flex;
-    height: 100%;
+    height: 200px;
+    border-bottom: 1px solid black;
+    /* transition: 4s; */
   }
 
 .img-bg img{
@@ -125,33 +162,37 @@ section{
     transition: 1s;
 }
 
+
 nav{
-    display: none;
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
     position: sticky;
     top: 50px;
     gap: 20px;
-    height: 100%;
-    box-shadow: 2px 2px 2px black;
+    height: 0;
+    overflow: hidden;
+    display: flex;
     background-color: white;
     opacity: 0.97;
     color: navy;
+    transition: 1s;
     z-index: 1;
 }
 
 .nav-btn-container{
  display: flex;
  flex-direction: column;
- margin:0 3px;
+ margin:3px 3px;
 }
 
 .nav-btn{
-    padding:0px 20px;
-    margin: 10px;
+    padding:10px 10px;
     cursor: pointer;
     font-weight: 900;
+    font-size: 20px;
+    width: 100%;
+    /* text-align: center; */
 }
 
 @media screen and (min-width:820px){
@@ -185,8 +226,12 @@ nav{
     font-weight: 900;
 }
 
-services-h1{
+.services-h1{
+    margin: 20px;
     margin-top: 100px;
+    padding: 0;
+    font-size: 25px;
+    font-weight: 900;
 }
 
 @media screen and (max-width:200px){
@@ -196,21 +241,51 @@ services-h1{
 }
 
 .intro{
-    margin: 10px 20px;
+    margin-top: 2px;
+    margin: 10px 5px;
 }
 
 
 .intro-h1{
-    margin-top: 100px;
+    padding: 15px;
+    padding-top: 100px;
+    font-size:30px;
+    max-width: 96vw;
+    word-wrap: break-word;
+}
+
+.intro-h1-wrapper{
+    background-image: url('images/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg');
+    background-size:cover;
+    height: 600px;
 }
 
 .my-name{
     color: navy;
 }
+
+.my-name,
+.name{
+    font-size: xx-large;
+    font-family: cursive;
+}
+
 .more-container{
-    margin: 100px 1px;
+    margin: 100px 10px;
+}
+.photo-credit{
+    margin: 20px;
+    padding: 10px;
+    font-size: 16px;
+    text-align: right;
+}
+.photo-credit a{
+   color: blue;
 }
 .find-out-more{
+    backdrop-filter: blur(5px);
+    font-weight: 900;
+    font-size: x-large;
     display: inline-block;
     text-decoration: none;
     padding: 5px;
@@ -320,7 +395,6 @@ services-h1{
     margin: 1px auto;
 }
 
-.about-in-h1,
 .about-in-h2{
  width: 50%;
 
@@ -350,6 +424,12 @@ services-h1{
 @media screen and (min-width:280px){
     .skill-list-container{
        display: flex;
+    }
+}
+
+@media screen and (max-width:360px){
+    .name{
+       font-size: 16px;
     }
 }
 @media screen and (min-width:700px) {
