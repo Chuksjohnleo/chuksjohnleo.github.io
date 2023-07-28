@@ -100,13 +100,23 @@ color: blue;
     border-radius: var(--border-radius);
   }
 
-  .opts:hover{
+  .opts:active{
     background-color: var(--main-color);
   }
 
-  .opts:hover .opt{
+  .opts:active .opt{
     background-color: white;
   }
+  @media screen and (hover:hover){
+    .opts:hover{
+        background-color: var(--main-color);
+      }
+
+      .opts:hover .opt{
+        background-color: white;
+      }
+  }
+
 
   .opt{
     margin: 3px;
@@ -274,7 +284,7 @@ nav{
     font-size:30px;
     max-width: 96vw;
     word-wrap: break-word;
-    font-size: 60px;
+    font-size: 35px;
     color: white;
     font-family: Arial, sans-serif;
     text-shadow: 3px 2px 2px black;
@@ -297,7 +307,7 @@ nav{
     display: inline-block;
     font-weight: 900;
     border-radius: var(--border-radius);
-    text-shadow: 5px 5px 1px white;
+    text-shadow: 3px 3px 1px white;
     max-width: 90vw;
     word-wrap: break-word;
     animation: textShadows 2s ease-in-out 3s infinite normal;
@@ -329,7 +339,7 @@ nav{
 .photo-credit{
     margin: 20px;
     padding: 10px;
-    font-size: 16px;
+    font-size: 12px;
     text-align: right;
 }
 .photo-credit a{
