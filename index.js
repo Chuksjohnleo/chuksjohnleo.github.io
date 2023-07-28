@@ -15,18 +15,34 @@ const medium_screen =  window.matchMedia('(min-width:820px)');
 const ipad_screen = window.matchMedia('(min-width:800px) and (max-width:850px)');
 const large_screen = window.matchMedia('(min-width:900px)');
 const year = document.getElementById('year');
+const changerBg = document.getElementById('changer-bg');
+
+// setInterval(()=>{
+//    if(changerBg.src.includes('images/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg')) {
+//     console.log(changerBg.src.length,changerBg.src )
+//     changerBg.src = 'images/code.png';
+//     return
+//   }
+//   changerBg.src = 'images/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg';
+// },1000)
 
 let currentSectionNavBtn;
 
 let date = new Date();
 year.innerHTML = date.getFullYear();
 
+let clickCount = 0;
 const open_menu = ()=>{
+     clickCount++;
      topbar.classList.toggle('change');
      nav.classList.toggle('open');
-     if(!topbar.className.includes('change')){
-        topbar.classList.toggle('opt-bouncer');
-    }
+    //  if(!topbar.className.includes('change')){
+        if(clickCount%2 === 0){
+          topbar.classList.add('opt-bouncer');
+          return
+        }
+        topbar.classList.remove('opt-bouncer');
+    console.log(clickCount%2 === 0)
     }
 function click_btn(){
     for(let i=0; i<nav_divs.length;i++) {
