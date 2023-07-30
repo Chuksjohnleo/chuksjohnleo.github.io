@@ -1,6 +1,6 @@
 :root{
     --border-radius: 10px;
-    --main-color: rgb(11, 85, 245);
+    --main-color:  rgb(15, 85, 245);
 }
 *{
     word-wrap: break-word;
@@ -76,7 +76,7 @@ color: blue;
     max-width: 70vw;
     word-wrap: break-word;
     font-size: xx-large;
-    font-family: cursive;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
 .services-img-wrapper{
@@ -294,9 +294,9 @@ nav{
     text-align: center;
 }
 
-/* .intro-h1-container{
+.intro-h1-container{
     z-index: 9999;
-} */
+}
 
 .intro-h1-bg-img{
     width: 100%;
@@ -304,7 +304,7 @@ nav{
     object-fit: cover;
     position: absolute;
     inset: 0;
-    z-index: -1;
+    z-index: -999;
 }
 
 .intro-h1{
@@ -328,8 +328,8 @@ nav{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, .8);
-    z-index: 0;
+    background: linear-gradient(to top, black, rgba(0, 0, 0, .8), rgba(15, 85, 245, .425), rgba(0, 0, 0,.8));
+    z-index: -1;
 }
 
 .my-name{
@@ -584,22 +584,22 @@ nav{
     }
 }
 @media screen and (min-width:700px) {
-    #me{
+    /* #me{
         width: 300px;
-    }
+    } */
     
     .more-about{
         margin: auto;
         display: inline;
        
     }
-    .about-me-wrapper img{
-        width: 300px;
+    /* .about-me-wrapper img{
+        width: 100px;
         float: right;
         margin: 10px;
         padding: 20px;
     }
-   
+    */
     .resume-link-container{
         display: block;
         align-self: center;
@@ -611,8 +611,21 @@ nav{
         margin: 0px;
     }
     .about{
-        padding: 100px;
+        padding: 60px;
     }
+    #me{
+        width: 300px;
+    }
+    .about-me-wrapper img{
+        /* width: 100px; */
+        float: right;
+        /* margin: 10px;
+        padding: 20px; */
+    }
+   .contact-h1,
+   .services-h1{
+    margin-left: 10%;
+   }
 }
 
 @media screen and (min-width:1050px){
@@ -621,7 +634,6 @@ nav{
         border-bottom: 0px;
         margin-bottom: 0px;
     }
-   
 }
 
 #project-view{
@@ -809,14 +821,14 @@ a{
     box-shadow: 2px 2px 3px var(--main-color);
 }
 
-.cta p:nth-child(even){
+/* .cta p:nth-child(even){
     animation:secondrowanimation1 5s ease-in 1s infinite normal;
 }
 
 .cta p:nth-child(odd){
     animation: name duration timing-function delay iteration-count direction fill-mode;
     animation:firstrowanimation1 5s ease-in 1s infinite normal;
-}
+} */
 
 @media screen and (min-width:780px){
     .contact-details-wrapper{
@@ -824,7 +836,7 @@ a{
     }
 }
 
-@media screen and (max-width:160px){
+/* @media screen and (max-width:160px){
     .cta{
         grid-template-columns: repeat(1,minmax(50px,1fr));
         grid-template-rows: repeat(2,1fr);
@@ -835,10 +847,10 @@ a{
     }
     
     .cta p:nth-child(odd){
-        /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+        animation: name duration timing-function delay iteration-count direction fill-mode;
         animation:firstrowanimation2 5s ease-in 1s infinite normal;
     }
-}
+} */
 
 @keyframes firstrowanimation1 {
     from{

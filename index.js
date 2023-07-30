@@ -42,8 +42,8 @@ const open_menu = ()=>{
           return
         }
         topbar.classList.remove('opt-bouncer');
-    console.log(clickCount%2 === 0)
-    }
+};
+
 function click_btn(){
     for(let i=0; i<nav_divs.length;i++) {
         let btn =  nav_divs[i];
@@ -176,8 +176,10 @@ window.onresize =()=>{
   if(currentSectionNavBtn)  highlightTheClickedBtn(currentSectionNavBtn);
 };
 window.onclick =(e)=>{
-    if(!e.target.className.includes('menu') && e.target.id !== 'nav'){
-        console.log(e.target)
+    if(!e.target.closest('nav') 
+       && !e.target.closest('.menu') 
+       && nav.className.includes('open')){
+        open_menu()
     }
 };
 
