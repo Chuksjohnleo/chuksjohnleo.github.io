@@ -175,7 +175,11 @@ function match_screen(){
 window.onresize =()=>{
   if(currentSectionNavBtn)  highlightTheClickedBtn(currentSectionNavBtn);
 };
-//window.onscroll =()=> match_screen();
+window.onclick =(e)=>{
+    if(!e.target.className.includes('menu') && e.target.id !== 'nav'){
+        console.log(e.target)
+    }
+};
 
 const sections = document.querySelectorAll('section')
 const observer = new IntersectionObserver(entries=>{
