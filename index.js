@@ -61,11 +61,11 @@ nav_divs.forEach((nav_div)=>{
 function highlightTheClickedBtn(btn){
     click_btn();
     if(medium_screen.matches){
-        btn.style.borderTop = '3px solid blue';
-        btn.style.background = 'lightblue'
+        btn.style.borderTop = '3px solid grey';
+        btn.style.background = 'grey'
     }else{
-        btn.style.borderLeft = '3px solid blue';
-        btn.style.background = 'lightblue';
+        btn.style.borderLeft = '3px solid grey';
+        btn.style.background = 'grey';
     }
 }
 
@@ -107,8 +107,8 @@ if(medium_screen.matches){
     btn1.style.borderLeft = '0px solid transparent';
     btn2.style.borderLeft = '0px solid transparent';
     btn3.style.borderLeft = '0px solid transparent';
-    current_btn.style.borderTop = '3px solid blue';
-    current_btn.style.background = 'lightblue'
+    current_btn.style.borderTop = '3px solid grey';
+    current_btn.style.background = 'grey'
     btn1.style.borderTop = '0px solid transparent';
     btn2.style.borderTop = '0px solid transparent';
     btn3.style.borderTop = '0px solid transparent';
@@ -116,12 +116,12 @@ if(medium_screen.matches){
     for(let i=0;i<nav_divs.length;i++){
         nav_divs[i].style.background = 'transparent'
     };
-    current_btn.style.background = 'lightblue'
+    current_btn.style.background = 'grey'
     current_btn.style.borderTop = '0px solid transparent';
     btn1.style.borderTop = '0px solid transparent';
     btn2.style.borderTop = '0px solid transparent';
     btn3.style.borderTop = '0px solid transparent';
-    current_btn.style.borderLeft = '3px solid blue';
+    current_btn.style.borderLeft = '3px solid grey';
     btn1.style.borderLeft = '0px solid transparent';
     btn2.style.borderLeft = '0px solid transparent';
     btn3.style.borderLeft = '0px solid transparent';
@@ -135,24 +135,24 @@ function indicator(a){
     if(window.scrollY >= 400 && window.scrollY < 1100){//select_nav_btn(about_btn, home_btn,projects_btn,contacts_btn)
         
         contacts_btn.style.borderTop = '0px solid transparent'
-        about_btn.style.borderTop = '3px solid blue'
+        about_btn.style.borderTop = '3px solid grey'
         projects_btn.style.borderTop = '0px solid transparent'
         home_btn.style.borderTop = '0px solid transparent';
     }else if(window.scrollY >= 1100 && window.scrollY < a){// select_nav_btn(projects_btn, home_btn, about_btn,contacts_btn)
         about_btn.style.borderTop = '0px solid transparent';
-        projects_btn.style.borderTop = '3px solid blue';
+        projects_btn.style.borderTop = '3px solid grey';
         contacts_btn.style.borderTop = '0px solid transparent';
         home_btn.style.borderTop = '0px solid tranparent';
     }else if(window.scrollY >= a){//select_nav_btn(contacts_btn, home_btn,projects_btn,about_btn)
         projects_btn.style.borderTop = '0px solid transparent';
         about_btn.style.borderTop = '0px solid transparent';
-        contacts_btn.style.borderTop = '3px solid blue';
+        contacts_btn.style.borderTop = '3px solid grey';
         home_btn.style.borderTop = '0px solid transparent';
     }else{//select_nav_btn(home_btn,projects_btn,about_btn,contacts_btn)
         projects_btn.style.borderTop = '0px solid transparent';
         about_btn.style.borderTop = '0px solid transparent';
         contacts_btn.style.borderTop = '0px solid transparent';
-        home_btn.style.borderTop = '3px solid blue';
+        home_btn.style.borderTop = '3px solid grey';
     }
 }
 
