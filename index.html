@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="light">
  <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,23 +25,32 @@
   </head>
 <body>
   <div id="intro-div"></div>
-  <div class="menu opener">
-    <div class="id-container"><img class="logo" src="images/logo.svg" alt="logo"><h1 class="name">Chuksjohnleo</h1></div>
+  <div class="sticky-nav-bar">
+   <div class="menu opener">
+    <div class="id-container">
+      <strong class="name">Chuksjohnleo</strong>
+      <button title="select theme" id="theme_selector">
+        <svg width="30px" height="30px" viewBox="0 0 24 24" fill="lightblue">
+          <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="lightblue" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
     <div onclick='open_menu()' id="topbar" class="opts" >
       <div class="opt  n1"></div>
       <div class="opt  n2"></div>
       <div class="opt  n3"></div>
     </div>
-  </div>
-  <nav id="nav">
-    <div class="logo-div"><img class="logo" src="images/logo.svg" alt="logo"><h1 class="name inner">Chuksjohnleo</h1></div>
+   </div>
+ 
+   <nav id="nav">
     <div class="nav-btn-container">
-      <div id="home" class="nav-btn">Intro</div>
+      <div id="home" class="nav-btn">Introduction</div>
       <div id="about" class="nav-btn">About</div>
       <div id="projects" class="nav-btn">Projects</div>
       <div id="contacts" class="nav-btn">Contacts</div>
     </div>
-  </nav>
+   </nav>
+  </div>
   <section class="intro">
     <!-- <button onclick="siter()">siter</button> -->
     <div class='intro-h1-wrapper'>
@@ -51,20 +60,23 @@
      </div>
      <div class='intro-h1-container'>
       <h1 class="intro-h1">
-         Hello! Welcome to my website. 
+         Hi! I am Leonard. <span class="hero">Your web developer</span>
       </h1>
-      <p class="page-description"> 
-        I am <span class="my-name">Chuksjohnleo</span>, a passionate and skilled Fullstack Developer dedicated to crafting innovative digital solutions.
+      <div class="i-am-tired-of-forging-names">
+       <p class="page-description"> 
+        I am <span class="my-name">Chukwuka Leonard Nwanonenyi,</span> a passionate and skilled Fullstack Developer dedicated to crafting innovative digital solutions.
          With a strong foundation in both frontend and backend technologies,
-          I thrive in building seamless web applications that deliver
-           exceptional user experiences. Through my projects,
            I showcase my expertise in various programming languages, 
            frameworks, and tools, as well as my problem-solving abilities
-            and attention to detail. Join me on this journey as we explore
-             the world of web development and witness the power of 
-             technology in action.
-          Let's collaborate and turn ideas into reality!
-      </p>
+           and attention to detail. Join me on this journey as we explore
+           the world of web development and witness the power of 
+           technology in action.
+           Let's collaborate and turn ideas into reality!
+       </p>
+       <div class="intro-img-wrapper">
+        <div class="intro-img-container"><img class="intro-img" src="images/chukwuka_leonard_nwanonenyi.jpg" alt="Computer code by Karl Pawlowicz on unsplash."></div>
+       </div>
+      </div>
       <p class="more-container"><a target="_blank" class="find-out-more" href="https://github.com/chuksjohnleo">Find out more</a></p>
       <aside class="photo-credit">Photo by <a target="_blank" href="https://unsplash.com/@karlp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Karl Pawlowicz</a> on <a target="_blank" href="https://unsplash.com/photos/QUHuwyNgSA0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a></aside>
      </div>
@@ -108,7 +120,7 @@
   <div class="about-me-wrapper">
       <h1 class="about-me-h1 important-h1">ABOUT ME</h1>
       <article  class="about-article">
-         <img id="me" src="images/favicon.jpg" alt="me">
+         <div class="my-pics-container"><img id="me" src="images/favicon.jpg" alt="me"></div>
          <h2 class="about-in-h2 sub-h2">Personal Details</h2>
          <p>
           <span class="starting-char">M</span>y fullname is Nwanonenyi Chukwuka Leonard.
@@ -160,7 +172,7 @@
 </section>
 <p id="project-view"><span  id="project"></span></p>
 <section class="projects">
-      <h1 class="important-h1">PROJECTS</h1>
+      <h1 class="important-h1 projects-h1">PROJECTS</h1>
       <article class="project-article">
         <h1>Real Time Chat App</h1>
         <div class="description-wrapper">
@@ -435,7 +447,7 @@
 
 <footer>
   <div class="upper-footer">
-   <div id="up">Back To Top</div>
+   <div class="scroll-up-container"><button type="button" title="scroll up" id="up">Back To Top</button></div>
    <p>Website by Chuksjohleo</p>
 
    <div id="social">
