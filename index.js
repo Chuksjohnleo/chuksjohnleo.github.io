@@ -188,6 +188,10 @@ window.onclick = (e) => {
 
 const sections = document.querySelectorAll("section");
 const observer = new IntersectionObserver((entries) => {
+//   entries.forEach(entry=>{
+//     entry.isIntersecting && !entry.target.classList.contains('viewed-section')?entry.target.classList.add('viewed-section'):entry.target.classList.remove('viewed-section');
+//   });
+  console.log(entries.length)
   if (entries[0].isIntersecting) {
     if (entries[0].target.className === "intro") {
       currentSectionNavBtn = home_btn;
