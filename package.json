@@ -1,0 +1,17 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tailwindcss build -i tailwind.css -o styles/tailwind.css",
+    "dev": "tailwindcss build -i tailwind.css -o styles/tailwind.css",
+    "start": "tailwindcss build -i tailwind.css -o styles/tailwind.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "tailwindcss": "^3.4.3"
+  }
+}

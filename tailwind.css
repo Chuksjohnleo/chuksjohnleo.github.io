@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: only light;
+  --opposite-bg-color: rgb(58, 57, 57);
+  --primary-border-radius: 12px;
+  --primary-color: rgb(59, 130, 246);
+  --secondary-color: rgb(129, 140, 248);
+  --positive-color: rgb(0, 0, 255);
+  --tertiary-color: rgb(235, 237, 252);
+  --other-color: rgb(240, 240, 250); /* I don't know what to name it*/
+  --danger-color: rgb(220, 38, 38);
+  --fade-danger-color: rgb(248, 113, 113);
+  --bg-color: rgb(250, 250, 250);
+  --text-color: rgb(115, 115, 115);
+  --dim-text-color: rgb(104, 102, 102);
+  --bg-gradient: linear-gradient(
+    to right,
+    var(--bg-color),
+    var(--other-color),
+    var(--bg-color)
+  );
+}
+
+:is(.dark) {
+  color-scheme: only dark;
+  /* --primary-color: rgb(0, 102, 204);
+    --secondary-color: rgb(0, 128, 143); */
+  --tertiary-color: rgb(38, 41, 58);
+  --opposite-bg-color: rgb(250, 250, 250);
+  --bg-color: rgb(58, 57, 57);
+  --other-color: rgb(25, 30, 60);
+  --text-color: rgb(244, 244, 247);
+}
+
+.open-menu{
+  display: block;
+}
+
+*{
+  word-wrap: break-word;
+  max-width: 100%;
+}
+
+ul.styled-list li{
+ padding: 8px;
+ background-color: var(--tertiary-color);
+ margin: 4px;
+ border-radius: 12px;
+ text-align: center;
+}

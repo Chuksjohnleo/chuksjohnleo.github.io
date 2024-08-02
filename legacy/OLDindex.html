@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="rgb(11, 85, 245)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="Keywords"
+      content="chuksjohnleo, Web developer, fullstack developer, web development,website creation,how to make a website, JAMB,
+      Nigerian Universities,waec past questions and answers 2022/2023,JAMB past questions and answers 2022/2023
+      Mathematics, Chemistry, Biology, Physics, English ,English language, WAEC, NECO,
+      WASSCE, SSCE, Medicine and surgery, Science, Law, Tutorials, UI, UNIZIK, Post-UTME, Universities,
+      Learning, Quiz, Exercises, Subjects, Lessons, References, 
+      Exams, UTME,JAMB CBT, Matriculation, Tips, JAMB practice website, 
+      Cbt exams, get 300+, get 9 As, A1, Economics, History, Christian religious studies, literatue and more"
+    />
+    <meta
+      name="Description"
+      content="Chukwuka Nwanonenyi is a fullstack web developer. 
+      He will develop different kinds of websites such as ecommerce site, portfolio site, past questions and answers website, construction company site, blog sites etc.
+      He developes websites that are responsive and fast and will deliver the website on time"
+    />
+    <link rel="canonical" href="https://chuksjohnleo.github.io" />
+    <link rel="shortcut icon" type="image/svg" href="images/logo.svg" />
+    <link rel="icon" href="images/C.png" type="image/png">
+    <meta property="og:image" content="images/favicon-32x32.png" />
+    <meta
+      property="og:title"
+      content="This is the personal homepage of Chuksjohnleo, a web developer. As a fullstack web developer, I will develop responsive and affordable websites that are performant and scalable for you."
+    />
+    <!-- <meta name="twitter:card" content="summary_large_image" /> -->
+    <title>Chuksjohnleo Developer</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <div id="intro-div"></div>
+    <div class="sticky-nav-bar">
+      <div class="menu opener">
+        <div class="id-container">
+          <strong class="name">Chuksjohnleo</strong>
+          <button title="select theme" id="theme_selector">
+            <svg
+              width="30px"
+              height="30px"
+              viewBox="0 0 24 24"
+              fill="lightblue"
+            >
+              <path
+                d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
+                stroke="lightblue"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+        <div onclick="open_menu()" id="topbar" class="opts">
+          <div class="opt n1"></div>
+          <div class="opt n2"></div>
+          <div class="opt n3"></div>
+        </div>
+      </div>
+
+      <nav id="nav">
+        <div class="nav-btn-container">
+          <div id="home" class="nav-btn">Introduction</div>
+          <div id="about" class="nav-btn">About</div>
+          <div id="projects" class="nav-btn">Projects</div>
+          <div id="contacts" class="nav-btn">Contacts</div>
+        </div>
+      </nav>
+    </div>
+    <section class="intro">
+      <!-- <button onclick="siter()">siter</button> -->
+      <div class="intro-h1-wrapper">
+        <div class="intro-h1-bg-img-container">
+          <!-- <img id="changer-bg" class="intro-h1-bg-img" src="images/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg" alt="Computer code by Karl Pawlowicz on unsplash."> -->
+          <img
+            id="changer-bg"
+            class="intro-h1-bg-img"
+            src="images/code_from_unsplash.png"
+            alt="Computer code by Karl Pawlowicz on unsplash."
+          />
+        </div>
+        <div class="intro-h1-container">
+          <div>
+            <h1 class="intro-h1">
+              Hi! I am Leonard. <span class="hero">Your web developer</span>
+            </h1>
+          </div>
+          <div class="i-am-tired-of-forging-names">
+            <p class="page-description">
+              I am <span class="my-name">Chukwuka Leonard Nwanonenyi,</span> a
+              passionate and skilled Fullstack Developer dedicated to crafting
+              innovative digital solutions. With a strong foundation in both
+              frontend and backend technologies, I showcase my skills in various
+              programming languages, frameworks, and tools, as well as my
+              problem-solving abilities and attention to detail. Join me on this
+              journey as we explore the world of web development and witness the
+              power of technology in action. Let's collaborate and turn ideas
+              into reality!
+            </p>
+            <div class="intro-img-wrapper">
+              <div class="intro-img-container">
+                <img
+                  class="intro-img"
+                  src="images/chukwuka_leonard_nwanonenyi.jpg"
+                  alt="Computer code by Karl Pawlowicz on unsplash."
+                />
+              </div>
+            </div>
+          </div>
+          <p class="more-container">
+            <a
+              target="_blank"
+              class="find-out-more"
+              href="https://github.com/chuksjohnleo"
+              >Find out more</a
+            >
+          </p>
+          <aside class="photo-credit">
+            Photo by
+            <a
+              target="_blank"
+              href="https://unsplash.com/@karlp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >Karl Pawlowicz</a
+            >
+            on
+            <a
+              target="_blank"
+              href="https://unsplash.com/photos/QUHuwyNgSA0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+              >Unsplash</a
+            >
+          </aside>
+        </div>
+        <!-- <p class="more-container"><a target="_blank" class="find-out-more" href="https://github.com/chuksjohnleo">Find out more</a></p> -->
+      </div>
+      <h1 class="services-h1 important-h1">My Services</h1>
+      <div id="services">
+        <article class="services-article first">
+          <!-- <div class="services-img-container"><div class="services-img-wrapper"><img class="services-img" src="images/code.png"></div></div> -->
+          <h1 class="services-subheading sub-h1 web-dev">
+            Website development
+          </h1>
+          <div class="services-img-container">
+            <div class="services-img-wrapper">
+              <img
+                class="services-img"
+                alt="Image of a computer code"
+                src="images/code.png"
+              />
+            </div>
+          </div>
+          <p class="services-description">
+            &nbsp;<span class="starting-char">I</span> develop different types
+            of websites using different types of technologies such as
+            JavaScript, Next.js, Node.js, React, SQL etc. You can contact me
+            through my
+            <a
+              href="mailto:nwanonenyichukwuka@gmail.com"
+              class="email special-link"
+            >
+              email
+            </a>
+            and other media handles for your websites.
+          </p>
+          <!-- <div class="services-img-container"><div class="services-img-wrapper"><img class="services-img" alt="Image of a computer code" src="images/code.png"></div></div>
+         -->
+        </article>
+        <article class="services-article">
+          <h1 class="services-subheading sub-h1">Past questions and Answers</h1>
+          <div class="services-img-container">
+            <div class="services-img-wrapper">
+              <img
+                class="services-img"
+                alt="Image of my past question and answer site"
+                src="images/pastquestion.png"
+              />
+            </div>
+          </div>
+          <p class="services-description">
+            &nbsp; <span class="starting-char">I</span> also provide past
+            questions and answers for students on my
+            <a
+              target="_blank"
+              href="https://chuksjohnleo.github.io/past_question"
+              class="pstq special-link"
+              >past questions and answers</a
+            >
+            website. Its mainly based on UTME past questions. You can visit the
+            website to learn and prepare for your exams especially university
+            entrance exams.
+          </p>
+          <!-- <div class="services-img-container"><div class="services-img-wrapper"><img class="services-img" alt="Image of my past question and answer site" src="images/pastquestion.png"></div></div> -->
+        </article>
+      </div>
+    </section>
+    <section id="about_me" class="about">
+      <div class="about-me-wrapper">
+        <h1 class="about-me-h1 important-h1">ABOUT ME</h1>
+        <article class="about-article">
+          <div class="my-pics-container">
+            <img id="me" src="images/favicon.jpg" alt="me" />
+          </div>
+          <h2 class="about-in-h2 sub-h2">Personal Details</h2>
+          <p>
+            <span class="starting-char">M</span>y fullname is Nwanonenyi
+            Chukwuka Leonard. I am an Igbo, I love learning and using
+            technologies. I have been a web developer for a while now. Learning
+            doesn't stop and I am always eager to learn and use new technologies
+            in order to be really good at what I do. Software development and
+            using technologies are things that I have passion for.
+          </p>
+          <h2 class="about-in-h2 sub-h2">Skills</h2>
+          <div>
+            <p><span class="starting-char">M</span>y skills include</p>
+            <div id="bg" class="skill-list-container">
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Tailwindcss</li>
+                <li>JAVASCRIPT</li>
+                <li>React.js</li>
+                <li>Next.js</li>
+              </ul>
+              <ul>
+                <li>NODE.JS</li>
+                <li>EXPRESS.JS</li>
+                <li>MONGODB</li>
+                <li>TypeScript</li>
+                <li>PostgreSQL</li>
+                <li>SOCKET.IO</li>
+              </ul>
+            </div>
+            I also have a knowledge of Jquery, Ejs(A node.js templating engine)
+            and several other libraries.
+          </div>
+          <h2 class="about-in-h2 sub-h2">Hobbies</h2>
+          <p>
+            <span class="more-about">
+              <span class="starting-char">S</span>ome of my hobbies include
+              reading, research, teaching and surfing the web. I also climb
+              palmtrees, once did it as a job 😁.
+            </span>
+          </p>
+        </article>
+      </div>
+      <div class="resume-link-container">
+        <strong class="a-btn resume-link">
+          <a
+            data-linkname="See My Resume"
+            title="Download my resume"
+            href="images/Chukwuka - Resume - Google Docs.pdf"
+            download="Chuksjohleo-resume"
+            >See My Resume</a
+          >
+          <span class="a-btn-bg-control"></span>
+        </strong>
+      </div>
+    </section>
+    <div id="project-view"><span id="project"></span></div>
+    <section class="projects">
+      <h1 class="important-h1 projects-h1">PROJECTS</h1>
+      <article class="project-article">
+        <h1>VTU website</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div class="description-text">
+              This website is made with
+              <ul>
+                <li>NEXT.JS/REACT</li>
+                <li>CSS</li>
+                <li>Paystack</li>
+                <li>EXPRESS.JS</li>
+                <li>postgresql and several other tools and APIs</li>
+              </ul>
+              <p>
+                I created it to enable users buy cheap intermet data and other
+                services easily. The official name is Airsolver. I am still
+                working on it will still make some improvements in the future.
+                You can view the source code using the buttons below. You can
+                also register though it is yet to be launched.
+              </p>
+            </div>
+            <div class="project-btns">
+              <strong class="visit-site a-btn">
+                <a
+                  data-linkname="Visit Site"
+                  target="_blank"
+                  href="https://airsolver.vercel.app"
+                  >Visit Site</a
+                >
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a target="_blank" href="https://github.com/Chuksjohnleo/vtu">
+                  Source Code</a
+                ></strong
+              >
+            </div>
+          </div>
+          <div class="img-container">
+            <img src="images/vtu.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+      <article class="project-article">
+        <h1>Real Time Chat App</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div class="description-text">
+              This website is made with
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>NODE.JS</li>
+                <li>EXPRESS.JS</li>
+                <li>MONGODB</li>
+                <li>SOCKET.IO and several libraries.</li>
+              </ul>
+              <p>
+                I created it as a hobby project and for learning. I am still
+                working on it will still make some improvements in the future.
+                You can view the source code using the buttons below.
+              </p>
+            </div>
+            <div class="project-btns">
+              <strong class="visit-site a-btn">
+                <a
+                  data-linkname="Visit Site"
+                  target="_blank"
+                  href="https://subscribe-i9vr.onrender.com"
+                  >Visit Site</a
+                >
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/suscribe"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </div>
+          </div>
+          <div class="img-container">
+            <img src="images/chatapp.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+      <article class="project-article">
+        <h1>Ecommerce site</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div class="description-text">
+              This website is made with
+              <ul>
+                <li>NEXT.JS/REACT</li>
+                <li>CSS</li>
+                <li>MONGODB and several libraries.</li>
+              </ul>
+              <p>
+                I created it as a hobby project to show how an ecommerce website
+                can be implemented and for learning. I am still working on it
+                will still make some improvements in the future. You can view
+                the source code using the buttons below.
+              </p>
+            </div>
+            <div class="project-btns">
+              <strong class="visit-site a-btn">
+                <a
+                  data-linkname="Visit Site"
+                  target="_blank"
+                  href="https://e-commerce-chuksjohnleo.vercel.app"
+                  >Visit Site</a
+                >
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/suscribe"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </div>
+          </div>
+          <div class="img-container">
+            <img src="images/ecommerce.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+      <article class="project-article">
+        <h1>E-shop</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div class="description-text">
+              This website is made with
+              <ul>
+                <li>NEXT.JS/REACT</li>
+                <li>CSS</li>
+                <li>TailwindCSS</li>
+                <li>Shopify</li>
+                <li>MONGODB and several libraries.</li>
+              </ul>
+              <p>
+                I created it as a hobby project and for learning. it is
+                integrated with shopify. I am still working on it will still
+                make some improvements in the future. You can view the source
+                code using the buttons below.
+              </p>
+            </div>
+            <div class="project-btns">
+              <strong class="visit-site a-btn">
+                <a
+                  data-linkname="Visit Site"
+                  target="_blank"
+                  href="https://e-shop-chuksjohnleo.vercel.app"
+                  >Visit Site</a
+                >
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/e-shop"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </div>
+          </div>
+          <div class="img-container">
+            <img src="images/e-shop.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+      <article class="project-article">
+        <h1>Face detecting app</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div class="description-text">
+              This website and its backend is made with
+              <ul>
+                <li>CSS and tachyons</li>
+                <li>JAVASCRIPT</li>
+                <li>NODE.JS</li>
+                <li>EXPRESS.JS</li>
+                <li>REACT.JS</li>
+                <li>POSTGRES SQL</li>
+                <li>CLARIFAI API</li>
+                <li>KNEX and several libraries.</li>
+              </ul>
+              <p>
+                Many people have created this app before but I added my own
+                features and designs. I started it as a code along project while
+                still learning and then added my own features. I created it as a
+                hobby project and for learning. I am still working on it will
+                still make some improvements in the future. You can view the
+                source code using the buttons below. I am still working on it.
+              </p>
+            </div>
+            <p class="project-btns">
+              <strong class="visit-site a-btn">
+                <a
+                  data-linkname="Visit Site"
+                  title="Visit site"
+                  target="_blank"
+                  href="https://face-detector-dkyz.onrender.com"
+                  >Visit Site</a
+                >
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/face-detector"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </p>
+          </div>
+          <div class="img-container">
+            <img src="images/face-detector.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+
+      <article class="project-article">
+        <h1>Questions and Answers site</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div>
+              This website is made with
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+              <p>
+                You can visit the website to learn and prepare for your exams
+                especially university entrance exams. Questions are fetched by
+                making API calls. I am still working on it will still make some
+                improvements in the future. You can view the source code using
+                the buttons below.
+              </p>
+            </div>
+            <p class="project-btns">
+              <strong class="visit-site a-btn">
+                <a href="past_question">Visit Site</a>
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/past_question"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </p>
+          </div>
+          <div class="img-container">
+            <img src="images/pastquestion.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+      <article class="project-article">
+        <h1>Web Calculator</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div>
+              This website is made with
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+              <p>
+                I created it as a hobby project and for learning. I am still
+                working on it will still make some improvements in the future.
+                You can view the source code using the buttons below. I am still
+                working on it.
+              </p>
+            </div>
+            <p class="project-btns">
+              <strong class="visit-site a-btn">
+                <a href="calculator.html">Visit Site</a>
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/web-calculator"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </p>
+          </div>
+          <div class="img-container">
+            <img src="images/calc.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+      <article class="project-article">
+        <h1>Todolist Web App</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div>
+              This website is made with
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+              <p>
+                I created it as one of my hobby site when I was a newbie. It is
+                a sort memory to me. I am still working on it will still make
+                some improvements in the future. You can view the source code
+                using the buttons below.
+              </p>
+            </div>
+            <p class="project-btns">
+              <strong class="visit-site a-btn">
+                <a href="todo.html">Visit Site</a>
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/chuksjohnleo_todolist"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </p>
+          </div>
+          <div class="img-container">
+            <img src="images/to_do.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+      <!-- s -->
+      <article class="project-article">
+        <h1>Tic Tac Toe Game</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div>
+              This website is made with
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+              <p>
+                I created this game as a hobby project and for learning. I am
+                still working on it will still make some improvements in the
+                future. You can view the source code using the buttons below. I
+                am still working on it.
+              </p>
+            </div>
+            <p class="project-btns">
+              <strong class="visit-site a-btn">
+                <a href="tic-tac-toe">Visit Site</a>
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/tic-tac-toe"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </p>
+          </div>
+          <div class="img-container">
+            <img src="images/tictac.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+      <!-- e -->
+      <article class="project-article">
+        <h1>Beer App</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div>
+              This website is made with
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+                <li>REACT.Js</li>
+                <li>PUNK API</li>
+              </ul>
+              <p>
+                React.js is a javascript library. I created it as a newbie when
+                it was given as an interview assignment to a fellow dev. The
+                beers are fetched from
+                <a
+                  target="_blank"
+                  style="color: navy"
+                  href="https://punkapi.com"
+                  class="special-link"
+                  >punkAPI.</a
+                >
+                One of the features is using a checkbox to toggle between the
+                beer ABVs. I am still working on it will still make some
+                improvements in the future. You can view the source code using
+                the buttons below.
+              </p>
+            </div>
+            <p class="project-btns">
+              <strong class="visit-site a-btn">
+                <a href="beerapp">Visit Site</a>
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/beerapp"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </p>
+          </div>
+          <div class="img-container">
+            <img src="images/beerapp.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+      <article class="project-article">
+        <h1>This Website</h1>
+        <div class="description-wrapper">
+          <div class="description-details">
+            <div>
+              This website is made with
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JAVASCRIPT</li>
+              </ul>
+              <p>
+                I created it as my portfolio site. I am still working on it will
+                still make some improvements in the future. You can view the
+                source code using the buttons below.
+              </p>
+            </div>
+            <p class="project-btns">
+              <strong class="visit-site a-btn">
+                <a href="#">Visit Site</a>
+                <span class="a-btn-bg-control"></span>
+              </strong>
+              <strong class="source-code"
+                ><a
+                  target="_blank"
+                  href="https://github.com/Chuksjohnleo/chuksjohnleo.github.io"
+                >
+                  Source Code</a
+                ></strong
+              >
+            </p>
+          </div>
+          <div class="img-container">
+            <img src="images/portfolio-site.png" alt="demo image" />
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="contact" class="contact">
+      <h1 class="contact-h1 important-h1">Contact Me</h1>
+      <div class="contact-details-wrapper">
+        <div class="contact-details-container">
+          <p class="contact-description">
+            <span class="starting-char">Y</span>ou can contact or hire me for
+            your websites by clicking the button below to send an email. You can
+            equally reach me through my social media handles
+          </p>
+          <p class="addition-contact-description">
+            I am open to hire both as full-time, part-time, freelance or
+            contract developer
+          </p>
+          <span class="email" id="email"
+            ><a class="email-link" href="mailto:nwanonenyichukwuka@gmail.com"
+              >Email</a
+            ></span
+          >
+        </div>
+        <div class="cta-container">
+          <div class="cta">
+            <!-- <p><span class="sppp">Affordable Services</span></p>
+        <p><span class="sppp">Customer Satisfaction</span></p>
+        <p><span class="sppp">Genuine Services</span></p>
+        <p><span class="sppp">Fast Delivery</span></p>
+        <p><span class="sppp">Responsive Websites</span></p>
+        <p><span class="sppp">Excellent communication</span></p> -->
+
+            <p>Affordable Services</p>
+            <p>Customer Satisfaction</p>
+            <p>Genuine Services</p>
+            <p>Fast Delivery</p>
+            <p>Responsive Websites</p>
+            <p>Excellent communication</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="upper-footer">
+        <div class="scroll-up-container">
+          <button type="button" title="scroll up" id="up">Back To Top</button>
+        </div>
+        <p>Website by Chuksjohleo</p>
+
+        <div id="social">
+          <h2 class="socials-h2">Socials</h2>
+          <em> Follow or chat me</em>
+          <p id="socials">
+            <a target="_blank" href="https://github.com/Chuksjohnleo"
+              ><img src="images/whitegithub.svg" alt="github"
+            /></a>
+            <a target="_blank" href="https://twitter.com/mariadevsQ"
+              ><img src="images/whitetwitter.svg" alt="twitter"
+            /></a>
+            <a target="_blank" href="https://wa.me/message/QT6HAF2AQUH6C1"
+              ><img src="images/whitewhatsapp.svg" alt="whatsapp"
+            /></a>
+            <a
+              target="_blank"
+              href="https://www.facebook.com/chuksjohnleo.nwanonenyi"
+              ><img src="images/whitefacebook.svg" alt="facebook"
+            /></a>
+          </p>
+        </div>
+      </div>
+      <div class="lowwer-footer">
+        <p style="word-wrap: break-word; max-width: 95vw">
+          ✉️Email: nwanonenyichukwuka@gmail.com
+        </p>
+        <p>God alone</p>
+        <p>
+          <a
+            style="text-decoration: none; color: white"
+            href="legacy/legacy2.html"
+            >Legacy site</a
+          >
+        </p>
+        <p style="text-align: center">
+          &copy; Copyright <span id="year"></span> Chuksjohnleo, All rights are
+          reserved
+        </p>
+      </div>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

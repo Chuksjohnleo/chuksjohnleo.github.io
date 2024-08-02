@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="light">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -7,817 +7,1119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="Keywords"
-      content="chuksjohnleo, Web developer, fullstack developer, web development,website creation,how to make a website, JAMB,
+      content="Chuksjohnleo, Web developer, fullstack developer, web development,website creation,how to make a website, JAMB,
       Nigerian Universities,waec past questions and answers 2022/2023,JAMB past questions and answers 2022/2023
       Mathematics, Chemistry, Biology, Physics, English ,English language, WAEC, NECO,
-      WASSCE, SSCE, Medicine and surgery, Science, Law, Tutorials, UI,UNIZIK,Post-UTME, Universities,
+      WASSCE, SSCE, Medicine and surgery, Science, Law, Tutorials, UI, UNIZIK, Post-UTME, Universities,
       Learning, Quiz, Exercises, Subjects, Lessons, References, 
-      Exams, UTME,JAMB CBT, Matriculation, Tips,JAMB practice website, 
-      Cbt exams,get 300+,get 9 As,A1, Economics, History,Christian religious studies, literatue and more"
+      Exams, UTME,JAMB CBT, Matriculation, Tips, JAMB practice website, 
+      Cbt exams, get 300+, get 9 As, A1, Economics, History, Christian religious studies, literatue and more"
     />
     <meta
       name="Description"
       content="Chukwuka Nwanonenyi is a fullstack web developer. 
-      He will develop different kinds of websites such as ecommerce site, portfolio site, past questions and answers website, construction company site, blog sites etc.
+      He will develop different kinds of websites such as ecommerce site, projects site, past questions and answers website, construction company site, blog sites etc.
       He developes websites that are responsive and fast and will deliver the website on time"
     />
     <link rel="canonical" href="https://chuksjohnleo.github.io" />
-    <link rel="shortcut icon" type="image/svg" href="images/logo.svg" />
-    <link rel="icon" href="images/C.png" type="image/png">
+    <link rel="shortcut icon" type="image/svg" href="images/logo.png" />
     <meta property="og:image" content="images/favicon-32x32.png" />
     <meta
       property="og:title"
       content="This is the personal homepage of Chuksjohnleo, a web developer. As a fullstack web developer, I will develop responsive and affordable websites that are performant and scalable for you."
     />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="stylesheet" type="text/css" href="styles/tailwind.css?l=klkk" />
     <!-- <meta name="twitter:card" content="summary_large_image" /> -->
     <title>Chuksjohnleo Developer</title>
-    <link rel="stylesheet" href="index.css" />
   </head>
   <body>
-    <div id="intro-div"></div>
-    <div class="sticky-nav-bar">
-      <div class="menu opener">
-        <div class="id-container">
-          <strong class="name">Chuksjohnleo</strong>
-          <button title="select theme" id="theme_selector">
-            <svg
-              width="30px"
-              height="30px"
-              viewBox="0 0 24 24"
-              fill="lightblue"
-            >
+    <!-- Navigation Bar -->
+    <header
+      class="text-text-color lg:flex justify-between items-center bg-white/80 dark:bg-black/80 sticky top-0 backdrop-blur-sm p-2 z-50"
+    >
+      <div class="text-center flex justify-between gap-2">
+        <img
+          class="h-8 max-w-[80vw] overflow-hidden object-contain"
+          src="images/logo-text.png"
+          alt="My logo"
+        />
+        <div class="lg:hidden">
+          <button
+            type="button"
+            class="menu-btn rounded hover:bg-blue-500 hover:fill-white fill-current"
+          >
+            <svg width="30" height="30" viewBox="0 0 16 16">
               <path
-                d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5001M17.6859 17.69L18.5 18.5001M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z"
-                stroke="lightblue"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                fillRule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
               />
             </svg>
           </button>
         </div>
-        <div onclick="open_menu()" id="topbar" class="opts">
-          <div class="opt n1"></div>
-          <div class="opt n2"></div>
-          <div class="opt n3"></div>
-        </div>
       </div>
-
-      <nav id="nav">
-        <div class="nav-btn-container">
-          <div id="home" class="nav-btn">Introduction</div>
-          <div id="about" class="nav-btn">About</div>
-          <div id="projects" class="nav-btn">Projects</div>
-          <div id="contacts" class="nav-btn">Contacts</div>
+      <button
+        id="scroll-to-top"
+        class="text-xs opacity-70 fast-scroll-btn bg-tertiary-color hover:text-white hover:bg-secondary-color active:bg-secondary-color font-extrabold hidden justify-center items-center fixed -z-10 w-6 h-6 shadow shadow-secondary-color rounded-full top-[calc(100vh-150px)] right-7"
+      >
+        ↑
+      </button>
+      <!-- nav links -->
+      <div
+        id="menu-bar"
+        class="fixed hidden lg:static lg:flex lg:rounded-2xl top-0 right-0 rounded-bl-2xl shadow-md z-50 overflow-y-auto bg-bg-color transition-[position] duration-300 max-w-[500px] min-w-[45vw] lg:min-w-max"
+      >
+        <div
+          class="lg:hidden flex justify-between items-center font-extrabold m-1 p-1"
+        >
+          <div class="text-xl">
+            <button
+              class="theme-btn flex justify-center w-12 items-center p-2"
+              id="theme-btn2"
+              type="button"
+            >
+              Theme
+            </button>
+          </div>
+          <div>
+            <button
+              type="button"
+              class="menu-btn fill-danger-color text-3xl rounded-lg hover:bg-danger-color hover:fill-white"
+            >
+              <svg width="30" height="30" viewBox="0 0 512 512">
+                <g stroke="none" stroke-width="1" fill-rule="evenodd">
+                  <g transform="translate(91.520000, 91.520000)">
+                    <polygon
+                      points="328.96 30.2933333 298.666667 1.42108547e-14 164.48 134.4 30.2933333 1.42108547e-14 1.42108547e-14 30.2933333 134.4 164.48 1.42108547e-14 298.666667 30.2933333 328.96 164.48 194.56 298.666667 328.96 328.96 298.666667 194.56 164.48"
+                    ></polygon>
+                  </g>
+                </g>
+              </svg>
+            </button>
+          </div>
         </div>
-      </nav>
-    </div>
-    <section class="intro">
-      <!-- <button onclick="siter()">siter</button> -->
-      <div class="intro-h1-wrapper">
-        <div class="intro-h1-bg-img-container">
-          <!-- <img id="changer-bg" class="intro-h1-bg-img" src="images/karl-pawlowicz-QUHuwyNgSA0-unsplash.jpg" alt="Computer code by Karl Pawlowicz on unsplash."> -->
+        <nav class="flex lg:flex-row flex-col font-bold justify-center">
+          <a
+            class="p-2 border-t lg:border-0 hover:text-white hover:bg-blue-500"
+            href="#"
+          >
+            Home
+          </a>
+          <a
+            class="p-2 border-t lg:border-0 hover:text-white hover:bg-blue-500"
+            href="#about"
+          >
+            About
+          </a>
+          <a
+            class="p-2 border-t lg:border-0 hover:text-white hover:bg-blue-500"
+            href="#services"
+          >
+            Services
+          </a>
+          <a
+            class="p-2 border-t lg:border-0 hover:text-white hover:bg-blue-500"
+            href="#projects"
+          >
+            Projects
+          </a>
+          <a
+            class="p-2 border-t lg:border-0 hover:text-white hover:bg-blue-500"
+            href="#contact"
+          >
+            Contact
+          </a>
+          <button
+            class="theme-btn lg:flex hidden justify-center w-12 items-center p-2"
+            id="theme-btn"
+            type="button"
+          >
+            Theme
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="text-text-color">
+      <div
+        class="container mx-auto flex px-5 pt-12 pb-24 md:flex-row flex-col items-center"
+      >
+        <div
+          class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center"
+        >
+          <h1 class="sm:text-6xl text-4xl mb-4 font-bold text-text-color">
+            Hi, Welcome to My <br class="hidden lg:inline-block" />Humble Abode.
+          </h1>
+          <p class="mb-8 leading-relaxed">
+            I am
+            <span class="font-extrabold">Chukwuka Leonard Nwanonenyi</span>, a
+            passionate and skilled Fullstack Developer dedicated to crafting
+            innovative digital solutions. With a strong foundation in both
+            frontend and backend technologies, I showcase my skills in various
+            programming languages, frameworks, and tools, as well as my
+            problem-solving abilities and attention to detail. Join me on this
+            journey as we explore the world of web development and witness the
+            power of technology in action. Let's collaborate and turn ideas into
+            reality!
+          </p>
+          <div class="flex flex-col gap-4 lg:flex-row justify-center">
+            <a
+              target="_blank"
+              href="mailto:nwanonenyichukwuka@gmail.com"
+              class="inline-block text-white bg-blue-500 border-0 py-2 px-6 focus:outline-none hover:bg-blue-600 rounded text-lg"
+            >
+              Get in Touch
+            </a>
+            <a
+              title="Download my resume"
+              href="images/Chukwuka - Resume - Google Docs.pdf"
+              download="Chuksjohleo-resume"
+              class="inline-block text-text-color bg-tertiary-color border-0 py-2 px-6 focus:outline-none hover:bg-primary-color hover:text-white rounded text-lg"
+            >
+              My Resume
+            </a>
+          </div>
+        </div>
+        <div class="lg:max-w-lg lg:w-full md:w-1/2 w-5/6">
           <img
-            id="changer-bg"
-            class="intro-h1-bg-img"
-            src="images/code_from_unsplash.png"
-            alt="Computer code by Karl Pawlowicz on unsplash."
+            class="object-cover object-center rounded"
+            alt="hero"
+            src="images/logo.png"
           />
         </div>
-        <div class="intro-h1-container">
-          <div>
-            <h1 class="intro-h1">
-              Hi! I am Leonard. <span class="hero">Your web developer</span>
-            </h1>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="text-text-color">
+      <div class="container px-5 py-24 mx-auto">
+        <h1 class="sm:text-3xl text-2xl font-bold text-center text-text-color">
+          Services
+          <br class="hidden sm:block" />
+        </h1>
+        <div class="flex flex-col items-center text-center justify-center">
+          <div class="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
+        </div>
+        <div
+          class="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6"
+        >
+          <div class="p-4 md:w-1/3 flex">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4 flex-shrink-0"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-6 h-6"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M9 7L4 12L9 17" />
+                <path d="M15 7L20 12L15 17" />
+              </svg>
+            </div>
+            <div class="flex-grow pl-6">
+              <h2 class="text-text-color text-lg font-semibold mb-2">
+                Development
+              </h2>
+              <p class="leading-relaxed text-base">
+                I specialize in creating robust, scalable, and efficient web
+                applications tailored to meet your unique business needs.
+                Leveraging the latest technologies and best practices, I ensure
+                that every project is delivered on time and exceeds
+                expectations. Whether it's front-end development using React or
+                building secure back-end solutions, my focus is on delivering
+                high-quality code and exceptional user experiences.
+              </p>
+              <a
+                title="Learn more by sending a message"
+                href="mailto:nwanonenyichukwuka@gmail.com"
+                class="mt-3 text-blue-500 inline-flex items-center overflow-hidden"
+                >Learn More
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
           </div>
-          <div class="i-am-tired-of-forging-names">
-            <p class="page-description">
-              I am <span class="my-name">Chukwuka Leonard Nwanonenyi,</span> a
-              passionate and skilled Fullstack Developer dedicated to crafting
-              innovative digital solutions. With a strong foundation in both
-              frontend and backend technologies, I showcase my skills in various
-              programming languages, frameworks, and tools, as well as my
-              problem-solving abilities and attention to detail. Join me on this
-              journey as we explore the world of web development and witness the
-              power of technology in action. Let's collaborate and turn ideas
-              into reality!
-            </p>
-            <div class="intro-img-wrapper">
-              <div class="intro-img-container">
-                <img
-                  class="intro-img"
-                  src="images/chukwuka_leonard_nwanonenyi.jpg"
-                  alt="Computer code by Karl Pawlowicz on unsplash."
+          <div class="p-4 md:w-1/3 flex">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4 flex-shrink-0"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-6 h-6"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M12,2A10,10,0,1,0,22,12,10,10,0,0,0,12,2Zm5.75,14.59L16.5,17.84a.54.54,0,0,1-.76,0l-5-4.95A3.54,3.54,0,0,1,6.34,8.06l2.39,2.33,1.63-1.63L8,6.43a3.6,3.6,0,0,1,4,.7,3.49,3.49,0,0,1,.82,3.75l4.94,4.95A.49.49,0,0,1,17.75,16.59Z"
                 />
+              </svg>
+            </div>
+            <div class="flex-grow pl-6">
+              <h2 class="text-text-color text-lg font-semibold mb-2">
+                Maintenance
+              </h2>
+              <p class="leading-relaxed text-base">
+                Ensuring your website remains secure, up-to-date, and running
+                smoothly is crucial for maintaining your online presence. I
+                offer comprehensive maintenance services that include regular
+                updates, performance optimization, and troubleshooting to keep
+                your site functioning at its best. With a proactive approach to
+                maintenance, I help you avoid potential issues and ensure your
+                site delivers a seamless experience to your users.
+              </p>
+              <a
+                title="Learn more by sending a message"
+                href="mailto:nwanonenyichukwuka@gmail.com"
+                class="mt-3 text-blue-500 inline-flex items-center"
+                >Learn More
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/3 flex">
+            <div
+              class="w-12 h-12 inline-flex items-center justify-center rounded-full bg-blue-100 text-blue-500 mb-4 flex-shrink-0"
+            >
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-6 h-6"
+                viewBox="0 0 24 24"
+              >
+                <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                <circle cx="12" cy="7" r="4"></circle>
+              </svg>
+            </div>
+            <div class="flex-grow pl-6">
+              <h2 class="text-text-color text-lg font-semibold mb-2">
+                Consultation
+              </h2>
+              <p class="leading-relaxed text-base">
+                My consultation services are designed to provide you with
+                strategic insights and expert guidance to help your business
+                thrive in the digital landscape. Whether you need advice on
+                technology selection, project planning, or optimizing your
+                current systems, I offer tailored solutions that align with your
+                goals. Together, we can identify opportunities for growth and
+                implement strategies that drive success.
+              </p>
+              <a
+                title="Learn more by sending a message"
+                href="mailto:nwanonenyichukwuka@gmail.com"
+                class="mt-3 text-blue-500 inline-flex items-center"
+                >Learn More
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="p-2 text-text-color">
+      <div class="container px-5 py-8 mx-auto flex flex-col">
+        <div class="lg:w-4/6 mx-auto">
+          <div class="flex flex-col sm:flex-row mt-10">
+            <div class="sm:w-1/3 text-center sm:pr-8 sm:py-8">
+              <div
+                class="w-20 h-20 rounded-full inline-flex items-center justify-center bg-gray-200 overflow-hidden"
+              >
+                <img
+                  alt="Chuksjohnleo"
+                  class="object-cover object-center"
+                  src="images/chukwuka_leonard_nwanonenyi.jpg"
+                />
+              </div>
+              <div
+                class="flex flex-col items-center text-center justify-center"
+              >
+                <h1 class="sm:text-3xl text-2xl font-bold mt-4">About Me</h1>
+                <div class="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
+                <p class="text-base">
+                  Nwanonenyi Chukwuka is a fullstack developer from Igboland in
+                  Africa.
+                </p>
+              </div>
+            </div>
+            <div
+              class="sm:w-2/3 sm:pl-8 sm:py-8 sm:border-l border-gray-200 sm:border-t-0 border-t mt-4 pt-4 sm:mt-0 text-center sm:text-left"
+            >
+              <p class="leading-relaxed text-lg mb-4">
+                I have been a developer for a while now. Learning doesn't stop
+                and I am always eager to learn and use new technologies in order
+                to be really good at what I do. Software development and using
+                technologies are things that I have passion for. I love learning
+                and using technologies.
+              </p>
+              <a
+                href="https://github.com/chuksjohnleo"
+                class="text-blue-500 inline-flex items-center"
+                >Learn More
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-4 h-4 ml-2"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M5 12h14M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="p-2 text-text-color">
+      <div class="container px-5 py-8 mx-auto flex flex-col">
+        <div class="lg:w-4/6 mx-auto">
+          <h1
+            class="sm:text-3xl text-2xl font-bold text-center text-text-color"
+          >
+            Skills
+            <br class="hidden sm:block" />
+          </h1>
+          <div class="flex flex-col items-center text-center justify-center">
+            <div class="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
+          </div>
+          <p>
+            Over the years, I have learnt and improved my skills on various
+            programming languages, frameworks, libraries and tools. They include
+            but are not limited to the following:
+          </p>
+          <div class="my-8">
+            <ul class="flex flex-wrap justify-center items-center styled-list">
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>TailwindCSS</li>
+              <li>JavaScript</li>
+              <li>React.js</li>
+              <li>Next.js</li>
+              <li>NODE.JS</li>
+              <li>EXPRESS.JS</li>
+              <li>MONGODB</li>
+              <li>TypeScript</li>
+              <li>PostgreSQL</li>
+              <li>SOCKET.IO</li>
+              <li>SQL</li>
+              <li>PHP</li>
+              <li>Git</li>
+              <li>GitHub</li>
+              <li>Responsive Web Design</li>
+              <li>Etc</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics -->
+    <section id="portfolio" class="text-text-color">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="flex flex-col text-center w-full mb-20">
+          <h1 class="sm:text-3xl text-2xl font-bold text-text-color">
+            Portfolio & Experience
+          </h1>
+          <div class="flex flex-col items-center text-center justify-center">
+            <div class="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
+          </div>
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base">
+            Dedicated to creating high-quality websites tailored to your needs.
+            I am committed to helping you advance your career through
+            exceptional web development services.
+          </p>
+        </div>
+        <div class="flex flex-wrap text-center">
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="text-blue-500 w-12 h-12 mb-3 inline-block"
+                viewBox="0 0 24 24"
+              >
+                <path d="M8 17l4 4 4-4m-4-5v9"></path>
+                <path
+                  d="M20.88 18.09A5 5 0 0018 9h-1.26A8 8 0 103 16.29"
+                ></path>
+              </svg>
+              <h2 class="title-font font-medium text-3xl text-text-color">
+                1k+
+              </h2>
+              <p class="leading-relaxed">Softwares</p>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="text-blue-500 w-12 h-12 mb-3 inline-block"
+                viewBox="0 0 24 24"
+              >
+                <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 00-3-3.87m-4-12a4 4 0 010 7.75"></path>
+              </svg>
+              <h2 class="title-font font-medium text-3xl text-text-color">~</h2>
+              <p class="leading-relaxed">Clients</p>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="text-blue-500 w-12 h-12 mb-3 inline-block"
+                viewBox="0 0 24 24"
+              >
+                <path d="M3 18v-6a9 9 0 0118 0v6"></path>
+                <path
+                  d="M21 19a2 2 0 01-2 2h-1a2 2 0 01-2-2v-3a2 2 0 012-2h3zM3 19a2 2 0 002 2h1a2 2 0 002-2v-3a2 2 0 00-2-2H3z"
+                ></path>
+              </svg>
+              <h2 class="title-font font-medium text-3xl text-text-color">
+                10K+
+              </h2>
+              <p class="leading-relaxed">Working Hours</p>
+            </div>
+          </div>
+          <div class="p-4 md:w-1/4 sm:w-1/2 w-full">
+            <div class="border-2 border-gray-200 px-4 py-6 rounded-lg">
+              <svg
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="text-blue-500 w-12 h-12 mb-3 inline-block"
+                viewBox="0 0 24 24"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+              <h2 class="title-font font-medium text-3xl text-text-color">~</h2>
+              <p class="leading-relaxed">Maintained</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section id="processes" class="text-text-color body-font overflow-auto">
+      <div class="container px-5 py-24 mx-auto flex flex-wrap">
+        <div class="flex flex-col text-center w-full mb-10">
+          <h1
+            class="sm:text-3xl text-2xl font-bold text-center text-text-color"
+          >
+            Processes
+            <br class="hidden sm:block" />
+          </h1>
+          <div class="flex flex-col items-center text-center justify-center">
+            <div class="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
+          </div>
+          <p>
+            My full-stack development process is designed to ensure the delivery
+            of high-quality, efficient, and scalable solutions. Each project is
+            meticulously handled through the following stages:
+          </p>
+        </div>
+        <div class="flex flex-wrap w-full">
+          <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+            <div class="flex relative pb-12">
+              <div
+                class="h-full w-10 absolute inset-0 flex items-center justify-center"
+              >
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2
+                  class="font-bold title-font text-sm text-text-color mb-1 tracking-wider"
+                >
+                  Feasibility analysis
+                </h2>
+                <p class="leading-relaxed">
+                  This initial step involves assessing the technical and
+                  economic viability of the project. By evaluating the project's
+                  requirements, potential challenges, and resource availability,
+                  I ensure that the proposed solution is both practical and
+                  achievable.
+                </p>
+              </div>
+            </div>
+            <div class="flex relative pb-12">
+              <div
+                class="h-full w-10 absolute inset-0 flex items-center justify-center"
+              >
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2
+                  class="font-bold title-font text-sm text-text-color mb-1 tracking-wider"
+                >
+                  Designing & Modelling
+                </h2>
+                <p class="leading-relaxed">
+                  During this phase, I create detailed blueprints and models of
+                  the application. This includes designing the user interface,
+                  database schemas, and system architecture. The goal is to
+                  establish a clear and coherent plan that guides the
+                  development process.
+                </p>
+              </div>
+            </div>
+            <div class="flex relative pb-12">
+              <div
+                class="h-full w-10 absolute inset-0 flex items-center justify-center"
+              >
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <path d="M12 22V8M5 12H2a10 10 0 0020 0h-3"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2
+                  class="font-bold title-font text-sm text-text-color mb-1 tracking-wider"
+                >
+                  Construction
+                </h2>
+                <p class="leading-relaxed">
+                  This is the core development phase where the application is
+                  built. Utilizing modern technologies and coding best
+                  practices, I develop both the front-end and back-end
+                  components of the application, ensuring they integrate
+                  seamlessly to deliver a robust solution.
+                </p>
+              </div>
+            </div>
+            <div class="flex relative pb-12">
+              <div
+                class="h-full w-10 absolute inset-0 flex items-center justify-center"
+              >
+                <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+              </div>
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"></path>
+                  <circle cx="12" cy="7" r="4"></circle>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2
+                  class="font-bold title-font text-sm text-text-color mb-1 tracking-wider"
+                >
+                  Quality Assurance
+                </h2>
+                <p class="leading-relaxed">
+                  In this critical step, I rigorously test the application to
+                  identify and fix any bugs or issues. Through comprehensive
+                  testing procedures, including unit tests, integration tests,
+                  and user acceptance testing, I ensure the application meets
+                  the highest standards of quality and performance.
+                </p>
+              </div>
+            </div>
+            <div class="flex relative">
+              <div
+                class="flex-shrink-0 w-10 h-10 rounded-full bg-blue-500 inline-flex items-center justify-center text-white relative z-10"
+              >
+                <svg
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  class="w-5 h-5"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M22 11.08V12a10 10 0 11-5.93-9.14"></path>
+                  <path d="M22 4L12 14.01l-3-3"></path>
+                </svg>
+              </div>
+              <div class="flex-grow pl-4">
+                <h2
+                  class="font-bold title-font text-sm text-text-color mb-1 tracking-wider"
+                >
+                  Deployment & Release
+                </h2>
+                <p class="leading-relaxed">
+                  The final step involves deploying the application to a live
+                  environment and making it available to users. I handle the
+                  setup, configuration, and monitoring of the deployment to
+                  ensure a smooth and successful release. Post-deployment, I
+                  provide support to address any issues that may arise and
+                  ensure the application runs efficiently.
+                </p>
               </div>
             </div>
           </div>
-          <p class="more-container">
-            <a
-              target="_blank"
-              class="find-out-more"
-              href="https://github.com/chuksjohnleo"
-              >Find out more</a
-            >
-          </p>
-          <aside class="photo-credit">
-            Photo by
-            <a
-              target="_blank"
-              href="https://unsplash.com/@karlp?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-              >Karl Pawlowicz</a
-            >
-            on
-            <a
-              target="_blank"
-              href="https://unsplash.com/photos/QUHuwyNgSA0?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
-              >Unsplash</a
-            >
-          </aside>
+          <img
+            class="w-full lg:w-3/5 md:w-1/2 object-cover object-center rounded-lg md:mt-0 mt-12"
+            src="images/code_from_unsplash.png"
+            alt="step"
+          />
         </div>
-        <!-- <p class="more-container"><a target="_blank" class="find-out-more" href="https://github.com/chuksjohnleo">Find out more</a></p> -->
       </div>
-      <h1 class="services-h1 important-h1">My Services</h1>
-      <div id="services">
-        <article class="services-article first">
-          <!-- <div class="services-img-container"><div class="services-img-wrapper"><img class="services-img" src="images/code.png"></div></div> -->
-          <h1 class="services-subheading sub-h1 web-dev">
-            Website development
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="text-text-color">
+      <div class="container px-5 py-24 mx-auto">
+        <div class="text-center mb-10">
+          <h1 class="text-3xl font-bold text-text-color text-center">
+            Projects
           </h1>
-          <div class="services-img-container">
-            <div class="services-img-wrapper">
-              <img
-                class="services-img"
-                alt="Image of a computer code"
-                src="images/code.png"
-              />
-            </div>
+          <div class="flex flex-col items-center text-center justify-center">
+            <div class="w-12 h-1 bg-blue-500 rounded mt-2 mb-4"></div>
           </div>
-          <p class="services-description">
-            &nbsp;<span class="starting-char">I</span> develop different types
-            of websites using different types of technologies such as
-            JavaScript, Next.js, Node.js, React, SQL etc. You can contact me
-            through my
-            <a
-              href="mailto:nwanonenyichukwuka@gmail.com"
-              class="email special-link"
-            >
-              email
-            </a>
-            and other media handles for your websites.
+          <p class="lg:w-2/3 mx-auto leading-relaxed text-base max-w-lg">
+            Below are some of the web apps and sites that I have developed over
+            the years.
           </p>
-          <!-- <div class="services-img-container"><div class="services-img-wrapper"><img class="services-img" alt="Image of a computer code" src="images/code.png"></div></div>
-         -->
-        </article>
-        <article class="services-article">
-          <h1 class="services-subheading sub-h1">Past questions and Answers</h1>
-          <div class="services-img-container">
-            <div class="services-img-wrapper">
-              <img
-                class="services-img"
-                alt="Image of my past question and answer site"
-                src="images/pastquestion.png"
-              />
-            </div>
-          </div>
-          <p class="services-description">
-            &nbsp; <span class="starting-char">I</span> also provide past
-            questions and answers for students on my
-            <a
-              target="_blank"
-              href="https://chuksjohnleo.github.io/past_question"
-              class="pstq special-link"
-              >past questions and answers</a
-            >
-            website. Its mainly based on UTME past questions. You can visit the
-            website to learn and prepare for your exams especially university
-            entrance exams.
-          </p>
-          <!-- <div class="services-img-container"><div class="services-img-wrapper"><img class="services-img" alt="Image of my past question and answer site" src="images/pastquestion.png"></div></div> -->
-        </article>
-      </div>
-    </section>
-    <section id="about_me" class="about">
-      <div class="about-me-wrapper">
-        <h1 class="about-me-h1 important-h1">ABOUT ME</h1>
-        <article class="about-article">
-          <div class="my-pics-container">
-            <img id="me" src="images/favicon.jpg" alt="me" />
-          </div>
-          <h2 class="about-in-h2 sub-h2">Personal Details</h2>
-          <p>
-            <span class="starting-char">M</span>y fullname is Nwanonenyi
-            Chukwuka Leonard. I am an Igbo, I love learning and using
-            technologies. I have been a web developer for a while now. Learning
-            doesn't stop and I am always eager to learn and use new technologies
-            in order to be really good at what I do. Software development and
-            using technologies are things that I have passion for.
-          </p>
-          <h2 class="about-in-h2 sub-h2">Skills</h2>
-          <div>
-            <p><span class="starting-char">M</span>y skills include</p>
-            <div id="bg" class="skill-list-container">
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Tailwindcss</li>
-                <li>JAVASCRIPT</li>
-                <li>React.js</li>
-                <li>Next.js</li>
-              </ul>
-              <ul>
-                <li>NODE.JS</li>
-                <li>EXPRESS.JS</li>
-                <li>MONGODB</li>
-                <li>TypeScript</li>
-                <li>PostgreSQL</li>
-                <li>SOCKET.IO</li>
-              </ul>
-            </div>
-            I also have a knowledge of Jquery, Ejs(A node.js templating engine)
-            and several other libraries.
-          </div>
-          <h2 class="about-in-h2 sub-h2">Hobbies</h2>
-          <p>
-            <span class="more-about">
-              <span class="starting-char">S</span>ome of my hobbies include
-              reading, research, teaching and surfing the web. I also climb
-              palmtrees, once did it as a job 😁.
-            </span>
-          </p>
-        </article>
-      </div>
-      <div class="resume-link-container">
-        <strong class="a-btn resume-link">
-          <a
-            data-linkname="See My Resume"
-            title="Download my resume"
-            href="images/Chukwuka - Resume - Google Docs.pdf"
-            download="Chuksjohleo-resume"
-            >See My Resume</a
+        </div>
+        <div class="flex flex-wrap justify-around gap-6">
+          <div
+            class="max-w-lg rounded overflow-hidden shadow-lg dark:shadow-tertiary-color"
           >
-          <span class="a-btn-bg-control"></span>
-        </strong>
-      </div>
-    </section>
-    <div id="project-view"><span id="project"></span></div>
-    <section class="projects">
-      <h1 class="important-h1 projects-h1">PROJECTS</h1>
-      <article class="project-article">
-        <h1>VTU website</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div class="description-text">
-              This website is made with
-              <ul>
-                <li>NEXT.JS/REACT</li>
-                <li>CSS</li>
-                <li>Paystack</li>
-                <li>EXPRESS.JS</li>
-                <li>postgresql and several other tools and APIs</li>
-              </ul>
-              <p>
-                I created it to enable users buy cheap intermet data and other
-                services easily. The official name is Airsolver. I am still
-                working on it will still make some improvements in the future.
-                You can view the source code using the buttons below. You can
-                also register though it is yet to be launched.
+            <img
+              class="w-full object-cover h-52"
+              src="images/fadapay-mobile.png"
+              alt="Site Preview"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Virtual Top Up</div>
+              <p class="text-text-color text-base">
+                Created with Next.js and integrated with multiple APIs for
+                seamless payments. I may still make some improvements in the
+                future. I have created many of such sites. Unfortunately, the
+                source codes are not publicly available.
               </p>
             </div>
-            <div class="project-btns">
-              <strong class="visit-site a-btn">
-                <a
-                  data-linkname="Visit Site"
-                  target="_blank"
-                  href="https://airsolver.vercel.app"
-                  >Visit Site</a
-                >
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a target="_blank" href="https://github.com/Chuksjohnleo/vtu">
-                  Source Code</a
-                ></strong
+            <div class="px-6 pt-4 pb-2">
+              <a
+                target="_blank"
+                title="Visit shop"
+                href="https://e-shop-chuksjohnleo.vercel.app"
+                class="inline-block hover:shadow-sm hover:shadow-primary-color rounded-full px-3 py-1 text-sm font-semibold text-white bg-primary-color mr-2 mb-2"
+                >Visit Site</a
+              >
+              <a
+                target="_blank"
+                href="https://github.com/Chuksjohnleo/e-shop"
+                title="View source code on github"
+                class="inline-block hover:bg-tertiary-color text-primary-color rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                >Source Code</a
               >
             </div>
           </div>
-          <div class="img-container">
-            <img src="images/vtu.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-      <article class="project-article">
-        <h1>Real Time Chat App</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div class="description-text">
-              This website is made with
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-                <li>NODE.JS</li>
-                <li>EXPRESS.JS</li>
-                <li>MONGODB</li>
-                <li>SOCKET.IO and several libraries.</li>
-              </ul>
-              <p>
-                I created it as a hobby project and for learning. I am still
-                working on it will still make some improvements in the future.
-                You can view the source code using the buttons below.
+          <div
+            class="max-w-lg rounded overflow-hidden shadow-lg dark:shadow-tertiary-color"
+          >
+            <img
+              class="w-full object-cover h-52"
+              src="images/chat-app.png"
+              alt="Site Preview"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Real Time Chat</div>
+              <p class="text-text-color text-base">
+                I created this site with Node.js, Socket.Io, HTML, CSS and
+                JavaScript as a hobby project. I have integrated chat features
+                in other sites. You can view the source code using the buttons
+                below.
               </p>
             </div>
-            <div class="project-btns">
-              <strong class="visit-site a-btn">
-                <a
-                  data-linkname="Visit Site"
-                  target="_blank"
-                  href="https://subscribe-i9vr.onrender.com"
-                  >Visit Site</a
-                >
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/suscribe"
-                >
-                  Source Code</a
-                ></strong
+            <div class="px-6 pt-4 pb-2">
+              <a
+                target="_blank"
+                title="Visit shop"
+                href="https://e-shop-chuksjohnleo.vercel.app"
+                class="inline-block hover:shadow-sm hover:shadow-primary-color rounded-full px-3 py-1 text-sm font-semibold text-white bg-primary-color mr-2 mb-2"
+                >Visit Site</a
+              >
+              <a
+                target="_blank"
+                href="https://github.com/Chuksjohnleo/e-shop"
+                title="View source code on github"
+                class="inline-block hover:bg-tertiary-color text-primary-color rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                >Source Code</a
               >
             </div>
           </div>
-          <div class="img-container">
-            <img src="images/chatapp.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-      <article class="project-article">
-        <h1>Ecommerce site</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div class="description-text">
-              This website is made with
-              <ul>
-                <li>NEXT.JS/REACT</li>
-                <li>CSS</li>
-                <li>MONGODB and several libraries.</li>
-              </ul>
-              <p>
-                I created it as a hobby project to show how an ecommerce website
-                can be implemented and for learning. I am still working on it
-                will still make some improvements in the future. You can view
-                the source code using the buttons below.
+          <div
+            class="max-w-lg rounded overflow-hidden shadow-lg dark:shadow-tertiary-color"
+          >
+            <img
+              class="w-full object-cover h-52"
+              src="images/e-shop.png"
+              alt="Site Preview"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">E-Shop With Shopify</div>
+              <p class="text-text-color text-base">
+                Created with Next.js and Shopify as a hobby project and for
+                learning. I may still make some improvements in the future. You
+                can view the source code using the buttons below.
               </p>
             </div>
-            <div class="project-btns">
-              <strong class="visit-site a-btn">
-                <a
-                  data-linkname="Visit Site"
-                  target="_blank"
-                  href="https://e-commerce-chuksjohnleo.vercel.app"
-                  >Visit Site</a
-                >
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/suscribe"
-                >
-                  Source Code</a
-                ></strong
+            <div class="px-6 pt-4 pb-2">
+              <a
+                target="_blank"
+                title="Visit shop"
+                href="https://e-shop-chuksjohnleo.vercel.app"
+                class="inline-block hover:shadow-sm hover:shadow-primary-color rounded-full px-3 py-1 text-sm font-semibold text-white bg-primary-color mr-2 mb-2"
+                >Visit Site</a
+              >
+              <a
+                target="_blank"
+                href="https://github.com/Chuksjohnleo/e-shop"
+                title="View source code on github"
+                class="inline-block hover:bg-tertiary-color text-primary-color rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                >Source Code</a
               >
             </div>
           </div>
-          <div class="img-container">
-            <img src="images/ecommerce.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-      <article class="project-article">
-        <h1>E-shop</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div class="description-text">
-              This website is made with
-              <ul>
-                <li>NEXT.JS/REACT</li>
-                <li>CSS</li>
-                <li>TailwindCSS</li>
-                <li>Shopify</li>
-                <li>MONGODB and several libraries.</li>
-              </ul>
-              <p>
-                I created it as a hobby project and for learning. it is
-                integrated with shopify. I am still working on it will still
+          <div
+            class="max-w-lg rounded overflow-hidden shadow-lg dark:shadow-tertiary-color"
+          >
+            <img
+              class="w-full object-cover h-52"
+              src="images/ecommerce.png"
+              alt="Site Preview"
+            />
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Ecommerce</div>
+              <p class="text-text-color text-base">
+                I created this site site with Next.js and MongoDb. I may still
                 make some improvements in the future. You can view the source
                 code using the buttons below.
               </p>
             </div>
-            <div class="project-btns">
-              <strong class="visit-site a-btn">
-                <a
-                  data-linkname="Visit Site"
-                  target="_blank"
-                  href="https://e-shop-chuksjohnleo.vercel.app"
-                  >Visit Site</a
-                >
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/suscribe"
-                >
-                  Source Code</a
-                ></strong
+            <div class="px-6 pt-4 pb-2">
+              <a
+                title="Visit E-commerce Site"
+                href="https://e-commerce-chuksjohnleo.vercel.app"
+                class="inline-block hover:shadow-sm hover:shadow-primary-color rounded-full px-3 py-1 text-sm font-semibold text-white bg-primary-color mr-2 mb-2"
+                >Visit Site</a
+              >
+              <a
+                target="_blank"
+                href="https://github.com/Chuksjohnleo/e-commerce"
+                title="View source code on github"
+                class="inline-block hover:bg-tertiary-color text-primary-color rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2"
+                >Source Code</a
               >
             </div>
-          </div>
-          <div class="img-container">
-            <img src="images/e-shop.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-      <article class="project-article">
-        <h1>Face detecting app</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div class="description-text">
-              This website and its backend is made with
-              <ul>
-                <li>CSS and tachyons</li>
-                <li>JAVASCRIPT</li>
-                <li>NODE.JS</li>
-                <li>EXPRESS.JS</li>
-                <li>REACT.JS</li>
-                <li>POSTGRES SQL</li>
-                <li>CLARIFAI API</li>
-                <li>KNEX and several libraries.</li>
-              </ul>
-              <p>
-                Many people have created this app before but I added my own
-                features and designs. I started it as a code along project while
-                still learning and then added my own features. I created it as a
-                hobby project and for learning. I am still working on it will
-                still make some improvements in the future. You can view the
-                source code using the buttons below. I am still working on it.
-              </p>
-            </div>
-            <p class="project-btns">
-              <strong class="visit-site a-btn">
-                <a
-                  data-linkname="Visit Site"
-                  title="Visit site"
-                  target="_blank"
-                  href="https://face-detector-dkyz.onrender.com"
-                  >Visit Site</a
-                >
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/face-detector"
-                >
-                  Source Code</a
-                ></strong
-              >
-            </p>
-          </div>
-          <div class="img-container">
-            <img src="images/face-detector.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-
-      <article class="project-article">
-        <h1>Questions and Answers site</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div>
-              This website is made with
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-              </ul>
-              <p>
-                You can visit the website to learn and prepare for your exams
-                especially university entrance exams. Questions are fetched by
-                making API calls. I am still working on it will still make some
-                improvements in the future. You can view the source code using
-                the buttons below.
-              </p>
-            </div>
-            <p class="project-btns">
-              <strong class="visit-site a-btn">
-                <a href="past_question">Visit Site</a>
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/past_question"
-                >
-                  Source Code</a
-                ></strong
-              >
-            </p>
-          </div>
-          <div class="img-container">
-            <img src="images/pastquestion.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-      <article class="project-article">
-        <h1>Web Calculator</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div>
-              This website is made with
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-              </ul>
-              <p>
-                I created it as a hobby project and for learning. I am still
-                working on it will still make some improvements in the future.
-                You can view the source code using the buttons below. I am still
-                working on it.
-              </p>
-            </div>
-            <p class="project-btns">
-              <strong class="visit-site a-btn">
-                <a href="calculator.html">Visit Site</a>
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/web-calculator"
-                >
-                  Source Code</a
-                ></strong
-              >
-            </p>
-          </div>
-          <div class="img-container">
-            <img src="images/calc.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-      <article class="project-article">
-        <h1>Todolist Web App</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div>
-              This website is made with
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-              </ul>
-              <p>
-                I created it as one of my hobby site when I was a newbie. It is
-                a sort memory to me. I am still working on it will still make
-                some improvements in the future. You can view the source code
-                using the buttons below.
-              </p>
-            </div>
-            <p class="project-btns">
-              <strong class="visit-site a-btn">
-                <a href="todo.html">Visit Site</a>
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/chuksjohnleo_todolist"
-                >
-                  Source Code</a
-                ></strong
-              >
-            </p>
-          </div>
-          <div class="img-container">
-            <img src="images/to_do.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-      <!-- s -->
-      <article class="project-article">
-        <h1>Tic Tac Toe Game</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div>
-              This website is made with
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-              </ul>
-              <p>
-                I created this game as a hobby project and for learning. I am
-                still working on it will still make some improvements in the
-                future. You can view the source code using the buttons below. I
-                am still working on it.
-              </p>
-            </div>
-            <p class="project-btns">
-              <strong class="visit-site a-btn">
-                <a href="tic-tac-toe">Visit Site</a>
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/tic-tac-toe"
-                >
-                  Source Code</a
-                ></strong
-              >
-            </p>
-          </div>
-          <div class="img-container">
-            <img src="images/tictac.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-      <!-- e -->
-      <article class="project-article">
-        <h1>Beer App</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div>
-              This website is made with
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-                <li>REACT.Js</li>
-                <li>PUNK API</li>
-              </ul>
-              <p>
-                React.js is a javascript library. I created it as a newbie when
-                it was given as an interview assignment to a fellow dev. The
-                beers are fetched from
-                <a
-                  target="_blank"
-                  style="color: navy"
-                  href="https://punkapi.com"
-                  class="special-link"
-                  >punkAPI.</a
-                >
-                One of the features is using a checkbox to toggle between the
-                beer ABVs. I am still working on it will still make some
-                improvements in the future. You can view the source code using
-                the buttons below.
-              </p>
-            </div>
-            <p class="project-btns">
-              <strong class="visit-site a-btn">
-                <a href="beerapp">Visit Site</a>
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/beerapp"
-                >
-                  Source Code</a
-                ></strong
-              >
-            </p>
-          </div>
-          <div class="img-container">
-            <img src="images/beerapp.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-      <article class="project-article">
-        <h1>This Website</h1>
-        <div class="description-wrapper">
-          <div class="description-details">
-            <div>
-              This website is made with
-              <ul>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>JAVASCRIPT</li>
-              </ul>
-              <p>
-                I created it as my portfolio site. I am still working on it will
-                still make some improvements in the future. You can view the
-                source code using the buttons below.
-              </p>
-            </div>
-            <p class="project-btns">
-              <strong class="visit-site a-btn">
-                <a href="#">Visit Site</a>
-                <span class="a-btn-bg-control"></span>
-              </strong>
-              <strong class="source-code"
-                ><a
-                  target="_blank"
-                  href="https://github.com/Chuksjohnleo/chuksjohnleo.github.io"
-                >
-                  Source Code</a
-                ></strong
-              >
-            </p>
-          </div>
-          <div class="img-container">
-            <img src="images/portfolio-site.png" alt="demo image" />
-          </div>
-        </div>
-      </article>
-    </section>
-    <section id="contact" class="contact">
-      <h1 class="contact-h1 important-h1">Contact Me</h1>
-      <div class="contact-details-wrapper">
-        <div class="contact-details-container">
-          <p class="contact-description">
-            <span class="starting-char">Y</span>ou can contact or hire me for
-            your websites by clicking the button below to send an email. You can
-            equally reach me through my social media handles
-          </p>
-          <p class="addition-contact-description">
-            I am open to hire both as full-time, part-time, freelance or
-            contract developer
-          </p>
-          <span class="email" id="email"
-            ><a class="email-link" href="mailto:nwanonenyichukwuka@gmail.com"
-              >Email</a
-            ></span
-          >
-        </div>
-        <div class="cta-container">
-          <div class="cta">
-            <!-- <p><span class="sppp">Affordable Services</span></p>
-        <p><span class="sppp">Customer Satisfaction</span></p>
-        <p><span class="sppp">Genuine Services</span></p>
-        <p><span class="sppp">Fast Delivery</span></p>
-        <p><span class="sppp">Responsive Websites</span></p>
-        <p><span class="sppp">Excellent communication</span></p> -->
-
-            <p>Affordable Services</p>
-            <p>Customer Satisfaction</p>
-            <p>Genuine Services</p>
-            <p>Fast Delivery</p>
-            <p>Responsive Websites</p>
-            <p>Excellent communication</p>
           </div>
         </div>
       </div>
     </section>
 
-    <footer>
-      <div class="upper-footer">
-        <div class="scroll-up-container">
-          <button type="button" title="scroll up" id="up">Back To Top</button>
+    <!-- CTA Section -->
+    <section id="contact" class="my-8">
+      <div
+        class="bg-gradient-to-r from-secondary-color to-primary-color text-white py-12 px-4 sm:px-6 lg:px-8"
+      >
+        <div class="max-w-3xl mx-auto text-center">
+          <h1 class="text-3xl font-extrabold sm:text-4xl">
+            Ready to Work Together?
+          </h1>
+          <p class="mt-4 text-lg leading-6">
+            I'm always excited to collaborate on new projects and bring ideas to
+            life. Let's create something amazing together.
+          </p>
+          <a
+            href="mailto:nwanonenyichukwuka@gmail.com"
+            class="mt-8 inline-flex items-center px-6 py-3 border border-transparent text-2xl font-extrabold rounded-md shadow-sm text-primary-color bg-white bg-primary-color hover:bg-tertiary-color focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-color"
+          >
+            Get in Touch
+          </a>
         </div>
-        <p>Website by Chuksjohleo</p>
+      </div>
+    </section>
 
-        <div id="social">
-          <h2 class="socials-h2">Socials</h2>
-          <em> Follow or chat me</em>
-          <p id="socials">
-            <a target="_blank" href="https://github.com/Chuksjohnleo"
-              ><img src="images/whitegithub.svg" alt="github"
-            /></a>
-            <a target="_blank" href="https://twitter.com/mariadevsQ"
-              ><img src="images/whitetwitter.svg" alt="twitter"
-            /></a>
-            <a target="_blank" href="https://wa.me/message/QT6HAF2AQUH6C1"
-              ><img src="images/whitewhatsapp.svg" alt="whatsapp"
-            /></a>
+    <!-- Footer -->
+    <footer class="text-text-color border-t">
+      <div class="container px-5 py-12 mx-auto">
+        <div class="text-center mx-auto">
+          <div class="px-2 sm:px-4 w-full">
+            <h2 class="font-extrabold tracking-widest mb-3">Useful Links</h2>
+            <nav class="list-none mb-10 flex flex-wrap gap-4 justify-center">
+              <li>
+                <a
+                  href="#about"
+                  class="text-dim-text-color hover:text-primary-color"
+                  >About</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-dim-text-color hover:text-primary-color"
+                  >Contact</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#projects"
+                  class="text-dim-text-color hover:text-primary-color"
+                  >Projects</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-dim-text-color hover:text-primary-color"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#portfolio"
+                  class="text-dim-text-color hover:text-primary-color"
+                  >Portfolio</a
+                >
+              </li>
+            </nav>
+          </div>
+        </div>
+      </div>
+      <div class="bg-tertiary-color">
+        <div
+          class="container px-5 py-6 mx-auto flex items-center sm:flex-row flex-col"
+        >
+          <a
+            href="#"
+            class="flex title-font font-medium items-center md:justify-start justify-center text-text-color"
+          >
+            <img
+              class="h-8 max-w-[80vw] overflow-hidden object-contain"
+              src="images/logo-text.png"
+              alt="My logo"
+            />
+          </a>
+          <p
+            class="text-sm text-center text-dim-text-color sm:ml-6 sm:mt-0 mt-4"
+          >
+            © <span id="c-year">2024</span> Chuksjohnleo —
+            <a
+              target="_blank"
+              href="https://github.com/Chuksjohnleo"
+              class="text-text-color ml-1"
+              >@Chuksjohnleo</a
+            >
+          </p>
+          <span
+            class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+          >
             <a
               target="_blank"
               href="https://www.facebook.com/chuksjohnleo.nwanonenyi"
-              ><img src="images/whitefacebook.svg" alt="facebook"
-            /></a>
-          </p>
+              class="text-dim-text-color hover:text-primary-color"
+            >
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              target="_blank"
+              class="ml-3 text-dim-text-color hover:text-primary-color"
+              href="https://t.me/Chuksjohnleo"
+              ><svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 192 192"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+              >
+                <path
+                  d="M23.073 88.132s65.458-26.782 88.16-36.212c8.702-3.772 38.215-15.843 38.215-15.843s13.621-5.28 12.486 7.544c-.379 5.281-3.406 23.764-6.433 43.756-4.54 28.291-9.459 59.221-9.459 59.221s-.756 8.676-7.188 10.185c-6.433 1.509-17.027-5.281-18.919-6.79-1.513-1.132-28.377-18.106-38.214-26.404-2.649-2.263-5.676-6.79.378-12.071 13.621-12.447 29.891-27.913 39.728-37.72 4.54-4.527 9.081-15.089-9.837-2.264-26.864 18.483-53.35 35.835-53.35 35.835s-6.053 3.772-17.404.377c-11.351-3.395-24.594-7.921-24.594-7.921s-9.08-5.659 6.433-11.693Z"
+                /></svg
+            ></a>
+            <a
+              href="https://twitter.com/chuksjohnleo"
+              target="_blank"
+              class="ml-3 text-dim-text-color hover:text-primary-color"
+            >
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"
+                ></path>
+              </svg>
+            </a>
+            <a
+              target="_blank"
+              href="https://wa.me/message/QT6HAF2AQUH6C1"
+              class="ml-3 text-dim-text-color hover:text-primary-color"
+            >
+              <svg
+                fill="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                class="w-5 h-5"
+                viewBox="0 0 16 16"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M11.42 9.49c-.19-.09-1.1-.54-1.27-.61s-.29-.09-.42.1-.48.6-.59.73-.21.14-.4 0a5.13 5.13 0 0 1-1.49-.92 5.25 5.25 0 0 1-1-1.29c-.11-.18 0-.28.08-.38s.18-.21.28-.32a1.39 1.39 0 0 0 .18-.31.38.38 0 0 0 0-.33c0-.09-.42-1-.58-1.37s-.3-.32-.41-.32h-.4a.72.72 0 0 0-.5.23 2.1 2.1 0 0 0-.65 1.55A3.59 3.59 0 0 0 5 8.2 8.32 8.32 0 0 0 8.19 11c.44.19.78.3 1.05.39a2.53 2.53 0 0 0 1.17.07 1.93 1.93 0 0 0 1.26-.88 1.67 1.67 0 0 0 .11-.88c-.05-.07-.17-.12-.36-.21z"
+                />
+                <path
+                  d="M13.29 2.68A7.36 7.36 0 0 0 8 .5a7.44 7.44 0 0 0-6.41 11.15l-1 3.85 3.94-1a7.4 7.4 0 0 0 3.55.9H8a7.44 7.44 0 0 0 5.29-12.72zM8 14.12a6.12 6.12 0 0 1-3.15-.87l-.22-.13-2.34.61.62-2.28-.14-.23a6.18 6.18 0 0 1 9.6-7.65 6.12 6.12 0 0 1 1.81 4.37A6.19 6.19 0 0 1 8 14.12z"
+                />
+              </svg>
+            </a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/chuksjohnleo/"
+              class="ml-3 text-dim-text-color hover:text-primary-color"
+            >
+              <svg
+                fill="currentColor"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="0"
+                class="w-5 h-5"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  stroke="none"
+                  d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
+                ></path>
+                <circle cx="4" cy="4" r="2" stroke="none"></circle>
+              </svg>
+            </a>
+          </span>
         </div>
-      </div>
-      <div class="lowwer-footer">
-        <p style="word-wrap: break-word; max-width: 95vw">
-          ✉️Email: nwanonenyichukwuka@gmail.com
-        </p>
-        <p>God alone</p>
-        <p>
-          <a
-            style="text-decoration: none; color: white"
-            href="legacy/legacy2.html"
-            >Legacy site</a
-          >
-        </p>
-        <p style="text-align: center">
-          &copy; Copyright <span id="year"></span> Chuksjohnleo, All rights are
-          reserved
-        </p>
       </div>
     </footer>
     <script src="index.js"></script>
