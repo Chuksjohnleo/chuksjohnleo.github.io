@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="theme-color" content="rgb(11, 85, 245)" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="Keywords"
+      content="Chuksjohnleo, Web developer, fullstack developer, web development,website creation,how to make a website, JAMB,
+          Nigerian Universities,waec past questions and answers 2022/2023,JAMB past questions and answers 2022/2023
+          Mathematics, Chemistry, Biology, Physics, English ,English language, WAEC, NECO,
+          WASSCE, SSCE, Medicine and surgery, Science, Law, Tutorials, UI, UNIZIK, Post-UTME, Universities,
+          Learning, Quiz, Exercises, Subjects, Lessons, References, 
+          Exams, UTME,JAMB CBT, Matriculation, Tips, JAMB practice website, 
+          Cbt exams, get 300+, get 9 As, A1, Economics, History, Christian religious studies, literatue and more, Catholic Youth Organisation (CYON)"
+    />
+    <meta
+      name="Description"
+      content="Chukwuka Nwanonenyi is a fullstack web developer. 
+          He will develop different kinds of websites such as ecommerce site, projects site, past questions and answers website, construction company site, blog sites etc.
+          He developes websites that are responsive and fast and will deliver the website on time"
+    />
+    <link rel="canonical" href="https://chuksjohnleo.github.io" />
+    <link rel="shortcut icon" type="image/png" href="/images/logo.png" />
+    <meta property="og:image" content="/images/logo.png" />
+    <meta
+      property="og:title"
+      content="Oraifite League Tables for Catholic Youth Organisation (CYON)"
+    />
+    <link rel="icon" href="/images/logo.png" type="image/png" />
+    <title>
+      Unofficial League Tables for Catholic Youth Organisation (CYON)
+    </title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f9;
+        color: #333;
+        overflow-x: hidden;
+        margin: 0;
+      }
+      .description {
+        text-align: center;
+      }
+      .container {
+        padding: 4px;
+        overflow-x: auto;
+        margin: auto 5px;
+      }
+      h1{
+        font-size: 20px;
+      }
+      h2{
+        font-size: 16px;
+      }
+      h1,
+      h2 {
+        text-align: center;
+        color: #3b82f6;
+      }
+      a{
+        text-decoration: none;
+        color: inherit;
+      }
+      .ref-link{
+        color: #3b82f6;
+      }
+      table {
+        margin: 0 auto;
+        border-collapse: collapse;
+        background-color: #fff;
+        font-size: 7px;
+      }
+      th,
+      td {
+        border: 1px solid #ddd;
+        text-align: center;
+        padding: 5px;
+      }
+      th {
+        background-color: #3b82f6;
+        color: #fff;
+      }
+      tr:nth-child(even) {
+        background-color: #f0f0f0;
+      }
+      .font-size-setting {
+        border-width: 1px;
+        border-style: solid;
+        border-color: #84a7ee; /* Adjust color as needed */
+        border-radius: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      .table-font-size-arrow-btn-container {
+        margin: 20px auto;
+      }
+      .table-font-size-arrow-btn-container button {
+        padding: 5px 15px;
+        font-weight: 900;
+        margin: 0 10px;
+      }
+      .notes-h3 {
+        margin-left: 20px;
+      }
+      .intro{
+        margin: 10px;
+      }
+      footer {
+        text-align: center;
+        margin-top: 40px;
+        padding: 10px 0;
+        background-color: #3b82f6;
+        color: #fff;
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="intro">
+        <h1>
+      Unofficial League Tables for Oraifite Catholic Youth Organisation (CYON)
+    </h1>
+    <p class="description">
+      Below is the <strong>unofficial League Table</strong> for the memorial
+      match in honor of <em>Fr. Chinonso Anaedo</em>. This competition features
+      players from the Catholic Youth Organization (CYON) of Oraifite Deanery.
+      Click <a class="ref-link" href="memorial-match.html">here</a> to read about the event.
+    </p></div>
+
+    <!-- Football Table -->
+    <div class="container">
+      <div class="font-size-setting">
+        <p>Table Size: <span id="table-font-size-indicator">7</span></p>
+        <input id="table-font-size" value="7" max="30" type="range" />
+        <div class="table-font-size-arrow-btn-container">
+          <button type="button" id="table-font-size-arrow-b-btn">←</button>
+          <button type="button" id="table-font-size-arrow-f-btn">→</button>
+        </div>
+      </div>
+      <h2>Football League Table (Male Category)</h2>
+
+      <table id="football-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Played (P)</th>
+            <th>Won (W)</th>
+            <th>Draw (D)</th>
+            <th>Lost (L)</th>
+            <th>Goals For (GF)</th>
+            <th>Goals Against (GA)</th>
+            <th>Goal Difference (GD)</th>
+            <th>Points (PTS)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Football Data will be populated here -->
+        </tbody>
+      </table>
+
+      <!-- Volleyball Table -->
+      <h2>Volleyball League Table (Female Category)</h2>
+      <table id="volleyball-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Played (P)</th>
+            <th>Won (W)</th>
+            <th>Lost (L)</th>
+            <th>Points (PTS)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Volleyball Data will be populated here -->
+        </tbody>
+      </table>
+    </div>
+    <hr />
+    <div>
+      <h3 class="notes-h3">Notes:</h3>
+      <ul>
+        <li>Points: Win = 3 points, Draw = 1 point, Loss = 0 points.</li>
+        <li>Goal Difference (GD) = Goals For (GF) - Goals Against (GA).</li>
+      </ul>
+    </div>
+
+    <!-- Footer -->
+    <footer>&copy; 2024 <a href="/">Chuksjohnleo</a></footer>
+
+    <script>
+      // Mock Data for Football League
+      const footballData = [
+        {
+          team: "St George",
+          played: 1,
+          won: 0,
+          draw: 0,
+          lost: 1,
+          gf: 0,
+          ga: 1,
+        },
+        {
+          team: "St Mary",
+          played: 2,
+          won: 2,
+          draw: 0,
+          lost: 0,
+          gf: 2,
+          ga: 0,
+        },
+        {
+          team: "St Augustine",
+          played: 2,
+          won: 2,
+          draw: 0,
+          lost: 0,
+          gf: 8,
+          ga: 0,
+        },
+        {
+          team: "St Michael",
+          played: 1,
+          won: 0,
+          draw: 0,
+          lost: 1,
+          gf: 0,
+          ga: 6,
+        },
+        {
+          team: "All Saints",
+          played: 1,
+          won: 0,
+          draw: 0,
+          lost: 1,
+          gf: 0,
+          ga: 1,
+        },
+        {
+          team: "St John",
+          played: 1,
+          won: 0,
+          draw: 0,
+          lost: 1,
+          gf: 0,
+          ga: 2,
+        },
+      ];
+
+      // Calculate Goal Difference and Points
+      footballData.forEach((team) => {
+        team.gd = team.gf - team.ga; // Goal Difference
+        team.points = team.won * 3 + team.draw * 1; // 3 points for win, 1 for draw
+      });
+
+      // Render Football Table
+      const footballTableBody = document.querySelector("#football-table tbody");
+      footballData.forEach((team) => {
+        footballTableBody.innerHTML += `
+                <tr>
+                    <td>${team.team}</td>
+                    <td>${team.played}</td>
+                    <td>${team.won}</td>
+                    <td>${team.draw}</td>
+                    <td>${team.lost}</td>
+                    <td>${team.gf}</td>
+                    <td>${team.ga}</td>
+                    <td>${team.gd}</td>
+                    <td>${team.points}</td>
+                </tr>
+            `;
+      });
+
+      // Mock Data for Volleyball League
+      const volleyballData = [
+        { team: "St Augustine", played: 2, won: 1, lost: 1 },
+        { team: "St John", played: 2, won: 0, lost: 2 },
+        { team: "All Saints", played: 1, won: 1, lost: 0 },
+        { team: "St Michael", played: 2, won: 0, lost: 2 },
+        { team: "St Mary", played: 2, won: 2, lost: 0 },
+        { team: "St George", played: 1, won: 1, lost: 0 },
+      ];
+
+      // Calculate Points
+      volleyballData.forEach((team) => {
+        team.points = team.won * 3; // 3 points for win
+      });
+
+      // Render Volleyball Table
+      const volleyballTableBody = document.querySelector(
+        "#volleyball-table tbody"
+      );
+      volleyballData.forEach((team) => {
+        volleyballTableBody.innerHTML += `
+                <tr>
+                    <td>${team.team}</td>
+                    <td>${team.played}</td>
+                    <td>${team.won}</td>
+                    <td>${team.lost}</td>
+                    <td>${team.points}</td>
+                </tr>
+            `;
+      });
+
+      const fontSizeAdjuster = document.getElementById("table-font-size");
+      const fontSizeIndictor = document.getElementById(
+        "table-font-size-indicator"
+      );
+
+      function adjustTableFontSize(fontSizeAdjusterValue) {
+        if (fontSizeAdjusterValue < 0) return;
+        fontSizeAdjuster.value = fontSizeAdjusterValue;
+        fontSizeIndictor.textContent = fontSizeAdjuster.value;
+        document.querySelectorAll("table").forEach((table) => {
+          table.style.fontSize = `${fontSizeAdjuster.valueAsNumber}px`;
+        });
+      }
+
+      document
+        .getElementById("table-font-size-arrow-f-btn")
+        .addEventListener("click", () => {
+          adjustTableFontSize(Number(fontSizeAdjuster.value) + 1);
+        });
+
+      document
+        .getElementById("table-font-size-arrow-b-btn")
+        .addEventListener("click", () => {
+          adjustTableFontSize(Number(fontSizeAdjuster.value) - 1);
+        });
+
+      fontSizeAdjuster.addEventListener("input", (e) => {
+        fontSizeIndictor.textContent = e.target.value;
+        document.querySelectorAll("table").forEach((table) => {
+          table.style.fontSize = `${e.target.valueAsNumber}px`;
+        });
+      });
+    </script>
+  </body>
+</html>
