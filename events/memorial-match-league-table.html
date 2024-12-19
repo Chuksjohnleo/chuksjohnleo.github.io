@@ -49,10 +49,10 @@
         overflow-x: auto;
         margin: auto 5px;
       }
-      h1{
+      h1 {
         font-size: 20px;
       }
-      h2{
+      h2 {
         font-size: 16px;
       }
       h1,
@@ -60,11 +60,11 @@
         text-align: center;
         color: #3b82f6;
       }
-      a{
+      a {
         text-decoration: none;
         color: inherit;
       }
-      .ref-link{
+      .ref-link {
         color: #3b82f6;
       }
       table {
@@ -103,12 +103,26 @@
         padding: 5px 15px;
         font-weight: 900;
         margin: 0 10px;
+        user-select: none;
+      }
+      .table-font-size-arrow-btn-container button:active {
+        background-color: #3b82f6;
+        color: #f8f6f6;
       }
       .notes-h3 {
         margin-left: 20px;
       }
-      .intro{
-        margin: 10px;
+      .intro {
+        padding: 30px 10px 50px 10px;
+      }
+      .intro h1 {
+        font-size: 30px;
+        font-weight: 900;
+      }
+      .group-caption {
+        text-align: center;
+        display: block;
+        margin-top: 20px;
       }
       footer {
         text-align: center;
@@ -122,15 +136,18 @@
   </head>
   <body>
     <div class="intro">
-        <h1>
-      Unofficial League Tables for Oraifite Catholic Youth Organisation (CYON)
-    </h1>
-    <p class="description">
-      Below is the <strong>unofficial League Table</strong> for the memorial
-      match in honor of <em>Fr. Chinonso Anaedo</em>. This competition features
-      players from the Catholic Youth Organization (CYON) of Oraifite Deanery.
-      Click <a class="ref-link" href="memorial-match.html">here</a> to read about the event.
-    </p></div>
+      <h1>
+        Unofficial League Tables for Oraifite Catholic Youth Organisation (CYON)
+      </h1>
+      <p class="description">
+        Below is the <strong>unofficial League Table</strong> for the memorial
+        match in honor of <em>Fr. Chinonso Anaedo</em>. This competition
+        features players from the Catholic Youth Organization (CYON) of Oraifite
+        Deanery. Click
+        <a class="ref-link" href="memorial-match.html">here</a> to read about
+        the event.
+      </p>
+    </div>
 
     <!-- Football Table -->
     <div class="container">
@@ -144,7 +161,28 @@
       </div>
       <h2>Football League Table (Male Category)</h2>
 
-      <table id="football-table">
+      <strong class="group-caption">Group A</strong>
+      <table id="group-a-football-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Played (P)</th>
+            <th>Won (W)</th>
+            <th>Draw (D)</th>
+            <th>Lost (L)</th>
+            <th>Goals For (GF)</th>
+            <th>Goals Against (GA)</th>
+            <th>Goal Difference (GD)</th>
+            <th>Points (PTS)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Football Data will be populated here -->
+        </tbody>
+      </table>
+
+      <strong class="group-caption">Group B</strong>
+      <table id="group-b-football-table">
         <thead>
           <tr>
             <th>Team</th>
@@ -164,8 +202,27 @@
       </table>
 
       <!-- Volleyball Table -->
-      <h2>Volleyball League Table (Female Category)</h2>
-      <table id="volleyball-table">
+      <h2 style="margin-top: 100px">
+        Volleyball League Table (Female Category)
+      </h2>
+      <strong class="group-caption">Group A</strong>
+      <table id="group-a-volleyball-table">
+        <thead>
+          <tr>
+            <th>Team</th>
+            <th>Played (P)</th>
+            <th>Won (W)</th>
+            <th>Lost (L)</th>
+            <th>Points (PTS)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Volleyball Data will be populated here -->
+        </tbody>
+      </table>
+
+      <strong class="group-caption">Group B</strong>
+      <table id="group-b-volleyball-table">
         <thead>
           <tr>
             <th>Team</th>
@@ -197,6 +254,7 @@
       const footballData = [
         {
           team: "St George",
+          group: "A",
           played: 1,
           won: 0,
           draw: 0,
@@ -206,6 +264,7 @@
         },
         {
           team: "St Mary",
+          group: "A",
           played: 2,
           won: 2,
           draw: 0,
@@ -215,6 +274,7 @@
         },
         {
           team: "St Augustine",
+          group: "B",
           played: 2,
           won: 2,
           draw: 0,
@@ -224,6 +284,7 @@
         },
         {
           team: "St Michael",
+          group: "B",
           played: 1,
           won: 0,
           draw: 0,
@@ -233,6 +294,7 @@
         },
         {
           team: "All Saints",
+          group: "A",
           played: 1,
           won: 0,
           draw: 0,
@@ -242,6 +304,7 @@
         },
         {
           team: "St John",
+          group: "B",
           played: 1,
           won: 0,
           draw: 0,
@@ -258,9 +321,21 @@
       });
 
       // Render Football Table
-      const footballTableBody = document.querySelector("#football-table tbody");
-      footballData.forEach((team) => {
-        footballTableBody.innerHTML += `
+      const footballTableBodyGroupA = document.querySelector(
+        "#group-a-football-table tbody"
+      );
+
+      const footballTableBodyGroupB = document.querySelector(
+        "#group-b-football-table tbody"
+      );
+
+      footballData
+        .sort((a, b) => b.points - a.points)
+        .forEach((team) => {
+          (team.group === "A"
+            ? footballTableBodyGroupA
+            : footballTableBodyGroupB
+          ).innerHTML += `
                 <tr>
                     <td>${team.team}</td>
                     <td>${team.played}</td>
@@ -273,16 +348,16 @@
                     <td>${team.points}</td>
                 </tr>
             `;
-      });
+        });
 
       // Mock Data for Volleyball League
       const volleyballData = [
-        { team: "St Augustine", played: 2, won: 1, lost: 1 },
-        { team: "St John", played: 2, won: 0, lost: 2 },
-        { team: "All Saints", played: 1, won: 1, lost: 0 },
-        { team: "St Michael", played: 2, won: 0, lost: 2 },
-        { team: "St Mary", played: 2, won: 2, lost: 0 },
-        { team: "St George", played: 1, won: 1, lost: 0 },
+        { team: "St Augustine", group: "A", played: 2, won: 1, lost: 1 },
+        { team: "St John", group: "A", played: 2, won: 0, lost: 2 },
+        { team: "All Saints", group: "B", played: 1, won: 1, lost: 0 },
+        { team: "St Michael", group: "B", played: 2, won: 0, lost: 2 },
+        { team: "St Mary", group: "A", played: 2, won: 2, lost: 0 },
+        { team: "St George", group: "B", played: 1, won: 1, lost: 0 },
       ];
 
       // Calculate Points
@@ -291,11 +366,19 @@
       });
 
       // Render Volleyball Table
-      const volleyballTableBody = document.querySelector(
-        "#volleyball-table tbody"
+      const volleyballTableBodyGroupA = document.querySelector(
+        "#group-a-volleyball-table tbody"
       );
-      volleyballData.forEach((team) => {
-        volleyballTableBody.innerHTML += `
+      const volleyballTableBodyGroupB = document.querySelector(
+        "#group-b-volleyball-table tbody"
+      );
+      volleyballData
+        .sort((a, b) => b.points - a.points)
+        .forEach((team) => {
+          (team.group === "A"
+            ? volleyballTableBodyGroupA
+            : volleyballTableBodyGroupB
+          ).innerHTML += `
                 <tr>
                     <td>${team.team}</td>
                     <td>${team.played}</td>
@@ -304,11 +387,17 @@
                     <td>${team.points}</td>
                 </tr>
             `;
-      });
+        });
 
       const fontSizeAdjuster = document.getElementById("table-font-size");
       const fontSizeIndictor = document.getElementById(
         "table-font-size-indicator"
+      );
+      const tableFontSizeDecreaseBtn = document.getElementById(
+        "table-font-size-arrow-b-btn"
+      );
+      const tableFontSizeIncreaseBtn = document.getElementById(
+        "table-font-size-arrow-f-btn"
       );
 
       function adjustTableFontSize(fontSizeAdjusterValue) {
@@ -320,17 +409,21 @@
         });
       }
 
-      document
-        .getElementById("table-font-size-arrow-f-btn")
-        .addEventListener("click", () => {
-          adjustTableFontSize(Number(fontSizeAdjuster.value) + 1);
-        });
+      tableFontSizeIncreaseBtn.addEventListener("click", () => {
+        adjustTableFontSize(Number(fontSizeAdjuster.value) + 1);
+      });
 
-      document
-        .getElementById("table-font-size-arrow-b-btn")
-        .addEventListener("click", () => {
-          adjustTableFontSize(Number(fontSizeAdjuster.value) - 1);
-        });
+      tableFontSizeDecreaseBtn.addEventListener("click", () => {
+        adjustTableFontSize(Number(fontSizeAdjuster.value) - 1);
+      });
+
+      // tableFontSizeIncreaseBtn.addEventListener("touchstart", () => {
+      //   adjustTableFontSize(Number(fontSizeAdjuster.value) + 1);
+      // });
+
+      // tableFontSizeDecreaseBtn.addEventListener("touchstart", () => {
+      //   adjustTableFontSize(Number(fontSizeAdjuster.value) - 1);
+      // });
 
       fontSizeAdjuster.addEventListener("input", (e) => {
         fontSizeIndictor.textContent = e.target.value;
