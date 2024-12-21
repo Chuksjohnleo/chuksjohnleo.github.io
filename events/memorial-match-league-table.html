@@ -41,9 +41,6 @@
         overflow-x: hidden;
         margin: 0;
       }
-      .description {
-        text-align: center;
-      }
       .container {
         padding: 4px;
         overflow-x: auto;
@@ -118,6 +115,9 @@
       .intro h1 {
         font-size: 30px;
         font-weight: 900;
+      }
+      .description {
+        text-align: center;
       }
       .group-caption {
         text-align: center;
@@ -285,12 +285,12 @@
         {
           team: "St Michael",
           group: "B",
-          played: 1,
+          played: 2,
           won: 0,
-          draw: 0,
+          draw: 1,
           lost: 1,
-          gf: 0,
-          ga: 6,
+          gf: 1,
+          ga: 7,
         },
         {
           team: "All Saints",
@@ -305,12 +305,12 @@
         {
           team: "St John",
           group: "B",
-          played: 1,
+          played: 2,
           won: 0,
-          draw: 0,
+          draw: 1,
           lost: 1,
-          gf: 0,
-          ga: 2,
+          gf: 1,
+          ga: 3,
         },
       ];
 
@@ -330,6 +330,7 @@
       );
 
       footballData
+        .sort((a, b) => b.gd - a.gd)
         .sort((a, b) => b.points - a.points)
         .forEach((team) => {
           (team.group === "A"
@@ -354,10 +355,10 @@
       const volleyballData = [
         { team: "St Augustine", group: "A", played: 2, won: 1, lost: 1 },
         { team: "St John", group: "A", played: 2, won: 0, lost: 2 },
-        { team: "All Saints", group: "B", played: 1, won: 1, lost: 0 },
+        { team: "All Saints", group: "B", played: 2, won: 2, lost: 0 },
         { team: "St Michael", group: "B", played: 2, won: 0, lost: 2 },
         { team: "St Mary", group: "A", played: 2, won: 2, lost: 0 },
-        { team: "St George", group: "B", played: 1, won: 1, lost: 0 },
+        { team: "St George", group: "B", played: 2, won: 1, lost: 1 },
       ];
 
       // Calculate Points
