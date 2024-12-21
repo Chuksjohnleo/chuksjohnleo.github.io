@@ -258,7 +258,7 @@
           played: 1,
           won: 0,
           draw: 0,
-          lost: 1,
+          lost: 2,
           gf: 0,
           ga: 1,
         },
@@ -296,7 +296,7 @@
           team: "All Saints",
           group: "A",
           played: 1,
-          won: 0,
+          won: 1,
           draw: 0,
           lost: 1,
           gf: 0,
@@ -416,14 +416,6 @@
       tableFontSizeDecreaseBtn.addEventListener("click", () => {
         adjustTableFontSize(Number(fontSizeAdjuster.value) - 1);
       });
-
-      // tableFontSizeIncreaseBtn.addEventListener("touchstart", () => {
-      //   adjustTableFontSize(Number(fontSizeAdjuster.value) + 1);
-      // });
-
-      // tableFontSizeDecreaseBtn.addEventListener("touchstart", () => {
-      //   adjustTableFontSize(Number(fontSizeAdjuster.value) - 1);
-      // });
 
       fontSizeAdjuster.addEventListener("input", (e) => {
         fontSizeIndictor.textContent = e.target.value;
