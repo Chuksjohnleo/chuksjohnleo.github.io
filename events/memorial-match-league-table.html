@@ -39,7 +39,14 @@
         background-color: #f4f4f9;
         color: #333;
         overflow-x: hidden;
-        margin: 0;
+        margin: 0 auto;
+        max-width: 800px;
+      }
+      header {
+        text-align: center;
+        background-color: #004080;
+        color: #fff;
+        padding: 2.5rem 1rem;
       }
       .container {
         padding: 4px;
@@ -60,9 +67,6 @@
       a {
         text-decoration: none;
         color: inherit;
-      }
-      .ref-link {
-        color: #3b82f6;
       }
       table {
         margin: 0 auto;
@@ -115,9 +119,13 @@
       .intro h1 {
         font-size: 30px;
         font-weight: 900;
+        color: #fff;
       }
       .description {
         text-align: center;
+      }
+      .ref-link {
+        color: #96bbf7;
       }
       .group-caption {
         text-align: center;
@@ -135,22 +143,22 @@
     </style>
   </head>
   <body>
-    <div class="intro">
+    <header class="intro">
       <h1>
         Unofficial League Tables for Oraifite Catholic Youth Organisation (CYON)
       </h1>
       <p class="description">
-        Below is the <strong>unofficial League Table</strong> for the memorial
+        This is the <strong>unofficial League Table</strong> for the memorial
         match in honor of <em>Fr. Chinonso Anaedo</em>. This competition
         features players from the Catholic Youth Organization (CYON) of Oraifite
         Deanery. Click
         <a class="ref-link" href="memorial-match.html">here</a> to read about
         the event.
       </p>
-    </div>
+    </header>
 
     <!-- Football Table -->
-    <div class="container">
+    <main class="container">
       <div class="font-size-setting">
         <p>Table Size: <span id="table-font-size-indicator">7</span></p>
         <input id="table-font-size" value="7" max="30" type="range" />
@@ -236,7 +244,7 @@
           <!-- Volleyball Data will be populated here -->
         </tbody>
       </table>
-    </div>
+    </main>
     <hr />
     <div>
       <h3 class="notes-h3">Notes:</h3>
